@@ -9,10 +9,16 @@ from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from matcher import SkillMatcher
-import csv, json, os
+import csv, json, os, re
 from dotenv import load_dotenv
 
 load_dotenv()
+
+
+def parse_activity_roles(activities_str: str) -> list[str]:
+    """ดึง role titles จาก '[Role] at [Org Year]' format"""
+    return re.findall(r'\[([^\]]+)\]\s+at\s+\[', activities_str)
+
 
 app = FastAPI(title="Career Matcher API", version="1.0.0")
 
@@ -35,15 +41,18 @@ STUDENTS: dict[str, dict] = {}
 student_path = os.getenv("DATA_PATH_STUDENTS", "data/synthetic_student_dataset_500_clean.csv")
 with open(student_path, encoding="utf-8-sig") as f:
     for row in csv.DictReader(f):
+        activities_raw = row.get("activities", "")
         STUDENTS[row["student_id"]] = {
-            "student_id":   row["student_id"],
-            "name":         row["name"],
-            "faculty":      row["faculty"],
-            "year":         int(row["year"]),
-            "gpa":          float(row["gpa"]),
-            "skills":       json.loads(row["skills"]),
-            "languages":    json.loads(row["languages"]),
-            "target_career": row["target_career"],
+            "student_id":     row["student_id"],
+            "name":           row["name"],
+            "faculty":        row["faculty"],
+            "year":           int(row["year"]),
+            "gpa":            float(row["gpa"]),
+            "skills":         json.loads(row["skills"]),
+            "languages":      json.loads(row["languages"]),
+            "target_career":  row["target_career"],
+            "activities":     activities_raw,
+            "activity_roles": parse_activity_roles(activities_raw),
         }
 
 # โหลด alumni data ไว้ใน memory
@@ -133,7 +142,7 @@ def get_student(student_id: str):
     s = STUDENTS.get(student_id)
     if not s:
         raise HTTPException(status_code=404, detail="Student not found")
-    return s
+    return {k: v for k, v in s.items() if k != "activity_roles"}
 
 
 @app.post("/match")
@@ -251,7 +260,8 @@ def match_student_blended(req: StudentBlendedMatchRequest):
         raise HTTPException(status_code=404, detail="Student not found")
 
     result = matcher.match_blended(
-        s["skills"], top_n=req.top_n, alpha=req.alpha, knn_k=req.knn_k
+        s["skills"], top_n=req.top_n, alpha=req.alpha, knn_k=req.knn_k,
+        activity_roles=s.get("activity_roles", []),
     )
     return {
         "student": {

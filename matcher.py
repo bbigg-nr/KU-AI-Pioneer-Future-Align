@@ -377,11 +377,28 @@ class SkillMatcher:
         self,
         similar_alumni: list[dict],
         candidate_job_titles: set[str],
+        activity_roles: list[str] | None = None,
+        activity_boost: float = 1.5,
+        activity_sim_threshold: float = 0.65,
     ) -> dict[str, float]:
-        """คำนวณ alumni-weighted career score ต่อ job_title (normalized ด้วย max weight)"""
+        """คำนวณ alumni-weighted career score ต่อ job_title (normalized ด้วย max weight)
+
+        ถ้า alumni's first_job_title คล้ายกับ activity roles ของนิสิต → weight × activity_boost
+        """
+        act_embs = None
+        if activity_roles:
+            act_embs = self.model.encode(activity_roles, batch_size=32)
+
         title_weights: dict[str, float] = defaultdict(float)
         for alum in similar_alumni:
             weight = alum["similarity_score"] * (alum["success_score"] / 99.0)
+
+            if act_embs is not None:
+                job_emb = self.model.encode([alum["first_job_title"]])[0]
+                sims = cosine_similarity([job_emb], act_embs)[0]
+                if float(sims.max()) >= activity_sim_threshold:
+                    weight *= activity_boost
+
             title_weights[alum["first_job_title"]] += weight
 
         max_w = max(title_weights.values()) if title_weights else 1.0
@@ -394,6 +411,7 @@ class SkillMatcher:
         top_n: int = 5,
         alpha: float = 0.7,
         knn_k: int = 10,
+        activity_roles: list[str] | None = None,
     ) -> dict:
         """
         Blended matching: α × match_score + (1-α) × alumni_career_score
@@ -411,7 +429,7 @@ class SkillMatcher:
 
         similar_alumni = self.find_similar_alumni(student_skills, top_k=knn_k)
         candidate_titles = {job["job_title"] for job in top_jobs}
-        career_scores = self._compute_alumni_career_score(similar_alumni, candidate_titles)
+        career_scores = self._compute_alumni_career_score(similar_alumni, candidate_titles, activity_roles=activity_roles)
 
         blended_jobs = []
         for job in top_jobs:
