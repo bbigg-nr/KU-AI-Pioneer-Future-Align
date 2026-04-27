@@ -17,6 +17,9 @@ const SUGGESTIONS = [
 
 function buildSystemPrompt(student: Student, topJob?: string, matchScore?: number): string {
   const skillList = student.skills.map(s => `${s.name} (${s.level})`).join(', ')
+  const activitiesLine = student.activities
+    ? `- Activities & Experience: ${student.activities}`
+    : ''
   return `You are FutureAlign AI Advisor, a career guidance assistant for Kasetsart University (KU) students.
 
 Student Profile:
@@ -25,12 +28,13 @@ Student Profile:
 - Year: ${student.year}, GPA: ${student.gpa}
 - Skills: ${skillList}
 - Target career: ${student.target_career}
+${activitiesLine}
 ${topJob ? `- Top career match: ${topJob} (${Math.round((matchScore ?? 0) * 100)}% match)` : ''}
 
 Instructions:
 - Be encouraging, specific, and actionable
 - Answer in the same language the user writes (Thai or English)
-- Reference their actual skills and career match when giving advice
+- Reference their actual skills, activities, and career match when giving advice
 - Keep responses concise (3-5 sentences unless detail is needed)
 - Use bullet points for lists`
 }

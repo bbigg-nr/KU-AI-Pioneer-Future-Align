@@ -12,6 +12,7 @@ export interface Student {
   skills: SkillItem[]
   languages: SkillItem[]
   target_career: string
+  activities?: string
 }
 
 export interface JobMatch {
