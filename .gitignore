@@ -1,0 +1,21 @@
+# Archives
+*.zip
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+
+# Databases — committed to repo so Docker image can COPY without rebuilding
+# chroma_db/
+
+# Data
+# data/  # Keep if you want to track data, but usually better to ignore large CSVs
