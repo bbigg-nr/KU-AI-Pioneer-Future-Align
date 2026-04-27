@@ -18,6 +18,12 @@ RUN pip install --no-cache-dir \
 # Pre-download SBERT model so container starts fast (no HF download at runtime)
 RUN python -c "from sentence_transformers import SentenceTransformer; SentenceTransformer('paraphrase-multilingual-MiniLM-L12-v2')"
 
+# Copy data files and indexing script, then regenerate ChromaDB
+# This ensures the database is built with the installed chromadb version
+COPY data/ data/
+COPY index_jobs.py .
+RUN python index_jobs.py
+
 # ── Runtime stage: slim image without build-essential ──
 FROM python:3.11-slim
 
@@ -31,8 +37,8 @@ COPY --from=builder /root/.cache/huggingface /root/.cache/huggingface
 # Copy application code
 COPY main.py matcher.py ./
 
-# Copy pre-built vector DB and CSV data
-COPY chroma_db/ chroma_db/
+# Copy freshly-built ChromaDB database from builder (not the stale repo version)
+COPY --from=builder /app/chroma_db/ chroma_db/
 COPY data/ data/
 
 EXPOSE 8080
