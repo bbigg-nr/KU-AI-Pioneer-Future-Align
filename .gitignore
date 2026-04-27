@@ -19,3 +19,6 @@ ENV/
 
 # Data
 # data/  # Keep if you want to track data, but usually better to ignore large CSVs
+evaluate_kpi.py
+
+.gitignore
