@@ -4,47 +4,71 @@ import { useEffect, useState } from 'react'
 import { useAuth } from '@/context/AuthContext'
 import { api } from '@/lib/api'
 import { storage } from '@/lib/storage'
-import type { JobMatch, ArchetypeMatch } from '@/lib/types'
+import type { ArchetypeMatch, JobMatch } from '@/lib/types'
 import MatchCard from '@/components/dashboard/MatchCard'
 import MatchDetailPanel from '@/components/dashboard/MatchDetailPanel'
 import { Button } from '@/components/ui/button'
-import { RefreshCw, Loader2, Target, Sparkles } from 'lucide-react'
+import { RefreshCw, Loader2, Target, Sparkles, Plus, Trash2 } from 'lucide-react'
 
-type AnyMatch = JobMatch | ArchetypeMatch
+/** Dedup by job_title — keep best final_score per title, sorted desc */
+function dedupByTitle(jobs: JobMatch[]): JobMatch[] {
+  const map = new Map<string, JobMatch>()
+  for (const job of jobs) {
+    const cur = map.get(job.job_title)
+    const score = (j: JobMatch) => j.final_score ?? j.match_score
+    if (!cur || score(job) > score(cur)) map.set(job.job_title, job)
+  }
+  return Array.from(map.values()).sort(
+    (a, b) => (b.final_score ?? b.match_score) - (a.final_score ?? a.match_score)
+  )
+}
 
 export default function CareerMatchesPage() {
   const { studentId } = useAuth()
-  const [yourTargets, setYourTargets] = useState<JobMatch[]>([])
-  const [aiDiscovery, setAiDiscovery] = useState<ArchetypeMatch[]>([])
-  const [activeMatch, setActiveMatch] = useState<AnyMatch | null>(null)
-  const [savedTargets, setSavedTargets] = useState<string[]>([])
+  const [blendedJobs, setBlendedJobs] = useState<JobMatch[]>([])
+  const [archetypeMap, setArchetypeMap] = useState<Map<string, ArchetypeMatch[]>>(new Map())
+  const [activeMatch, setActiveMatch] = useState<JobMatch | null>(null)
+  const [savedTitles, setSavedTitles] = useState<string[]>([])
   const [loading, setLoading] = useState(true)
+
+  const refreshSaved = () => setSavedTitles(storage.getTargets())
 
   const load = () => {
     if (!studentId) return
     setLoading(true)
+    refreshSaved()
     Promise.all([
-      api.matchStudent(studentId, 5),
-      api.matchStudentArchetype(studentId, 5),
+      api.matchStudentBlended(studentId, 20),
+      api.matchStudentArchetype(studentId, 20),
     ])
-      .then(([standard, archetype]) => {
-        setYourTargets((standard as any).top_jobs ?? [])
-        setAiDiscovery((archetype as any).top_archetypes ?? [])
+      .then(([blended, archetype]) => {
+        setBlendedJobs(dedupByTitle((blended as any).top_jobs ?? []))
+
+        // Build archetype map: job_title → ArchetypeMatch[]
+        const aMap = new Map<string, ArchetypeMatch[]>()
+        for (const arch of (archetype as any).top_archetypes ?? [] as ArchetypeMatch[]) {
+          const list = aMap.get(arch.job_title) ?? []
+          list.push(arch)
+          aMap.set(arch.job_title, list)
+        }
+        setArchetypeMap(aMap)
       })
       .finally(() => setLoading(false))
-    setSavedTargets(storage.getTargets())
   }
 
   useEffect(() => { load() }, [studentId])
 
-  const toggleTarget = (title: string) => {
+  const toggleSaved = (title: string) => {
     if (storage.isTarget(title)) {
       storage.removeTarget(title)
     } else {
       storage.addTarget(title)
     }
-    setSavedTargets(storage.getTargets())
+    refreshSaved()
   }
+
+  const savedJobs = blendedJobs.filter(j => savedTitles.includes(j.job_title))
+  const discoveryJobs = blendedJobs.filter(j => !savedTitles.includes(j.job_title)).slice(0, 10)
 
   return (
     <div>
@@ -65,28 +89,81 @@ export default function CareerMatchesPage() {
         </div>
       ) : (
         <div className="grid grid-cols-2 gap-8">
-          <Column
-            title="Your Target"
-            subtitle="Based on your career interests and goals."
-            icon={<Target size={16} className="text-indigo-500" />}
-            matches={yourTargets}
-            savedTargets={savedTargets}
-            activeMatch={activeMatch}
-            onSelect={setActiveMatch}
-            onToggleTarget={toggleTarget}
-            variant="target"
-          />
-          <Column
-            title="AI Discovery"
-            subtitle="Alternative paths where your skills show high success probability."
-            icon={<Sparkles size={16} className="text-indigo-500" />}
-            matches={aiDiscovery}
-            savedTargets={savedTargets}
-            activeMatch={activeMatch}
-            onSelect={setActiveMatch}
-            onToggleTarget={toggleTarget}
-            variant="discovery"
-          />
+          {/* Left: My Saved Targets */}
+          <div>
+            <div className="mb-4 pb-3 border-b border-l-4 border-l-indigo-500 pl-3">
+              <div className="flex items-center gap-2">
+                <Target size={16} className="text-indigo-500" />
+                <h2 className="font-semibold text-gray-900">My Target Careers</h2>
+              </div>
+              <p className="text-xs text-gray-400 mt-0.5">
+                Careers you&apos;ve added from AI Discovery.
+              </p>
+            </div>
+            <div className="space-y-4">
+              {savedJobs.length === 0 ? (
+                <div className="text-center py-12 text-gray-400 border-2 border-dashed border-gray-200 rounded-2xl">
+                  <Target size={32} className="mx-auto mb-3 opacity-40" />
+                  <p className="text-sm font-medium">No targets yet</p>
+                  <p className="text-xs mt-1">Add careers from AI Discovery →</p>
+                </div>
+              ) : (
+                savedJobs.map((job, i) => (
+                  <div key={job.job_title} className="space-y-2">
+                    <MatchCard
+                      match={job}
+                      variations={archetypeMap.get(job.job_title) ?? []}
+                      index={i}
+                      isActive={activeMatch?.job_title === job.job_title}
+                      isTarget={true}
+                      onClick={() => setActiveMatch(job)}
+                    />
+                    <button
+                      onClick={() => toggleSaved(job.job_title)}
+                      className="w-full py-2 rounded-xl text-xs font-medium transition-colors flex items-center justify-center gap-2 bg-red-50 text-red-500 hover:bg-red-100 border border-red-100"
+                    >
+                      <Trash2 size={12} />
+                      Remove from My List
+                    </button>
+                  </div>
+                ))
+              )}
+            </div>
+          </div>
+
+          {/* Right: AI Discovery */}
+          <div>
+            <div className="mb-4 pb-3 border-b border-l-4 border-l-indigo-500 pl-3">
+              <div className="flex items-center gap-2">
+                <Sparkles size={16} className="text-indigo-500" />
+                <h2 className="font-semibold text-gray-900">AI Discovery</h2>
+              </div>
+              <p className="text-xs text-gray-400 mt-0.5">
+                Alternative paths where your skills show high success probability.
+              </p>
+            </div>
+            <div className="space-y-4">
+              {discoveryJobs.map((job, i) => (
+                <div key={job.job_title} className="space-y-2">
+                  <MatchCard
+                    match={job}
+                    variations={archetypeMap.get(job.job_title) ?? []}
+                    index={i}
+                    isActive={activeMatch?.job_title === job.job_title}
+                    isTarget={false}
+                    onClick={() => setActiveMatch(job)}
+                  />
+                  <button
+                    onClick={() => toggleSaved(job.job_title)}
+                    className="w-full py-2 rounded-xl text-xs font-medium transition-colors flex items-center justify-center gap-2 bg-indigo-50 text-indigo-600 hover:bg-indigo-100 border border-indigo-100"
+                  >
+                    <Plus size={12} />
+                    Add to My List
+                  </button>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       )}
 
@@ -95,64 +172,6 @@ export default function CareerMatchesPage() {
           <MatchDetailPanel match={activeMatch} onClose={() => setActiveMatch(null)} />
         </div>
       )}
-    </div>
-  )
-}
-
-function Column({
-  title, subtitle, icon, matches, savedTargets, activeMatch, onSelect, onToggleTarget, variant,
-}: {
-  title: string
-  subtitle: string
-  icon: React.ReactNode
-  matches: AnyMatch[]
-  savedTargets: string[]
-  activeMatch: AnyMatch | null
-  onSelect: (m: AnyMatch) => void
-  onToggleTarget: (title: string) => void
-  variant: 'target' | 'discovery'
-}) {
-  return (
-    <div>
-      <div className="mb-4 pb-3 border-b border-l-4 border-l-indigo-500 pl-3">
-        <div className="flex items-center gap-2">
-          {icon}
-          <h2 className="font-semibold text-gray-900">{title}</h2>
-        </div>
-        <p className="text-xs text-gray-400 mt-0.5">{subtitle}</p>
-      </div>
-      <div className="space-y-4">
-        {matches.map((m, i) => {
-          const isTarget = savedTargets.includes(m.job_title)
-          return (
-            <div key={m.job_title + i} className="space-y-2">
-              <MatchCard
-                match={m}
-                index={i}
-                isActive={activeMatch === m}
-                isTarget={isTarget}
-                onClick={() => onSelect(m)}
-              />
-              <button
-                onClick={() => onToggleTarget(m.job_title)}
-                className={`w-full py-2 rounded-xl text-xs font-medium transition-colors flex items-center justify-center gap-2 ${
-                  isTarget
-                    ? variant === 'target'
-                      ? 'bg-red-50 text-red-500 hover:bg-red-100 border border-red-100'
-                      : 'bg-green-50 text-green-600 border border-green-100'
-                    : 'bg-indigo-50 text-indigo-600 hover:bg-indigo-100 border border-indigo-100'
-                }`}
-              >
-                {isTarget
-                  ? variant === 'target'
-                    ? '🗑 Remove from Targets'
-                    : '✓ Current Target'
-                  : '🎯 Set as my Target'}
-              </button>
-            </div>
-          )
-        })}
-      </div>
     </div>
   )
 }
