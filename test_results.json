@@ -1,0 +1,36 @@
+[
+  {
+    "test": "health",
+    "status": 200,
+    "data": {
+      "status": "ok",
+      "vectors": 4917,
+      "archetypes": 144,
+      "alumni_profiles": 500
+    }
+  },
+  {
+    "test": "jobs",
+    "status": 200,
+    "tools": [
+      "search_jobs"
+    ],
+    "text": "It seems there was an issue retrieving job listings at the moment. However, I notice that **your student profile hasn't been loaded into this session** — so I don't have access to your skills, major, or student ID right now.\n\nCould you please share a bit about yourself so I can find the best matches for you? Specifically:\n\n- 🎓 **Your major / field of study**\n- 🛠️ **Your key skills** (e.g., Python, Excel, Graphic Design, etc.)\n- 🎯 **Any career interests or target roles?** *(optional but helpful!)"
+  },
+  {
+    "test": "skill_gap",
+    "status": 200,
+    "tools": [
+      "analyze_skill_gap"
+    ],
+    "text": "⚠️ **ไม่พบข้อมูลในระบบ**\n\nขออภัย ระบบไม่พบข้อมูลโปรไฟล์ของคุณ (รหัสนิสิต: **6510405023**) ในฐานข้อมูล\n\n---\n\n### 🔧 สิ่งที่คุณสามารถทำได้:\n\n1. **ตรวจสอบรหัสนิสิต** — กรุณายืนยันว่ารหัสนิสิตถูกต้อง\n2. **ติดต่อเจ้าหน้าที่** — แจ้งปัญหาที่ฝ่ายทะเบียน หรือผู้ดูแลระบบ FutureAlign เพื่อให้ลงทะเบียนโปรไฟล์ของคุณ\n3. **ลองใหม่อีกครั้ง** — หากเพิ่งลงทะเบียน อาจต้องรอระบบอัปเดตข้อมูล\n\n---\n\nหากต้องการความช่วยเหลืออื่น เช่น **ค้นหางาน Software Engineer** หรือ **แนะนำคอร์สเรียน** สามารถแจ้งได้เลยนะครับ! 😊"
+  },
+  {
+    "test": "courses",
+    "status": 200,
+    "tools": [
+      "recommend_courses"
+    ],
+    "text": "Here are the recommended courses to level up your **Python** and **SQL** skills! 🚀\n\n---\n\n### 🐍 Python\n\n| Type | Course |\n|------|--------|\n| 🏫 KU | **01418111** — Introduction to Computer Programming (Python) |\n| 💻 Online | **Python for Everybody Specialization** — Coursera (Univ. of Michigan) |\n| 💻 Online | **Complete Python Bootcamp** — Udemy |\n| 🏆 Cert | **PCAP** – Certified Associate in Python Programming (Python Institute) |\n\n---\n\n### 🗄️ SQL\n\n| Type | Course |\n|------|--------|\n| 🏫 KU | **0"
+  }
+]

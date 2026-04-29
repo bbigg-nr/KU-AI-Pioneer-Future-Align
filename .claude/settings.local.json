@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python -c ' *)",
+      "WebSearch",
+      "Bash(python rag_precision_eval.py --k 3)",
+      "Bash(python3 -c ' *)",
+      "Bash(python3 -c \"from matcher import _level_penalty; print\\('import OK'\\)\")",
+      "Bash(python3 -c \"from matcher import _level_penalty, CORE_SKILLS; print\\('matcher OK,', len\\(CORE_SKILLS\\), 'core skills'\\)\")",
+      "Bash(npx tsc *)"
+    ]
+  }
+}

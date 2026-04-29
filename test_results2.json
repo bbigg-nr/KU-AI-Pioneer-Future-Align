@@ -1,0 +1,36 @@
+[
+  {
+    "test": "health",
+    "status": 200,
+    "data": {
+      "status": "ok",
+      "vectors": 4917,
+      "archetypes": 144,
+      "alumni_profiles": 500
+    }
+  },
+  {
+    "test": "jobs",
+    "status": 200,
+    "tools": [
+      "search_jobs"
+    ],
+    "text": "It seems the job database is currently returning no results — this may be a temporary issue with the job listings database. 😔\n\nHowever, based on your strong profile, here are roles you're well-suited for:\n\n- 📊 **Economic Researcher / Research Analyst** — Your experience at **BOT** and skills in **causal inference & DiD** are a perfect fit\n- 📈 **Data Analyst** — Your **R, time series analysis**, and **SCB EIC internship** make you highly competitive\n- 🏦 **Financial/Economic Analyst** — Your **por"
+  },
+  {
+    "test": "skill_gap",
+    "status": 200,
+    "tools": [
+      "analyze_skill_gap"
+    ],
+    "text": "Here's your Skill Gap Analysis for **Software Engineer**, Student_0000! 📊\n\n---\n\n### ✅ ทักษะที่มีอยู่แล้ว (Matched Skills)\n- R (ggplot2, dplyr, tidyr)\n- Stata\n- Causal Inference (DiD, RDD, IV)\n- Communication\n\n---\n\n### ⚠️ ทักษะที่ต้องพัฒนา (Skills to Improve)\n- **Communication** — ปัจจุบัน Beginner → ต้องการระดับ Intermediate\n\n---\n\n### ❌ ทักษะที่ขาด (Missing Skills)\n- Academic Paper Writing\n- Research Methods in Economics\n- Economic Forecasting\n- Regression Analysis\n- Macro Modeling (DSGE, CGE)\n-"
+  },
+  {
+    "test": "courses",
+    "status": 200,
+    "tools": [
+      "recommend_courses"
+    ],
+    "text": "นี่คือคอร์สแนะนำสำหรับ Python และ SQL ที่เหมาะกับสาย Economist เลย! 🎓\n\n---\n\n### 🐍 Python\n| ประเภท | คอร์ส |\n|--------|-------|\n| 🏫 KU | **01418111** — Introduction to Computer Programming (Python) |\n| 💻 Online | **Python for Everybody Specialization** — Coursera (Univ. of Michigan) |\n| 💻 Online | **Complete Python Bootcamp** — Udemy |\n| 🏆 Cert | **PCAP** — Certified Associate in Python Programming (Python Institute) |\n\n---\n\n### 🗄️ SQL\n| ประเภท | คอร์ส |\n|--------|-------|\n| 🏫 KU | **01418331** —"
+  }
+]

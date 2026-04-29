@@ -1,0 +1,15 @@
+Loading SBERT model...
+Connecting to ChromaDB...
+  4917 vectors ready
+  144 archetypes ready
+  500 alumni profiles ready
+  500 alumni RAG profiles ready
+  WARNING: No predictor model — run index_jobs.py first
+INFO:     127.0.0.1:55310 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55313 - "POST /ai/advisor/chat HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51772 - "POST /ai/advisor/chat HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56903 - "POST /ai/advisor/chat HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51310 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51312 - "POST /ai/advisor/chat HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49252 - "POST /ai/advisor/chat HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55590 - "POST /ai/advisor/chat HTTP/1.1" 200 OK
