@@ -429,40 +429,31 @@ ECON_ACTIVITY_TEMPLATES = [
 
 CPE_CAREERS  = [
     # Core engineering
-    "Software Engineer", "Data Scientist", "AI/ML Engineer",
+    "Software Engineer", "Data Scientist", "ML Engineer", "AI Engineer",
     "Data Engineer", "DevOps / SRE Engineer", "Cloud Architect",
     "Cybersecurity Engineer", "Backend Engineer", "Full-Stack Developer",
     "Embedded Systems Engineer", "Computer Vision Engineer",
-    "NLP Engineer", "Quantitative Developer", "Game Developer",
-    "Product Manager (Technical)", "Robotics Engineer",
+    "Game Developer", "Product Manager (Technical)",
     # Trending 2025-2026
     "MLOps Engineer",
-    "AI Platform Engineer",
-    "Platform Engineer",
     "Security Engineer (AppSec)",
     "Blockchain / Web3 Developer",
-    "AR/VR Developer",
-    "Site Reliability Engineer",
-    "FinTech Software Engineer",
 ]
 
 ECON_CAREERS = [
     # Core finance/econ
     "Quantitative Researcher", "Financial Analyst", "Investment Banker",
-    "Risk Manager", "Policy Analyst", "Data Analyst (Finance)",
+    "Risk Manager", "Data Analyst (Finance)",
     "Portfolio Manager", "Equity Research Analyst", "Economist",
     "Derivatives Trader", "Credit Analyst", "ESG Analyst",
-    "Actuarial Analyst", "Corporate Finance Analyst",
-    "Economic Development Consultant", "Regulatory Economist",
+    "Corporate Finance Analyst",
     # Trending 2025-2026
     "FinTech Product Manager",
     "Crypto / Digital Asset Analyst",
     "Wealth Manager",
     "FP&A Analyst",
     "Compliance Officer (RegTech)",
-    "Supply Chain Economist",
     "Sustainability / ESG Finance Analyst",
-    "Behavioral Economist",
 ]
 
 # ─────────────────────────────────────────────
@@ -511,22 +502,20 @@ def gen_activities(faculty: str, year: int = 4) -> str:
 # careers ที่ต้องการ English สูง (international-facing, global reports, cross-border)
 CAREER_ENG_HIGH = {
     "Investment Banker", "Equity Research Analyst", "Portfolio Manager",
-    "Quantitative Researcher", "AI Platform Engineer", "NLP Engineer",
-    "ESG Analyst", "Economic Development Consultant",
+    "Quantitative Researcher",
+    "ESG Analyst",
     "Sustainability / ESG Finance Analyst", "Crypto / Digital Asset Analyst",
     "Blockchain / Web3 Developer", "Computer Vision Engineer",
-    "Robotics Engineer", "AR/VR Developer",
 }
 # careers ที่ต้องการ English ปานกลาง
 CAREER_ENG_MID = {
-    "Software Engineer", "Data Scientist", "AI/ML Engineer", "Data Engineer",
+    "Software Engineer", "Data Scientist", "ML Engineer", "AI Engineer", "Data Engineer",
     "DevOps / SRE Engineer", "Cloud Architect", "Cybersecurity Engineer",
     "Backend Engineer", "Full-Stack Developer", "MLOps Engineer",
-    "Platform Engineer", "Security Engineer (AppSec)", "Site Reliability Engineer",
-    "FinTech Software Engineer", "Financial Analyst", "Risk Manager",
-    "Policy Analyst", "Economist", "Derivatives Trader", "Credit Analyst",
-    "Data Analyst (Finance)", "Corporate Finance Analyst", "Actuarial Analyst",
-    "Regulatory Economist", "FinTech Product Manager", "Wealth Manager",
+    "Security Engineer (AppSec)", "Financial Analyst", "Risk Manager",
+    "Economist", "Derivatives Trader", "Credit Analyst",
+    "Data Analyst (Finance)", "Corporate Finance Analyst",
+    "FinTech Product Manager", "Wealth Manager",
     "Compliance Officer (RegTech)",
 }
 # careers ที่เหลือ = English Beginner ok
@@ -580,13 +569,21 @@ CAREER_SKILL_MAP = {
         "adjacent": ["R", "Apache Spark", "Tableau", "Communication",
                      "Problem Solving", "dbt (Data Build Tool)", "Airflow"],
     },
-    "AI/ML Engineer": {
+    "ML Engineer": {
         "core": ["Python", "Deep Learning", "TensorFlow", "PyTorch", "Keras",
                  "Machine Learning", "Model Deployment (MLOps)", "Hugging Face Transformers",
                  "Natural Language Processing", "Computer Vision",
                  "Feature Engineering", "Docker"],
         "adjacent": ["Kubernetes", "GCP (BigQuery, GKE)", "AWS (EC2, S3, Lambda)",
                      "LangChain", "Reinforcement Learning", "Problem Solving"],
+    },
+    "AI Engineer": {
+        "core": ["Python", "LLM Fine-tuning", "Prompt Engineering", "LangChain",
+                 "RAG (Retrieval-Augmented Generation)", "Vector Databases (Pinecone/Weaviate)",
+                 "Hugging Face Transformers", "FastAPI", "Docker",
+                 "REST API Design", "Git / Version Control"],
+        "adjacent": ["AWS (EC2, S3, Lambda)", "Node.js", "Redis",
+                     "Technical Writing", "Problem Solving"],
     },
     "Data Engineer": {
         "core": ["Python", "SQL", "Apache Spark", "Apache Kafka", "Airflow",
@@ -651,21 +648,6 @@ CAREER_SKILL_MAP = {
         "adjacent": ["C/C++", "CUDA Programming", "Machine Learning",
                      "Scikit-learn", "Problem Solving"],
     },
-    "NLP Engineer": {
-        "core": ["Python", "Natural Language Processing", "Hugging Face Transformers",
-                 "Deep Learning", "PyTorch", "TensorFlow", "LangChain",
-                 "Machine Learning", "Text Mining", "Feature Engineering"],
-        "adjacent": ["SQL", "Elasticsearch", "Model Deployment (MLOps)",
-                     "Problem Solving", "Research Skills"],
-    },
-    "Quantitative Developer": {
-        "core": ["Python", "C++", "Java", "Scala", "Statistical Modeling",
-                 "Time Series Analysis", "SQL", "Machine Learning",
-                 "Introduction to Computational Finance",
-                 "Parallel and Distributed Computing Systems"],
-        "adjacent": ["R", "MATLAB", "Monte Carlo Simulation",
-                     "Financial Modeling", "Problem Solving"],
-    },
     "Game Developer": {
         "core": ["C++", "C#", "Python", "Unity / Unreal Engine",
                  "Digital Game Production", "Computer Graphics",
@@ -682,16 +664,6 @@ CAREER_SKILL_MAP = {
         "adjacent": ["Python", "Figma (UI/UX)", "Technical Writing",
                      "Financial Modeling", "Problem Solving"],
     },
-    "Robotics Engineer": {
-        "core": ["C++", "Python", "ROS (Robot Operating System)",
-                 "Embedded Systems (Arduino/Raspberry Pi)", "Control Systems",
-                 "Introduction to Robotics", "Mechatronic System and Control",
-                 "Computer Vision", "Real-Time Operating Systems (RTOS)",
-                 "Kinematics & Motion Planning"],
-        "adjacent": ["MATLAB", "FPGA Programming", "Machine Learning",
-                     "Problem Solving"],
-    },
-
     # ── ECON careers ─────────────────────────────────────────────────────────
     "Quantitative Researcher": {
         "core": ["Econometrics", "Stochastic Modeling", "Monte Carlo Simulation",
@@ -729,15 +701,6 @@ CAREER_SKILL_MAP = {
                  "Economics of Financial Risk Management", "Credit Analysis"],
         "adjacent": ["Python (Pandas, NumPy, Statsmodels)", "R (ggplot2, dplyr, tidyr)",
                      "Analytical Thinking", "Attention to Detail"],
-    },
-    "Policy Analyst": {
-        "core": ["Policy Brief Writing", "Cost-Benefit Analysis (CBA)",
-                 "Development Economics", "Regression Analysis",
-                 "Research Design", "Survey Design & Analysis",
-                 "Stata", "National Accounts Analysis",
-                 "Economic Thinking", "Research Methods in Economics"],
-        "adjacent": ["R (ggplot2, dplyr, tidyr)", "Python (Pandas, NumPy, Statsmodels)",
-                     "Communication", "Report Writing", "Stakeholder Management"],
     },
     "Data Analyst (Finance)": {
         "core": ["SQL (Data Querying)", "Python (Pandas, NumPy, Statsmodels)",
@@ -802,16 +765,6 @@ CAREER_SKILL_MAP = {
         "adjacent": ["Bloomberg Terminal", "Survey Design & Analysis",
                      "Communication", "Report Writing", "Cross-cultural Communication"],
     },
-    "Actuarial Analyst": {
-        "core": ["Stochastic Modeling", "Monte Carlo Simulation",
-                 "Probability & Statistics", "Risk Management (VaR, CVaR)",
-                 "Excel (Advanced: Solver, VBA, Power Query)",
-                 "Regression Analysis", "Time Series Forecasting",
-                 "R (ggplot2, dplyr, tidyr)", "MATLAB (Economic Modeling)",
-                 "Mathematical Economics"],
-        "adjacent": ["Python (Pandas, NumPy, Statsmodels)", "Fixed Income Analysis",
-                     "Attention to Detail", "Analytical Thinking"],
-    },
     "Corporate Finance Analyst": {
         "core": ["Financial Modeling", "Capital Budgeting",
                  "Valuation (DCF, Comps)", "Financial Statement Analysis",
@@ -820,24 +773,6 @@ CAREER_SKILL_MAP = {
                  "Investment Analysis", "Negotiation", "Presentation Skills"],
         "adjacent": ["Power BI", "Tableau", "Communication",
                      "Leadership", "Project Management"],
-    },
-    "Economic Development Consultant": {
-        "core": ["Development Economics", "Cost-Benefit Analysis (CBA)",
-                 "Policy Brief Writing", "Survey Design & Analysis",
-                 "Poverty Analysis", "Stata", "Research Methods in Economics",
-                 "Causal Inference (DiD, RDD, IV)", "National Accounts Analysis",
-                 "Economic Development and International Trade"],
-        "adjacent": ["R (ggplot2, dplyr, tidyr)", "Project Management",
-                     "Communication", "Report Writing", "Stakeholder Management"],
-    },
-    "Regulatory Economist": {
-        "core": ["Regulatory Economics", "Industrial Organization Analysis",
-                 "Cost-Benefit Analysis (CBA)", "Game Theory",
-                 "Econometrics", "Policy Brief Writing",
-                 "Stata", "Research Design",
-                 "Economics of Industrial Organization", "Report Writing"],
-        "adjacent": ["R (ggplot2, dplyr, tidyr)", "Academic Paper Writing",
-                     "Communication", "Analytical Thinking", "Stakeholder Management"],
     },
 }
 
@@ -852,24 +787,6 @@ CAREER_SKILL_MAP.update({
                  "Feature Engineering", "dbt (Data Build Tool)", "Prometheus & Grafana"],
         "adjacent": ["TensorFlow", "PyTorch", "Linux System Admin",
                      "Technical Writing", "Problem Solving"],
-    },
-    "AI Platform Engineer": {
-        "core": ["Python", "LangChain", "LLM Fine-tuning", "Vector Databases (Pinecone/Weaviate)",
-                 "Hugging Face Transformers", "Model Deployment (MLOps)",
-                 "Docker", "Kubernetes", "AWS (EC2, S3, Lambda)",
-                 "RAG (Retrieval-Augmented Generation)", "Prompt Engineering",
-                 "CI/CD Pipelines"],
-        "adjacent": ["PyTorch", "Redis", "Technical Writing",
-                     "Communication", "Problem Solving"],
-    },
-    "Platform Engineer": {
-        "core": ["Kubernetes", "Terraform", "CI/CD Pipelines", "Docker",
-                 "GitHub Actions", "Internal Developer Platforms (IDP)",
-                 "AWS (EC2, S3, Lambda)", "GCP (BigQuery, GKE)",
-                 "Linux System Admin", "Bash/Shell Scripting",
-                 "Prometheus & Grafana", "Service Mesh (Istio)"],
-        "adjacent": ["Go", "Python", "Ansible",
-                     "Technical Writing", "Communication"],
     },
     "Security Engineer (AppSec)": {
         "core": ["OWASP Top 10", "SAST / DAST Tools", "Penetration Testing",
@@ -889,33 +806,6 @@ CAREER_SKILL_MAP.update({
         "adjacent": ["Rust", "Zero-Knowledge Proofs (ZKP)",
                      "Node.js", "Agile / Scrum Methodology", "Problem Solving"],
     },
-    "AR/VR Developer": {
-        "core": ["Unity 3D", "Unreal Engine", "C#", "C++",
-                 "WebXR / WebGL", "3D Modeling (Blender)",
-                 "Spatial Computing (Meta Quest / Apple Vision Pro)",
-                 "Shader Programming", "Computer Graphics",
-                 "Digital Image Processing", "Git / Version Control"],
-        "adjacent": ["Python", "OpenCV", "Machine Learning",
-                     "Creativity & Innovation", "Problem Solving"],
-    },
-    "Site Reliability Engineer": {
-        "core": ["SLO / SLA / SLI Design", "Prometheus & Grafana", "Kubernetes",
-                 "Docker", "Linux System Admin", "Python", "Go",
-                 "Bash/Shell Scripting", "Chaos Engineering (Chaos Monkey)",
-                 "Incident Management", "AWS (EC2, S3, Lambda)",
-                 "CI/CD Pipelines"],
-        "adjacent": ["Terraform", "Elasticsearch", "Nginx",
-                     "Technical Writing", "Communication"],
-    },
-    "FinTech Software Engineer": {
-        "core": ["Java", "Python", "Spring Boot", "RESTful APIs",
-                 "SQL", "PostgreSQL", "Docker", "Kubernetes",
-                 "Payment Systems (ISO 20022, SWIFT)", "PCI-DSS Compliance",
-                 "Microservices Architecture", "AWS (EC2, S3, Lambda)"],
-        "adjacent": ["Kafka", "Redis", "Cryptography",
-                     "Agile / Scrum Methodology", "Technical Writing"],
-    },
-
     # ── ECON New ─────────────────────────────────────────────────────────────
     "FinTech Product Manager": {
         "core": ["Product Roadmapping", "Agile / Scrum Methodology",
@@ -968,16 +858,6 @@ CAREER_SKILL_MAP.update({
         "adjacent": ["Python (Pandas, NumPy, Statsmodels)", "Excel (Advanced: Solver, VBA, Power Query)",
                      "Stakeholder Management", "Communication", "Research Skills"],
     },
-    "Supply Chain Economist": {
-        "core": ["Supply Chain Modeling", "Input-Output Analysis",
-                 "Operations Research for Economic Applications",
-                 "Cost-Benefit Analysis (CBA)", "Regression Analysis",
-                 "Python (Pandas, NumPy, Statsmodels)", "Stata",
-                 "Econometrics", "Excel (Advanced: Solver, VBA, Power Query)",
-                 "Survey Design & Analysis", "Data Visualization"],
-        "adjacent": ["Power BI", "Tableau", "R (ggplot2, dplyr, tidyr)",
-                     "Report Writing", "Communication"],
-    },
     "Sustainability / ESG Finance Analyst": {
         "core": ["ESG Reporting Frameworks (GRI, TCFD, ISSB)",
                  "Green Bond / Sustainable Finance Analysis",
@@ -990,16 +870,6 @@ CAREER_SKILL_MAP.update({
         "adjacent": ["Python (Pandas, NumPy, Statsmodels)", "Survey Design & Analysis",
                      "Stakeholder Management", "Communication", "Research Skills"],
     },
-    "Behavioral Economist": {
-        "core": ["Behavioural Economics", "Experimental Economics",
-                 "Survey Design & Analysis", "Causal Inference (DiD, RDD, IV)",
-                 "Regression Analysis", "R (ggplot2, dplyr, tidyr)",
-                 "Stata", "Academic Paper Writing",
-                 "Research Methods in Economics", "Nudge Theory",
-                 "Hypothesis Testing"],
-        "adjacent": ["Python (Pandas, NumPy, Statsmodels)", "Data Visualization",
-                     "Policy Brief Writing", "Communication", "Research Skills"],
-    },
 })
 
 # Career → most relevant activities (index into the activity template lists)
@@ -1007,7 +877,8 @@ CPE_CAREER_ACTIVITY_MAP = {
     # Existing
     "Software Engineer":            [1, 2, 9, 13, 14, 17],
     "Data Scientist":               [2, 9, 13, 16, 7],
-    "AI/ML Engineer":               [2, 8, 9, 13, 16],
+    "ML Engineer":                  [2, 8, 9, 13, 16],
+    "AI Engineer":                  [21, 2, 8, 16, 13],
     "Data Engineer":                [2, 7, 9, 13, 16],
     "DevOps / SRE Engineer":        [9, 10, 13, 16, 4],
     "Cloud Architect":              [9, 10, 13, 16, 4],
@@ -1016,20 +887,12 @@ CPE_CAREER_ACTIVITY_MAP = {
     "Full-Stack Developer":         [0, 1, 4, 13, 17],
     "Embedded Systems Engineer":    [11, 13, 16, 3, 15],
     "Computer Vision Engineer":     [12, 2, 8, 13, 16],
-    "NLP Engineer":                 [12, 2, 8, 13, 16],
-    "Quantitative Developer":       [2, 7, 9, 13, 16],
     "Game Developer":               [19, 13, 16, 17, 4],
     "Product Manager (Technical)":  [0, 15, 13, 4, 17],
-    "Robotics Engineer":            [11, 12, 13, 16, 3],
     # New trending (indices 20-27 = new templates added above)
     "MLOps Engineer":               [20, 2, 8, 13, 16],
-    "AI Platform Engineer":         [21, 2, 8, 16, 13],
-    "Platform Engineer":            [24, 9, 10, 13, 16],
     "Security Engineer (AppSec)":   [25, 5, 13, 4, 16],
     "Blockchain / Web3 Developer":  [22, 18, 13, 16, 4],
-    "AR/VR Developer":              [23, 19, 13, 16, 12],
-    "Site Reliability Engineer":    [27, 9, 10, 13, 16],
-    "FinTech Software Engineer":    [26, 1, 9, 13, 16],
 }
 
 ECON_CAREER_ACTIVITY_MAP = {
@@ -1038,7 +901,6 @@ ECON_CAREER_ACTIVITY_MAP = {
     "Financial Analyst":            [1, 3, 4, 6, 9],
     "Investment Banker":            [6, 3, 4, 9, 19],
     "Risk Manager":                 [1, 11, 6, 3, 9],
-    "Policy Analyst":               [0, 9, 8, 7, 18],
     "Data Analyst (Finance)":       [8, 3, 1, 9, 7],
     "Portfolio Manager":            [4, 1, 6, 3, 19],
     "Equity Research Analyst":      [1, 6, 3, 4, 9],
@@ -1046,20 +908,35 @@ ECON_CAREER_ACTIVITY_MAP = {
     "Derivatives Trader":           [13, 1, 6, 4, 3],
     "Credit Analyst":               [10, 1, 6, 3, 9],
     "ESG Analyst":                  [14, 7, 9, 18, 8],
-    "Actuarial Analyst":            [3, 7, 1, 6, 18],
     "Corporate Finance Analyst":    [5, 6, 1, 4, 9],
-    "Economic Development Consultant": [9, 7, 0, 18, 8],
-    "Regulatory Economist":         [0, 9, 7, 18, 16],
     # New trending (indices 20-27 = new templates added above)
     "FinTech Product Manager":      [19, 20, 8, 9, 1],
     "Crypto / Digital Asset Analyst": [20, 21, 13, 3, 1],
     "Wealth Manager":               [22, 4, 1, 6, 9],
     "FP&A Analyst":                 [23, 5, 1, 8, 9],
     "Compliance Officer (RegTech)": [24, 9, 0, 7, 16],
-    "Supply Chain Economist":       [25, 9, 0, 8, 7],
     "Sustainability / ESG Finance Analyst": [26, 14, 9, 7, 0],
-    "Behavioral Economist":         [27, 18, 7, 0, 9],
 }
+
+# ─────────────────────────────────────────────
+# 4b. LOAD JD SKILL OVERLAY
+#     Adds skills extracted from real JD files by extract_jd_skills.py.
+#     Merges into CAREER_SKILL_MAP without replacing existing entries.
+#     Re-run extract_jd_skills.py any time JDs are updated.
+# ─────────────────────────────────────────────
+_JD_OVERLAY_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)) if "__file__" in dir() else ".", "data", "jd_skill_overlay.json")
+if os.path.exists(_JD_OVERLAY_PATH):
+    with open(_JD_OVERLAY_PATH, encoding="utf-8") as _f:
+        _jd_overlay = json.load(_f)
+    for _career, _extra in _jd_overlay.items():
+        if _career in CAREER_SKILL_MAP:
+            CAREER_SKILL_MAP[_career]["core"] = list(dict.fromkeys(
+                CAREER_SKILL_MAP[_career]["core"] + _extra.get("core_skills", [])
+            ))
+            CAREER_SKILL_MAP[_career]["adjacent"] = list(dict.fromkeys(
+                CAREER_SKILL_MAP[_career]["adjacent"] + _extra.get("adjacent_skills", [])
+            ))
+
 
 def _language_skills(career: str) -> list:
     """Return language skill entries to append into skills lists, based on career group."""
@@ -1210,23 +1087,16 @@ CAREER_SALARY_RANGE = {
     "Full-Stack Developer":         (28_000,  65_000),
     "Data Engineer":                (35_000,  80_000),
     "Data Scientist":               (38_000,  85_000),
-    "AI/ML Engineer":               (42_000,  95_000),
-    "NLP Engineer":                 (42_000,  95_000),
+    "ML Engineer":                  (42_000,  95_000),
+    "AI Engineer":                  (45_000, 100_000),
     "Computer Vision Engineer":     (42_000,  95_000),
     "MLOps Engineer":               (40_000,  90_000),
-    "AI Platform Engineer":         (45_000, 100_000),
     "DevOps / SRE Engineer":        (35_000,  80_000),
-    "Site Reliability Engineer":    (38_000,  85_000),
     "Cloud Architect":              (40_000,  90_000),
-    "Platform Engineer":            (38_000,  82_000),
     "Cybersecurity Engineer":       (38_000,  85_000),
     "Security Engineer (AppSec)":   (38_000,  85_000),
     "Embedded Systems Engineer":    (28_000,  65_000),
-    "Robotics Engineer":            (32_000,  72_000),
-    "Quantitative Developer":       (45_000, 105_000),
-    "FinTech Software Engineer":    (38_000,  85_000),
     "Blockchain / Web3 Developer":  (40_000,  92_000),
-    "AR/VR Developer":              (32_000,  75_000),
     "Game Developer":               (25_000,  62_000),
     "Product Manager (Technical)":  (40_000,  90_000),
     # ECON — Finance / Policy  (เงินเดือนงานแรก fresh graduate ตลาดไทย 2025)
@@ -1238,7 +1108,6 @@ CAREER_SALARY_RANGE = {
     "Financial Analyst":            (28_000,  68_000),
     "Risk Manager":                 (35_000,  82_000),
     "Credit Analyst":               (28_000,  65_000),
-    "Actuarial Analyst":            (38_000,  88_000),
     "Data Analyst (Finance)":       (28_000,  68_000),
     "Corporate Finance Analyst":    (32_000,  75_000),
     "Wealth Manager":               (38_000,  88_000),
@@ -1249,11 +1118,6 @@ CAREER_SALARY_RANGE = {
     "FinTech Product Manager":      (38_000,  88_000),
     "Crypto / Digital Asset Analyst": (35_000, 88_000),
     "Economist":                    (30_000,  72_000),
-    "Policy Analyst":               (28_000,  62_000),
-    "Regulatory Economist":         (30_000,  70_000),
-    "Economic Development Consultant": (30_000, 70_000),
-    "Supply Chain Economist":       (28_000,  65_000),
-    "Behavioral Economist":         (28_000,  65_000),
 }
 
 def career_salary(career: str, success_score: int) -> int:
@@ -1269,17 +1133,16 @@ def career_salary(career: str, success_score: int) -> int:
 # careers ที่ต้องการ GPA สูง (competitive entry)
 CAREER_GPA_HIGH = {
     "Investment Banker", "Quantitative Researcher", "Derivatives Trader",
-    "AI Platform Engineer", "Portfolio Manager", "Equity Research Analyst",
-    "Actuarial Analyst", "Blockchain / Web3 Developer", "Computer Vision Engineer",
-    "NLP Engineer", "Quantitative Developer", "Robotics Engineer",
+    "Portfolio Manager", "Equity Research Analyst",
+    "Blockchain / Web3 Developer", "Computer Vision Engineer",
 }
 CAREER_GPA_MID = {
-    "Data Scientist", "AI/ML Engineer", "MLOps Engineer", "Risk Manager",
-    "Cloud Architect", "Cybersecurity Engineer", "Platform Engineer",
-    "Security Engineer (AppSec)", "Site Reliability Engineer",
+    "Data Scientist", "ML Engineer", "AI Engineer", "MLOps Engineer", "Risk Manager",
+    "Cloud Architect", "Cybersecurity Engineer",
+    "Security Engineer (AppSec)",
     "Financial Analyst", "Corporate Finance Analyst", "Wealth Manager",
     "Compliance Officer (RegTech)", "FinTech Product Manager",
-    "Crypto / Digital Asset Analyst", "FinTech Software Engineer",
+    "Crypto / Digital Asset Analyst",
 }
 # remaining careers = GPA ทั่วไป
 
@@ -1437,20 +1300,12 @@ ALL_JOBS = list(set(CPE_CAREERS + ECON_CAREERS))
 market   = []
 for job in ALL_JOBS:
     fac_hint = "Computer Engineering" if job in CPE_CAREERS else "Economics"
-    lo, hi   = CAREER_SALARY_RANGE.get(job, (30_000, 100_000))
     for _ in range(10):
-        # min_salary around lower 40% of range, max around upper 60%-100%
-        min_sal = int(lo + random.uniform(0, 0.4) * (hi - lo))
-        max_sal = int(lo + random.uniform(0.6, 1.0) * (hi - lo))
         market.append({
-            "job_id":           f"JOB_{len(market):04d}",
-            "job_title":        job,
-            "industry":         "Technology" if fac_hint == "Computer Engineering" else "Finance / Policy",
-            "required_skills":      gen_career_skills(job, year=4, entry_level=True),
-            "min_salary":           min(min_sal, max_sal - 5_000),
-            "max_salary":           max_sal,
-            "growth_rate":          f"{random.randint(5, 30)}%",
-            "experience_required":  "0-1 years (Fresh Graduate)",
+            "job_id":          f"JOB_{len(market):04d}",
+            "job_title":       job,
+            "industry":        "Technology" if fac_hint == "Computer Engineering" else "Finance / Policy",
+            "required_skills": gen_career_skills(job, year=4, entry_level=True),
         })
 
 df_market = pd.DataFrame(market).iloc[:500]
@@ -1462,21 +1317,55 @@ df_market = pd.DataFrame(market).iloc[:500]
 out_students = os.getenv("DATA_PATH_STUDENTS", "data/synthetic_student_dataset_500_clean.csv")
 out_alumni   = os.getenv("DATA_PATH_ALUMNI",   "data/alumni_dataset_500.csv")
 out_market   = os.getenv("DATA_PATH_LABOR",    "data/labor_market_dataset_with_salary.csv")
+out_backtest = os.getenv("DATA_PATH_BACKTEST",  "data/backtest_alumni.csv")
 
 df_students.to_csv(out_students, index=False, encoding="utf-8-sig")
 df_alumni.to_csv(  out_alumni,   index=False, encoding="utf-8-sig")
 df_market.to_csv(  out_market,   index=False, encoding="utf-8-sig")
 
-print("Generated 3 datasets successfully!")
+# --- 7b. Backtest holdout set (career-balanced, ไม่ซ้ำกับ alumni_dataset_500) ---
+# สร้าง alumni ใหม่อีก 100 คน (career-stratified) ใช้ seed ต่างออกไปเพื่อ diversity
+random.seed(99)
+np.random.seed(99)
+
+backtest_career_pool = (ALL_CAREERS * (3 + 1))[:100]
+random.shuffle(backtest_career_pool)
+
+backtest = []
+for i, career in enumerate(backtest_career_pool):
+    fac           = "Computer Engineering" if career in CPE_SET else "Economics"
+    success_score = int(np.clip(np.random.normal(80, 8), 60, 99))
+    salary        = career_salary(career, success_score)
+    promo_base    = 5 - int((success_score - 60) / (99 - 60) * 4)
+    years_to_promo = int(np.clip(promo_base + random.randint(-1, 1), 1, 5))
+    gpa_grad      = career_gpa(career)
+
+    backtest.append({
+        "alumni_id":             f"BT_{i:04d}",
+        "faculty":               fac,
+        "first_job_title":       career,
+        "gpa_at_graduation":     gpa_grad,
+        "skills":                gen_career_skills(career, year=4),
+        "activities_in_college": gen_career_activities(career, fac),
+        "key_course_grades":     gen_course_grades(fac, 4),
+        "salary_start":          salary,
+        "years_to_promotion":    years_to_promo,
+        "success_score":         success_score,
+    })
+
+pd.DataFrame(backtest).to_csv(out_backtest, index=False, encoding="utf-8-sig")
+
+print("Generated 4 datasets successfully!")
 print(f"    Students  : {len(df_students)} rows  | columns: {list(df_students.columns)}")
 print(f"    Alumni    : {len(df_alumni)} rows  | columns: {list(df_alumni.columns)}")
 print(f"    Market    : {len(df_market)} rows  | columns: {list(df_market.columns)}")
+print(f"    Backtest  : {len(backtest)} rows   | holdout set (career-balanced, seed=99)")
 
 # --- Quick sanity checks ---
 sample = df_students.sample(1).iloc[0]
-print(f"\n📋  Sample student: {sample['student_id']} | {sample['faculty']} | Year {sample['year']} | GPA {sample['gpa']}")
+print(f"\nSample student: {sample['student_id']} | {sample['faculty']} | Year {sample['year']} | GPA {sample['gpa']}")
 courses = json.loads(sample["key_course_grades"])
-print(f"    Courses enrolled : {len(courses)} (e.g. {courses[0]['course_name']} → {courses[0]['grade']})")
+print(f"    Courses enrolled : {len(courses)} (e.g. {courses[0]['course_name']} -> {courses[0]['grade']})")
 skills  = json.loads(sample["skills"])
 print(f"    Skills           : {len(skills)} (e.g. {skills[0]['name']} [{skills[0]['level']}])")
 print(f"    Target career    : {sample['target_career']}")

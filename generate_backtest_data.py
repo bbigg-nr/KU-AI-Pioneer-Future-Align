@@ -37,7 +37,6 @@ TARGET_JOBS = [
     "Cybersecurity Engineer",
     "Data Scientist",
     "DevOps / SRE Engineer",
-    "FinTech Software Engineer",
     "NLP Engineer",
     "Robotics Engineer",
 ]

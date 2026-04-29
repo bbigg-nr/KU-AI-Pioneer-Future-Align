@@ -6,11 +6,15 @@ interface StatCardProps {
   subtitle: string
   icon: LucideIcon
   iconBg: string
+  onClick?: () => void
 }
 
-export default function StatCard({ title, value, subtitle, icon: Icon, iconBg }: StatCardProps) {
+export default function StatCard({ title, value, subtitle, icon: Icon, iconBg, onClick }: StatCardProps) {
   return (
-    <div className="bg-white rounded-2xl border border-gray-100 p-6 flex items-start justify-between shadow-sm">
+    <div 
+      onClick={onClick}
+      className={`bg-white rounded-2xl border border-gray-100 p-6 flex items-start justify-between shadow-sm transition-all duration-200 ${onClick ? 'cursor-pointer hover:shadow-md hover:border-gray-300 active:scale-[0.98]' : ''}`}
+    >
       <div>
         <p className="text-xs text-gray-400 uppercase tracking-wider font-medium mb-2">{title}</p>
         <p className="text-3xl font-bold text-gray-900">{value}</p>

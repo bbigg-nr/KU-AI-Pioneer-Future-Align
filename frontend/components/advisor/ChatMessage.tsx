@@ -1,6 +1,7 @@
 'use client'
 
-import ReactMarkdown from 'react-markdown'
+import dynamic from 'next/dynamic'
+const ReactMarkdown = dynamic(() => import('react-markdown'), { ssr: false })
 import type { ChatMessage as Msg } from '@/lib/types'
 import { GraduationCap } from 'lucide-react'
 import { cn } from '@/lib/utils'

@@ -5,6 +5,7 @@ import type { JobMatch, ArchetypeMatch } from '@/lib/types'
 import { Badge } from '@/components/ui/badge'
 import { Briefcase, Target, ChevronDown } from 'lucide-react'
 import { cn } from '@/lib/utils'
+import { motion, AnimatePresence } from 'framer-motion'
 
 type AnyMatch = JobMatch | ArchetypeMatch
 
@@ -59,11 +60,18 @@ export default function MatchCard({ match, variations = [], index, isActive, isT
   const industry = isArchetype(match) ? match.industry : 'Technology'
   const totalSkills = (isArchetype(match) ? match.top_skills?.length : match.matched_skills?.length) ?? 0
 
+  const entryDelay = index * 0.07
+
   return (
-    <div className={cn(
-      'bg-white rounded-2xl border transition-all',
-      isActive ? 'border-indigo-400 ring-2 ring-indigo-100 shadow-md' : 'border-gray-100 shadow-sm hover:shadow-md'
-    )}>
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.32, delay: entryDelay, ease: [0.25, 0.46, 0.45, 0.94] }}
+      className={cn(
+        'bg-white rounded-2xl border transition-all',
+        isActive ? 'border-indigo-400 ring-2 ring-indigo-100 shadow-md' : 'border-gray-100 shadow-sm hover:shadow-md'
+      )}
+    >
       <div className="p-5 cursor-pointer" onClick={onClick}>
         <div className="flex items-start justify-between mb-3">
           <div>
@@ -85,8 +93,8 @@ export default function MatchCard({ match, variations = [], index, isActive, isT
         </div>
 
         <div className="space-y-2 mb-3">
-          <ScoreBar label="Skill Match" value={score} color="bg-indigo-500" />
-          <ScoreBar label="Success Probability" value={successScore} color="bg-emerald-500" />
+          <ScoreBar label="Skill Match" value={score} color="bg-indigo-500" delay={entryDelay + 0.15} />
+          <ScoreBar label="Success Probability" value={successScore} color="bg-emerald-500" delay={entryDelay + 0.25} />
         </div>
 
         <div className="flex flex-wrap gap-1 mb-2">
@@ -108,19 +116,31 @@ export default function MatchCard({ match, variations = [], index, isActive, isT
             className="w-full flex items-center justify-between px-5 py-2.5 text-xs text-gray-500 hover:text-indigo-600 hover:bg-gray-50 transition-colors"
           >
             <span>{expanded ? 'Hide' : 'Show'} {variations.length} variation{variations.length > 1 ? 's' : ''}</span>
-            <ChevronDown size={14} className={cn('transition-transform', expanded && 'rotate-180')} />
+            <motion.div animate={{ rotate: expanded ? 180 : 0 }} transition={{ duration: 0.2 }}>
+              <ChevronDown size={14} />
+            </motion.div>
           </button>
 
-          {expanded && (
-            <div className="px-4 pb-4 space-y-2">
-              {variations.map((v, i) => (
-                <VariationRow key={i} match={v} />
-              ))}
-            </div>
-          )}
+          <AnimatePresence>
+            {expanded && (
+              <motion.div
+                initial={{ height: 0, opacity: 0 }}
+                animate={{ height: 'auto', opacity: 1 }}
+                exit={{ height: 0, opacity: 0 }}
+                transition={{ duration: 0.25, ease: 'easeInOut' }}
+                className="overflow-hidden"
+              >
+                <div className="px-4 pb-4 space-y-2">
+                  {variations.map((v, i) => (
+                    <VariationRow key={i} match={v} />
+                  ))}
+                </div>
+              </motion.div>
+            )}
+          </AnimatePresence>
         </div>
       )}
-    </div>
+    </motion.div>
   )
 }
 
@@ -150,7 +170,7 @@ function VariationRow({ match }: { match: AnyMatch }) {
   )
 }
 
-function ScoreBar({ label, value, color }: { label: string; value: number; color: string }) {
+function ScoreBar({ label, value, color, delay = 0 }: { label: string; value: number; color: string; delay?: number }) {
   return (
     <div>
       <div className="flex justify-between text-xs text-gray-500 mb-1">
@@ -158,7 +178,12 @@ function ScoreBar({ label, value, color }: { label: string; value: number; color
         <span className="font-medium text-gray-700">{value}%</span>
       </div>
       <div className="h-1.5 bg-gray-100 rounded-full overflow-hidden">
-        <div className={cn('h-full rounded-full', color)} style={{ width: `${value}%` }} />
+        <motion.div
+          className={cn('h-full rounded-full', color)}
+          initial={{ width: 0 }}
+          animate={{ width: `${value}%` }}
+          transition={{ duration: 0.7, delay, ease: [0.25, 0.46, 0.45, 0.94] }}
+        />
       </div>
     </div>
   )

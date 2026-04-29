@@ -1,5 +1,6 @@
 # Archives
 *.zip
+*.tar.gz
 
 # Python
 __pycache__/
@@ -9,16 +10,33 @@ __pycache__/
 
 # Environments
 .env
+.env.railway
+.env.local
 .venv
 env/
 venv/
 ENV/
 
-# Databases — committed to repo so Docker image can COPY without rebuilding
-# chroma_db/
+# Databases
+chroma_db/
+chroma_db_old/
 
-# Data
-# data/  # Keep if you want to track data, but usually better to ignore large CSVs
-evaluate_kpi.py
+# Node / Frontend
+node_modules/
+.next/
+dist/
+build/
 
-.gitignore
+# Logs
+*.log
+server_err.log
+server_out.log
+
+# IDE & Misc
+.claude
+.vscode/
+scratch/
+
+# Test Artifacts
+test_server*.py
+test_results*.json

@@ -1,0 +1,369 @@
+Investment Banker
+Job Description
+Investment Banker is responsible for related activities including:
+* Initial Public Offering (IPO)
+* Debt financing / Loan financing i.e. bond, Debenture
+* Debt Restructuring
+* Mergers and Acquisition (M&A)
+* Independent Financial Advisory (IFA)
+* Conduct Due Diligence process including gathering, interpreting, and preparing information
+* Coordinate between issuer and external parties (i.e. Auditor, Internal Audit, Legal Advisory)
+* Develop financial model for any related purpose
+* Maintain comprehensive knowledge of related regulatory and legal issues in the financial industry
+Qualifications preferred
+* Bachelor's or Master's degree in Finance & Banking, Accounting, Economics or related field.
+* Experience in IB, M&A, IPO and familiarity with SEC/SET rules
+* Having Financial Advisor (FA) license is a plus.
+* Good command of both spoken and written in English (Chinese is advantage)
+* Proficient in computer skills (MS Office)
+* Having analytical and problem-solving skill, able to work well under pressure and deadline.
+* Good human relations.
+* Willing to travel up country, Oversea in occasional.
+
+
+Financial Analyst
+Job Description
+A. Financial Planning & Analysis (FP&A)
+* Budgeting & Forecasting: Lead or significantly contribute to the development of the annual budget and rolling financial forecasts (P&L, Balance Sheet, and Cash Flow).
+* Financial Modeling: Develop and maintain robust financial models to analyze the viability of new projects, capital expenditures (CapEx), and business initiatives (e.g., ROI, NPV analysis).
+* Performance Analysis: Conduct detailed variance analysis (actuals vs. budget/forecast) and historical trend analysis.
+* Reporting & Insights: Prepare and present comprehensive monthly, quarterly, and annual financial reports to senior management.
+B. Cashflow Management & Control
+* Cash Flow Forecasting: Develop and maintain accurate daily, weekly, and monthly cash flow forecasts.
+* Working Capital Optimization: Actively manage and monitor components of working capital, including Accounts Receivable (A/R) and Accounts Payable (A/P).
+* Treasury Liaison: Coordinate with banking and financial institutions regarding cash management tools, credit facilities, and foreign exchange exposure.
+* Cost Control: Monitor department spending against budget.
+C. Accounting Oversight & Compliance
+* Month/Year-End Support: Assist the accounting team with month-end and year-end closing processes.
+* Internal Controls: Ensure adherence to internal financial controls and company policies.
+* Audit Support: Provide necessary documentation and analysis to internal and external auditors.
+Required Skills and Qualifications
+* Education: Bachelor's degree in Finance, Accounting, or Economics. An MBA or professional certification (e.g., CFA, CPA, or CMA) is highly advantageous.
+* Experience: 3+ years of experience in a progressive financial role, combining Financial Analysis (FP&A) and Cash Management/Treasury functions.
+* Technical Proficiency: Advanced proficiency in Microsoft Excel (pivot tables, complex formulas, financial modeling) is mandatory. Experience with ERP systems (e.g., SAP, Oracle, NetSuite) and Business Intelligence (BI) tools is preferred.
+* Analytical Aptitude: Exceptional analytical skills with a meticulous attention to detail.
+* Communication: Strong presentation and written communication skills.
+
+
+Risk Manager
+Job Description/Responsibilities:
+* Framing and Policy Establishment: Develop and communicate risk management policies throughout the organization.
+* Risk Identification & Assessment.
+* Collaborate with various departments (HR, Legal, IT, Finance) to analyze specific risks.
+* Conduct a root cause analysis when an adverse event occurs.
+* Review contracts and key proposals to assess legal risks.
+* Legal management and regulatory compliance.
+* Develop and implement risk management strategies, frameworks, and policies.
+* Design and develop a comprehensive risk management program.
+* Analyze and evaluate the tech company's risk exposure, including credit, market, operational, regulatory, reputation, cyber, and strategic risks.
+* Prepare and present risk reports and dashboards.
+* Monitor and review risk performance and compliance.
+* Develop and maintain credit risk frameworks, including credit limits, margin loan policies.
+* Enhance credit risk models, tools, proactive monitoring.
+Qualifications
+* Bachelor's degree in computer engineering, finance, business, or a related field
+* At least 5 years of experience in risk management, preferably in the banking industry
+* Strong understanding of risk management principles and practices
+* Excellent analytical and problem-solving skills
+* Strong communication and interpersonal skills
+
+
+Data Analyst (Finance)
+Job Description
+* Analyze collections portfolio performance and provide actionable insights
+* Develop and maintain dashboards and reports to track KPIs
+* Identify trends, risk segments, and behavioral patterns to improve strategies
+* Support strategy design such as segmentation, prioritization, and treatment optimization
+* Collaborate with teams to translate business needs into analytical solutions
+* Perform ad-hoc analysis to support decision-making
+* Ensure data accuracy, integrity, and consistency across reporting systems
+* Automate reporting processes to improve efficiency
+Qualifications
+* Bachelor's degree in Data Analytics, Statistics, Mathematics, or a related field
+* 2-4 years of experience in data analysis (experience in collections, banking, or financial services is a plus)
+* Strong proficiency in SQL and Excel; experience with Python, R, or BI tools (e.g., Power BI, Tableau) is preferred
+* Strong analytical thinking and problem-solving skills
+* Ability to communicate insights clearly to non-technical stakeholders
+
+
+Economist
+Job Description
+Economist is responsible for conducting rigorous economic research and analysis to support strategic decision-making across business, policy, and financial domains, including:
+* Economic Research & Analysis: Design and execute research projects using quantitative and qualitative methods to evaluate market dynamics, pricing behavior, and macroeconomic trends.
+* Econometric Modeling: Build and apply causal inference models (e.g., difference-in-differences, regression discontinuity, instrumental variables) to evaluate policy impacts and business strategies.
+* Data-Driven Insights: Analyze large structured datasets using Python, R, or SQL to extract actionable insights.
+* Strategic Communication: Translate complex economic findings into clear, evidence-based recommendations.
+* Marketplace & Pricing Strategy: Apply microeconomic theory to design pricing mechanisms, market structures, and incentive systems.
+* Cross-functional Collaboration: Work closely with treasury, risk, capital markets, product, and business teams.
+Qualifications
+* Advanced degree in Economics, Finance, or a closely related quantitative discipline strongly preferred.
+* Strong foundation in economics, finance, and data analytics.
+* Proven ability to produce consistent, logically structured, evidence-based analysis under time pressure.
+* Quantitative literacy — comfort with time series data, econometric techniques, and statistical reasoning as tools to support analysis.
+* Strong collaborative instincts and ability to work effectively across research, treasury, risk, capital markets, and business teams.
+* Strong written and verbal communication skills in both Thai and English.
+Qualifications (Senior / Specialist Level)
+* Advanced Degree: A PhD in Economics, or a related field is preferred.
+* Industry Experience: Proven experience in marketplace design, pricing strategy, or economic consulting.
+* Technical Skills:
+  * Econometrics: Expertise in causal inference techniques like difference-in-differences and regression discontinuity.
+  * Structural thinking: Ability to build models predicting market equilibrium and effects of pricing changes.
+  * Technical proficiency: SQL and statistical programming (R, Python) is necessary.
+  * Strategic Communication: Ability to simplify complex economic concepts to partners and influence decisions.
+
+
+Portfolio Manager
+Job Description
+Portfolio Manager is responsible for construction and management of investment portfolios.
+* Portfolio Management: Construct and rebalance investment portfolios across various asset classes (Stocks, Bonds, Mutual Funds, and Alternative Investments).
+* Relationship Management: Build and maintain long-term relationships with clients.
+* Market Analysis: Keep clients updated on market trends, economic shifts, and potential investment opportunities.
+Qualifications preferred
+* Bachelor's or Master's degree in Finance, Banking, Economics, or a related field.
+* Required Licenses: Must hold an Investment Consultant (IC) License (Complex/Plain) and preferably an Investment Planner (IP) License.
+* Professional Certification: Having a CFP or CFA designation is a major advantage.
+* Proven experience in wealth management, private banking, or financial advisory.
+Technical Competencies:
+* Market and Customer Insights: knowledge of customer needs, behaviors and goals, market dynamics, competitor and regulatory landscape.
+* Brand Strategy: knowledge of product lifecycle stages.
+* Portfolio Management: Creates, manages and analyzes the health of a portfolio by using a data-driven approach.
+* Financial Acumen: Understands and apply business and financial knowledge through a data-driven approach.
+Qualifications
+* Bachelor's degree or higher in Accounting / Finance or any related field (GPA > 3.00).
+* Good knowledge of accounting and finance.
+* Knowledge of Financial model in the business.
+* Good knowledge Word, Excel and others.
+
+
+Equity Research Analyst
+Qualification:
+* Master's Degree in Finance, Accounting, Financial Engineering, or any related field
+* At least 3 years of working experience in Debt Capital Markets, Financial Advisory or Credit Analysis
+* Strong knowledge in Financial Modeling, Cash Flow Projection, excellent in presentation and analytical skills
+* Fluent in both written and spoken in English (TOEIC 700 or equivalent)
+* Computer literate in Microsoft Word, Excel and Power Point
+Required Skills:
+* Strong knowledge in financial analysis, investment portfolio management and forecasting.
+* Good systematic thinking and people management
+* Good Communication and presentation skills, including ability to interface with executive management
+
+
+Derivatives Trader
+Qualifications:
+* Master Degree in Finance, Economics, Business Administration or related field
+* Excellent personality, self-motivated and proactive
+* Well organized, team-work oriented and work well under pressure
+* Must be exempt from military service
+Required Skills:
+* Good systematic thinking with strong knowledge in global economic analysis and forecasting
+* High communication, negotiation and presentation skills
+* Fluent in both written and spoken English (TOEIC 700 or equivalent)
+* Computer literate in Microsoft Word, Excel and Power Point
+* Analytical skills, proficiency in financial time series data and market dynamics
+* Familiarity with technical indicators and trading concepts (MA/EMA, RSI, MACD, ATR, volatility, momentum)
+* Experience working with risk and performance metrics (drawdown, Sharpe/Sortino, hit rate)
+* Strong Python skills for research and production use (pandas, numpy; sklearn a plus)
+* Hands-on experience with strategy back testing and performance analysis
+
+
+Credit Analyst
+Qualifications
+* Education: Bachelor's or Master's Degree in Business Administration, Economics, Finance, or a related field.
+* Technical Skills: Strong background in Financial Analysis and SAP (highly preferred).
+* Communication: Excellent command of English (both written and spoken).
+* Master's Degree in Finance, Accounting, Investment, or any related field
+* Experience in credit analyst will be appreciated
+Qualifications:
+* Master's Degree in Finance, Accounting, Investment, or any related field
+* Experience in credit analyst will be appreciated
+Required Skills:
+* Excellent analysis skill and strong knowledge in financial analysis and investment portfolio will be appreciated
+* Good systematic thinking with high communication, negotiation and presentation skills
+* Fluent in both written and spoken in English (TOEIC 650 or equivalent)
+* Computer literate in Microsoft Word, Excel and Power Point
+
+
+ESG Analyst
+Requirements
+* Bachelor's degree in a quantitative or related field (e.g., Analytics, Statistics, Economics, Business)
+* Proficiency in Excel, SQL, and data visualization tools (e.g., Power BI, Tableau, Google Data Studio)
+* Strong attention to detail and ability to work with large datasets accurately
+* Structured thinking and problem-solving ability
+* High level of ownership and reliability in delivering work
+* Growth mindset, with a willingness to learn and develop both technical and business understanding
+Nice to Have
+* Exposure to broadcast/digital audience data, social listening, or media monitoring tools
+* Familiarity with tools such as Python for data analysis or automation
+* Passion for combat sports or the broader sports industry
+
+
+Corporate Finance Analyst
+Qualification:
+* Master's Degree in Finance, Accounting, Financial Engineering, or any related field
+* At least 3 years of working experience in Debt Capital Markets, Financial Advisory or Credit Analysis
+* Strong knowledge in Financial Modeling, Cash Flow Projection, excellent in presentation and analytical skills
+* Fluent in both written and spoken in English (TOEIC 700 or equivalent)
+* Computer literate in Microsoft Word, Excel and Power Point
+Required Skills:
+* Strong knowledge in financial analysis, investment portfolio management and forecasting.
+* Good systematic thinking and people management
+* Good Communication and presentation skills, including ability to interface with executive management
+
+
+FinTech Product Manager
+Job Description
+FinTech Product Manager is responsible for developing and managing innovative financial products, including:
+* Product Strategy & Roadmap: Define the product vision, strategy, and roadmap based on market research and customer needs.
+* End-to-End Product Development: Manage the entire product lifecycle from ideation and design to launch and post-launch optimization.
+* Cross-functional Collaboration: Coordinate between Software Engineers, UX/UI Designers, Marketing, and Operations.
+* Compliance & Risk Integration: Work closely with legal and compliance teams.
+* Data-Driven Insights: Analyze user behavior data and key performance indicators (KPIs).
+* Stakeholder Management: Present product progress and align goals with executive management and external partners.
+Qualifications Preferred
+* Bachelor's or Master's degree in Computer Science, Finance, Business Administration, or a related field.
+* Experience in Agile/Scrum environments and product management tools (e.g., Jira, Trello, or Figma).
+* Deep understanding of FinTech trends such as API integration, Blockchain, Digital Identity (NDID), or Payment Systems.
+* Strong analytical and problem-solving skills, with a focus on User Experience (UX).
+* Good command of spoken and written English.
+* Ability to work well under pressure and manage tight release cycles.
+* Familiarity with financial regulations and Cybersecurity standards is a plus.
+
+
+Crypto / Digital Asset Analyst
+Job Description
+Crypto / Digital Asset Analyst is responsible for evaluating digital assets and blockchain projects, including:
+* Fundamental & Technical Analysis: Research and evaluate blockchain projects, tokens (DeFi, GameFi, Infrastructure), and NFTs using both on-chain and off-chain data.
+* On-chain Data Monitoring: Use analytics tools (e.g., Dune, Nansen, Glassnode) to track wallet movements, liquidity flows, and protocol health.
+* Market Research & Insights: Monitor global macroeconomic trends, regulatory changes, and emerging narratives in the crypto ecosystem.
+* Investment Reports: Prepare comprehensive research reports, whitepaper summaries, and risk assessment models.
+* Tokenomics Evaluation: Analyze token distribution, supply-demand mechanics, and utility.
+* Portfolio Tracking: Assist in managing and rebalancing digital asset portfolios.
+Qualifications Preferred
+* Bachelor's or Master's degree in Finance, Economics, Mathematics, Computer Science, or a related field.
+* Deep passion and understanding of Blockchain technology, Smart Contracts, and Web3 ecosystem.
+* Experience in data analysis; proficiency in SQL, Python, or Excel for financial modeling is a plus.
+* Familiarity with crypto-native tools and platforms (e.g., DEXs, Wallets, Governance forums).
+* Good command of spoken and written English.
+* High level of analytical and critical thinking.
+* Having a CFA designation or specialized crypto certifications (e.g., Certified Bitcoin Professional) is a plus.
+* Willing to keep up with a 24/7 market environment.
+
+
+Wealth Manager
+Job Description
+Wealth Manager is responsible for providing comprehensive financial planning and investment management services to High-Net-Worth Individuals (HNWIs), including:
+* Financial Planning: Develop and implement personalized financial strategies covering investment, retirement, tax planning, and estate planning.
+* Portfolio Management: Construct and rebalance investment portfolios across various asset classes.
+* Relationship Management: Build and maintain long-term relationships with clients.
+* Market Analysis: Keep clients updated on market trends, economic shifts, and potential investment opportunities.
+* Compliance & Ethics: Ensure all financial advice and transactions comply with SEC regulations.
+* Business Development: Acquire new clients and expand the current Assets Under Management (AUM).
+Qualifications Preferred
+* Bachelor's or Master's degree in Finance, Banking, Economics, or a related field.
+* Required Licenses: Must hold an Investment Consultant (IC) License (Complex/Plain) and preferably an Investment Planner (IP) License.
+* Professional Certification: Having a CFP or CFA designation is a major advantage.
+* Proven experience in wealth management, private banking, or financial advisory.
+* Strong interpersonal and communication skills.
+* High level of integrity and professional ethics.
+* Good command of English.
+* Several years of client-facing experience within the private wealth industry
+* Strong knowledge of investment products with a required IC License; CFP certification is strongly preferred
+* Highly analytical, flexible, patient, and willing to learn
+
+
+FP&A Analyst
+Job Description
+FP&A Analyst is responsible for providing strategic financial insights through budgeting, forecasting, and performance analysis to support management decision-making, including:
+* Budgeting & Forecasting: Coordinate the annual budgeting process and develop rolling financial forecasts.
+* Financial Modeling: Build and maintain complex financial models.
+* Variance Analysis: Compare actual financial results against budgets and forecasts.
+* Management Reporting: Prepare monthly, quarterly, and ad-hoc financial reports and presentations.
+* Business Partnering: Work closely with other departments to provide financial guidance.
+* Data Analysis: Analyze large datasets to identify trends, risks, and opportunities.
+Qualifications Preferred
+* Bachelor's or Master's degree in Finance, Accounting, Economics, or a related field.
+* Strong experience in financial analysis, corporate finance, or accounting.
+* Advanced Proficiency in MS Excel: (e.g., Power Query, Pivot Tables, Complex Formulas).
+* Familiarity with ERP systems (such as SAP, Oracle, or Microsoft Dynamics) and BI tools (such as Tableau or Power BI).
+* High level of analytical and problem-solving skills.
+* Ability to translate complex financial data into actionable insights.
+* Good command of spoken and written English.
+* Professional certifications such as CFA, CPA, or FPAC are a significant advantage.
+Qualifications
+* Bachelor's Degree or Higher
+* Strong analytical minded person, flexible, patient and willing to learn
+* Good command in English
+* Computer literate in Microsoft Word, Excel and Power Point
+Skills & Competencies
+* Strong analytical thinking with the ability to translate financial data into business insights
+* Effective communication and presentation skills
+* Ability to manage multiple priorities in a fast-paced environment
+* High attention to detail with strong sense of accountability
+Technical Skills
+* Advanced proficiency in Microsoft Excel (e.g., Pivot Tables, formulas, financial analysis)
+* Experience with ERP systems such as SAP is an advantage
+* Knowledge of BI tools such as Power BI, Tableau, or Looker Studio is a plus
+
+
+Compliance Officer (RegTech)
+Job Description
+Compliance Officer (RegTech) is responsible for ensuring the organization adheres to financial laws and regulations by leveraging automated technology, including:
+* Compliance Automation: Implement and manage RegTech tools to automate compliance processes such as KYC/AML (Anti-Money Laundering), transaction monitoring, and regulatory reporting.
+* Regulatory Monitoring: Stay updated on changing financial regulations (e.g., BOT, SEC, AMLO).
+* Risk Assessment: Identify and assess compliance risks.
+* Audit & Reporting: Prepare and submit regulatory reports to authorities.
+* Data Privacy (PDPA): Oversee and ensure that data handling practices comply with the Personal Data Protection Act.
+* Cross-functional Liaison: Work between the legal team and IT/Product teams.
+Qualifications Preferred
+* Bachelor's or Master's degree in Law, Finance, Information Technology, or a related field.
+* Experience in Compliance, Internal Audit, or Risk Management, preferably within the FinTech or banking industry.
+* Familiarity with RegTech solutions and automated compliance software.
+* Understanding of Data Analytics and the ability to interpret complex datasets.
+* Knowledge of digital assets, payment systems, and cybersecurity frameworks.
+* Professional Certification: Having CAMS (Certified Anti-Money Laundering Specialist), CISA (Certified Information Systems Auditor), or specialized legal certifications is a plus.
+* Excellent analytical, problem-solving, and communication skills.
+* Good command of spoken and written English.
+
+
+Sustainability / ESG Finance Analyst
+Job Description
+Sustainability / ESG Finance Analyst is responsible for integrating Environmental, Social, and Governance (ESG) criteria into financial analysis, including:
+* ESG Research & Scoring: Analyze and rate companies or investment projects based on ESG performance using international frameworks (e.g., GRI, SASB, TCFD).
+* Climate Risk Assessment: Evaluate the financial impact of climate change on investment portfolios.
+* Sustainable Investment Strategies: Support the development of green bonds, social bonds, and ESG-themed funds.
+* Engagement & Stewardship: Coordinate with investee companies to encourage improvement in sustainability disclosure.
+* Regulatory Compliance: Ensure all sustainability reporting complies with evolving ESG regulations.
+* Data Analysis & Reporting: Gather and interpret sustainability data.
+Qualifications Preferred
+* Bachelor's or Master's degree in Finance, Economics, Environmental Science, Sustainability, or a related field.
+* Experience in Financial Analysis or Investment Research with a strong interest in sustainability.
+* In-depth knowledge of Global ESG Frameworks (e.g., GRI, TCFD, ISSB) and United Nations Sustainable Development Goals (SDGs).
+* Proficiency in data analysis and familiarity with ESG data providers (e.g., MSCI, Sustainalytics, Bloomberg ESG).
+* Strong analytical skills with the ability to link ESG factors to financial performance (Valuation).
+* Good command of spoken and written English.
+* Professional Certification: Having CFA Certificate in ESG Investing, SCR (Sustainability and Climate Risk), or CESGA is a major advantage.
+* Passion for driving positive social and environmental impact.
+Role and Responsibilities:
+* Project Management (End-to-End): Plan and track project progress in sustainable finance.
+* Stakeholder Coordination: Coordinate with local and international stakeholders.
+* Proposal & Report Development: Prepare proposals and project reports on sustainable investment, ESG.
+* Research: Research and summarize news, knowledge, policies related to sustainable investment / climate finance.
+Qualifications:
+* Bachelor's or Master's in Economics, Finance
+* 1-2 years of experience in financial analysis, financial planning
+* Experience in project management
+
+
+Quantitative Researcher
+Requirements
+* 2-5+ years experience in trading strategy research, quantitative analysis, or market analytics
+* Strong Python skills for research and production use (pandas, numpy; sklearn a plus)
+* Hands-on experience with strategy back testing and performance analysis
+* Strong understanding of financial time-series behavior and market dynamics
+* Familiarity with technical indicators and trading concepts (MA/EMA, RSI, MACD, ATR, volatility, momentum)
+* Experience working with risk and performance metrics (drawdown, Sharpe/Sortino, hit rate)
+* Ability to write clean, tested, maintainable code (not notebook-only work)
+* Comfortable working in a fast-iteration, results-driven environment
+* Skills: Advanced Degree in Quantitative Finance, Engineering, Statistics, Economics, or related field
+* Programming: Python, R, SQL for quantitative analysis and data analytics
+* Econometrics: expertise in causal inference, time series analysis, statistical modeling
