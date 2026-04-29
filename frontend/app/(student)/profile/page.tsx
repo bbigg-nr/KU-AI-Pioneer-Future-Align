@@ -1,15 +1,16 @@
 'use client'
 
 import { useEffect, useState } from 'react'
+import { useRouter } from 'next/navigation'
 import { useAuth } from '@/context/AuthContext'
 import { api } from '@/lib/api'
-import { storage } from '@/lib/storage'
 import type { Student, SkillItem } from '@/lib/types'
 import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
 import { Button } from '@/components/ui/button'
 import SkillsInput from '@/components/profile/SkillsInput'
 import LanguagesInput from '@/components/profile/LanguagesInput'
+import ExtractFromText from '@/components/profile/ExtractFromText'
 import { User, BookOpen, Wrench, Loader2, CheckCircle2 } from 'lucide-react'
 
 export default function ProfilePage() {
@@ -22,21 +23,76 @@ export default function ProfilePage() {
   const [loading, setLoading] = useState(true)
   const [saved, setSaved] = useState(false)
 
+  const router = useRouter()
+  const [saving, setSaving] = useState(false)
+  const [deleting, setDeleting] = useState(false)
+
   useEffect(() => {
     if (!studentId) return
     api.getStudent(studentId).then(s => {
       setStudent(s)
-      const overrides = storage.getProfileOverrides()
-      setSkills(overrides.skills ?? s.skills)
-      setLanguages(overrides.languages ?? s.languages)
-      setActivities(overrides.activities ?? [])
+      setSkills(s.skills || [])
+      setLanguages(s.languages || [])
+      setActivities(s.activities ? s.activities.split(' | ').filter(Boolean) : [])
     }).finally(() => setLoading(false))
   }, [studentId])
 
-  const handleSave = () => {
-    storage.setProfileOverrides({ skills, languages, activities })
-    setSaved(true)
-    setTimeout(() => setSaved(false), 2500)
+  const handleSave = async () => {
+    if (!studentId) return
+    setSaving(true)
+    try {
+      await api.updateStudent(studentId, {
+        skills,
+        languages,
+        activities: activities.join(' | ')
+      })
+      setSaved(true)
+      setTimeout(() => setSaved(false), 2500)
+    } catch (e) {
+      console.error(e)
+      alert('Failed to save profile')
+    } finally {
+      setSaving(false)
+    }
+  }
+
+  const handleDelete = async () => {
+    if (!studentId) return
+    if (!confirm('Are you sure you want to delete your profile? This cannot be undone.')) return
+    
+    setDeleting(true)
+    try {
+      await api.deleteStudent(studentId)
+      alert('Profile deleted.')
+      router.push('/login')
+    } catch (e) {
+      console.error(e)
+      alert('Failed to delete profile')
+      setDeleting(false)
+    }
+  }
+
+  const handleMergeExtracted = (newSkills: SkillItem[], newActivities: string[]) => {
+    if (newSkills.length > 0) {
+      setSkills(prev => {
+        const merged = [...prev]
+        for (const s of newSkills) {
+          if (!merged.some(e => e.name.toLowerCase() === s.name.toLowerCase())) {
+            merged.push(s)
+          }
+        }
+        return merged
+      })
+    }
+    if (newActivities.length > 0) {
+      setActivities(prev => {
+        const merged = [...prev]
+        for (const a of newActivities) {
+          if (!merged.includes(a)) merged.push(a)
+        }
+        return merged
+      })
+    }
   }
 
   const addActivity = () => {
@@ -84,7 +140,14 @@ export default function ProfilePage() {
         </Section>
 
         <Section title="Skills & Experience" icon={<Wrench size={16} className="text-indigo-500" />}>
-          <SkillsInput skills={skills} onChange={setSkills} />
+          <ExtractFromText
+            existingSkills={skills}
+            existingActivities={activities}
+            onMerge={handleMergeExtracted}
+          />
+          <div className="mt-4">
+            <SkillsInput skills={skills} onChange={setSkills} />
+          </div>
         </Section>
 
         <Section title="Languages" icon={<BookOpen size={16} className="text-indigo-500" />}>
@@ -116,11 +179,21 @@ export default function ProfilePage() {
         </Section>
       </div>
 
-      <div className="flex justify-end mt-8">
+      <div className="flex justify-between items-center mt-8 pt-6 border-t border-gray-200">
+        <Button
+          onClick={handleDelete}
+          disabled={deleting}
+          variant="destructive"
+          className="text-white px-6"
+        >
+          {deleting ? 'Deleting...' : 'Delete Profile'}
+        </Button>
         <Button
           onClick={handleSave}
+          disabled={saving}
           className="bg-indigo-600 hover:bg-indigo-500 text-white px-8"
         >
+          {saving ? <Loader2 className="animate-spin mr-2" size={16} /> : null}
           {saved ? (
             <><CheckCircle2 size={16} className="mr-2" /> Saved!</>
           ) : 'Save Profile'}

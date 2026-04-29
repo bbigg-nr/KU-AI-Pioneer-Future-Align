@@ -1,0 +1,393 @@
+MLOps Engineer
+Responsibilities:
+* Design, develop, and deploy AI and machine learning models
+* Build and maintain scalable AI pipelines and infrastructure
+* Implement NLP, computer vision, and predictive analytics solutions
+* Train, evaluate, optimize, and fine-tune machine learning models
+* Deploy models into production and monitor performance
+* Integrate AI models with APIs, applications, and enterprise systems
+* Ensure model reliability, scalability, and security
+* Work with large datasets and perform data preprocessing and feature engineering
+* Implement MLOps best practices for CI/CD, versioning, and monitoring
+* Document model architectures, workflows, and performance metrics
+
+Qualifications
+* Application Development: Proven ability to build production-ready web apps or APIs using any stack (e.g., Flask, NextJS, ReactJS) combined with GenAI frameworks (LangChain, LlamaIndex).
+* Multi-Agent Experience: Familiarity with frameworks such as LangGraph, N8N or CrewAI is a distinct advantage.
+* Cloud & DevOps: Proficiency in selecting appropriate Cloud Services, along with strong skills in Docker, Kubernetes, and CI/CD.
+* LLMOps & Security: Experience with monitoring tools (e.g., LangSmith, LangFuse) and guardrail implementation (e.g., Guardrails AI).
+* Context Engineering: Strong background in Context Engineering, with practical experience in implementing RAG workflows and the Model Context Protocol (MCP).
+* Mindset: An Early Adopter passionate about leveraging new technologies to drive tangible business impact
+
+Required Qualifications
+* Bachelor's degree in computer science, Engineering, or related field (master's preferred).
+* 5-10 years of experience in MLOps, DevOps, or software engineering.
+* Extensive experience with Kubernetes and container orchestration.
+* Proficiency in Python and Bash scripting.
+* Experience with ML frameworks such as TensorFlow, PyTorch, or Scikit-learn.
+* Familiarity with cloud platforms (AWS, Azure, GCP).
+* Knowledge of CI/CD tools and monitoring systems.
+Preferred Qualifications
+* Experience with Kubeflow, MLflow, or similar platforms.
+* Exposure to data versioning tools like DVC or LakeFS.
+* Understanding of model explainability and compliance frameworks.
+
+
+Software Engineer
+Requirements
+* Bachelor's or master's degree in electrical engineering, Electronics Engineering, Mechatronics Engineering, Control Engineering, Computer Engineering, Software Engineering, or related fields
+* Programming knowledge in Python, C / C#/ C++, MATLAB Simulink, or other related programming
+* Experience in Microcontroller, Arduino, Raspberry Pi, IOT, Embedded would be advantaged
+* Good communication in both writing and speaking English and fluent in Thai
+* Node.js, React.js, GO, JAVA, Spring boot, TypeScript, Flutter, Kotlin
+* Knowledge in AWS or any Cloud platform
+* Experience with source control systems such as Git, SVN, etc.
+* Can work under pressure, strong communication & negotiation skills, self-learning, self-motivated.
+* Experience in Kafka, Redis, API Gateway are beneficial
+* Strong Experience in modern application development by using microservices approach
+Qualifications:
+* Bachelor's degree in Computer Science, Computer Engineering, or related field
+* 3-5 years of professional software development experience.
+* Experience with web, mobile, or backend development — databases, APIs, version control are familiar territory.
+* Can take a feature from requirements to deployment with reasonable independence.
+* Makes pragmatic decisions — knows when "good enough" is the right call and when it isn't.
+* Comfortable working on both legacy and modern codebases.
+* Has worked on a team and understands code review, collaboration, and shared ownership.
+
+
+Data Scientist
+Qualifications:
+* At least 2 years of professional experience in data science or related fields.
+* Holding a bachelor's, master's, or Ph.D. in Computer Science, Engineering, Data Science, Mathematics, or equivalent experience.
+* Strong understanding and hands-on experience in the end-to-end data science process, including data cleaning, model development (machine learning or deep learning), validation, and performance testing.
+* Strong analytical, problem solving, communication and interpersonal skills
+* Strong coding skills and familiarity with relevant programming languages and tools (Python, SQL).
+* Adaptable and eager to learn new tools or technologies as needed.
+* BSc/BA in Computer Science, Engineering or relevant field; graduate degree in Data Science or other quantitative field is preferred
+* Proven experience as a Data Scientist or Data Analyst
+* Experience in data mining
+* Experience using business intelligence tools (e.g. Tableau)
+* Knowledge of SQL and Python
+* Understanding of machine-learning and operations research
+* Analytical mind and business acumen
+* Strong math skills (e.g. statistics)
+* Problem-solving aptitude
+* Excellent communication and presentation skills
+* Working knowledge of message queuing, stream processing, and highly scalable big data data stores
+* Education: Bachelor's or Master's degree in Data Science, Computer Science, Statistics, Mathematics, or a related field.
+* At least 2 years of experience in data science or a related field.
+* Technical Skills:
+  * Proficiency in Python for data analysis and machine learning.
+  * Strong SQL skills for managing and querying large datasets.
+  * Experience with machine learning frameworks (e.g., scikit-learn, TensorFlow, PyTorch).
+  * Knowledge of data visualization tools (e.g., Tableau, Power BI, matplotlib).
+
+
+ML Engineer
+Qualification:
+* Bachelor's degree or higher in Computer Science, AI, or related field
+* 3-5 years of experience in ML / NLP or OCR / Computer Vision
+* Strong Python and experience with relevant frameworks (e.g., OpenAI SDK, LangGraph or Tesseract, PaddleOCR)
+* Experience in LLM / RAG / chatbot or OCR / document processing
+* Familiar with vector databases or document pipelines
+* Experience with FastAPI / backend integration is a plus
+* Experience with cloud platforms (AWS, GCP, Azure) is a plus
+* Strong problem-solving skills and able to work independently
+
+
+AI Engineer
+Technical Skills
+* Proficiency in Python and SQL for data analysis and system support
+* Experience in data analysis, data visualization, and reporting tools (e.g., Power BI, Tableau)
+* Ability to design system workflows, data pipelines, and UI mockups
+* Familiarity with Figma or similar tools for UI/UX design and prototyping
+* Basic understanding of Data Science, Machine Learning, and AI concepts
+What you'll bring
+* Bachelor's degree in artificial intelligence, machine learning, data science, computer science, computer engineering, or a related discipline; a Master's or PhD is an advantage.
+* 4-6 years of hands-on experience in AI or machine-learning development.
+* Demonstrated experience contributing to the design, deployment, and support of AI solutions for commercial use.
+Requirements
+* Excellent problem-solving and analytical skills.
+* Strong communication and collaboration abilities.
+* Ability to write clean, maintainable, and efficient code.
+* Familiarity with software engineering best practices in AI product development.
+* Strong foundation in traditional machine learning, deep learning, and generative adversarial algorithms.
+* Solid understanding of Generative AI and prompt engineering techniques.
+* Experience with LLM orchestration frameworks (LangChain, LangGraph, Crew.ai, OpenAI Agent SDK).
+* Proficient in Python and deep learning frameworks such as PyTorch and TensorFlow.
+* Experience with Docker and Kubernetes for containerization and orchestration.
+* Skilled in using Apache Spark for large-scale data processing is a plus.
+* Hands-on experience with CI/CD workflows for AI and data pipelines.
+Technical Skills
+* Strong Python programming skills with experience in production-grade development practices.
+* Developer mindset with solid understanding of backend development, microservices architecture, and RESTful API design.
+* Experience building automation workflows and data pipelines using Python, ETL processes, Bash scripting, and scheduled jobs.
+* Hands-on experience with cloud platforms (Azure) including Azure AI Services, Azure AI Foundry, and related AI infrastructure.
+* Experience with containerization and orchestration technologies, such as Docker and Kubernetes.
+* Good understanding of Agentic AI architectures, AI Agents, and modern LLM frameworks such as LangChain, LangGraph, and AI SDK.
+* Ability to design and implement AI agents using: Pro-code frameworks (e.g., Agent SDK), Low-code / no-code solutions
+Your Qualifications:
+* Strong Engineering Foundation: Solid programming experience in Python, Java, or similar languages, with strong proficiency in SQL.
+* AI & ML Expertise: A strong background in traditional AI and machine learning, with hands-on experience using Generative AI frameworks.
+* Agentic Frameworks & Architecture: Proven expertise in building self-improving Agentic AI systems using frameworks (e.g., LangGraph, AutoGen, CrewAI).
+* Cloud Experience: Familiarity with cloud computing platforms such as Google Cloud, AWS, or Azure.
+Common Technical Stack
+* Languages: Python, Java, Go, or C++
+* Frameworks: TensorFlow, PyTorch, Hugging Face
+* Tools: MLflow, Airflow, Kubeflow, Docker, Kubernetes, FastAPI
+* Cloud: AWS Sagemaker, Azure ML, VertexAI
+* Others: Git, APIs, REST, CI/CD pipelines
+
+
+Data Engineer
+Must Have
+* Bachelor's degree or higher in Computer Science, Data Engineering, Information Systems, Statistics, or a related field.
+* 3-5 years of hands-on data engineering experience in a production environment.
+* Proficiency in Python for data engineering tasks (pandas, PySpark, boto3) and strong SQL skills.
+* Hands-on experience with a pipeline orchestration framework — Apache Airflow, AWS Glue, Prefect, or equivalent.
+* Experience designing and querying a cloud data warehouse or lakehouse — Amazon Redshift, Snowflake, Databricks, BigQuery, or Delta Lake/Apache Iceberg.
+* Experience with dbt or equivalent SQL transformation frameworks.
+* Working experience on a cloud data platform (AWS, GCP, or Azure).
+Qualifications:
+* Education: Bachelor's degree or higher in Computer Engineering, Computer Science, IT or related fields
+* At least 2+ years of experience in Data Engineering
+* Programming: Strong background in Python, specifically with data manipulation libraries like Pandas.
+* SQL Mastery: Advanced proficiency in SQL (Complex Joins, Window Functions, Query Optimization, and Indexing).
+* Big Data Ecosystem: Proven experience with Apache Spark (PySpark) for distributed data processing.
+* Workflow Orchestration: Hands-on experience building and managing workflows in Apache Airflow.
+* DevOps & Tools: Proficiency with Docker (Dockerfile, Compose) and version control via Git.
+* Operating Systems: Comfortable working in Linux/Unix environments with strong Shell Scripting skills.
+* 2-3 years of experience in Data Engineering or ETL development.
+* Strong experience in SQL (query optimization, stored procedures, complex joins).
+* Hands-on experience with ETL/ELT tools such as Airflow, dbt, Talend, Informatica, SSIS, or custom Python scripts.
+* Experience working with both relational databases (MySQL, PostgreSQL, SQL Server, Oracle) and NoSQL databases (MongoDB, Cassandra, DynamoDB).
+* Familiarity with at least one cloud platform (AWS, GCP, Azure).
+* Knowledge of data modeling, data warehousing, and data governance.
+* Proficiency in Python/Scala/Java for data processing.
+* Familiarity with Git, Docker, and CI/CD pipelines is a plus.
+
+
+DevOps / SRE Engineer
+Requirements
+* Excellent scripting skills (e.g. Python, Bash, Perl)
+* Experienced with building and maintaining large scale, cloud-based container-based platforms (in IaaS and PaaS)
+* Working knowledge of deployment automation solutions (i.e. Terraform, Puppet, Chef, Ansible)
+* Experienced AWS platform (certification is a plus)
+* Experienced with containers and Kubernetes
+* Experienced with continuous integration and related tools such as GitlabCI, Jenkins, Hudson, Maven, Ant, Git, Sonar, etc.
+* Familiar with security automation tools such as static application security testing etc
+* Strong understanding of Agile methodologies
+* Experience as a DevOps or SRE Engineer on a cross-functional agile team preferred
+Qualifications:
+* Bachelor's degree in Computer Science, IT, Engineering, or related fields.
+* 1-3 years of experience in system engineering or IT infrastructure roles.
+* Proficiency in managing Linux-based systems and experience with Windows environments.
+* Hands-on experience with virtualization technologies such as VMware, Docker, or Kubernetes.
+* Experience with CI/CD tools such as Jenkins, GitLab CI/CD, or similar.
+* Familiarity with cloud platforms (AWS, Azure, or Google Cloud) is a plus.
+* Strong understanding of networking principles, including TCP/IP, DNS, and firewalls.
+Key Responsibilities
+* Build and manage infrastructure: Provision and manage cloud infrastructure (Azure or Google Cloud), configure servers, and maintain the systems that support applications.
+* Automate processes: Use scripting and automation tools to streamline build, test, and deployment processes, creating and maintaining CI/CD pipelines.
+* Ensure system reliability: Monitor application and system performance, respond to incidents, and implement tools for logging, alerting, and observability.
+* Implement best practices: Manage infrastructure as code (IaC) and container orchestration (Docker, Kubernetes).
+* Integrate security practices: Address security findings (CVE, VA scan, and penetration test results).
+Required skills
+* Technical skills: Proficiency in programming and scripting languages, CI/CD tools (GitLab CI, Jenkins), containerization (Docker), orchestration (Kubernetes), web servers (IIS, Nginx), cloud platforms (Azure, Google Cloud), and workflow/automation tools.
+* Infrastructure practices: Infrastructure as Code (IaC) and configuration management concepts.
+* Security practices: Application and container security (SAST, DAST, dependency scanning) and risk assessment.
+Key Responsibilities AWS
+* Build and maintain AWS cloud infrastructure to support data platform and product services.
+* Implement infrastructure-as-code and deployment automation (CI/CD).
+* Support data engineering pipelines and ML production environments (Glue, Lambda, Step Functions, Spark).
+* Manage containerized services and orchestration environment (ECS/EKS).
+* Implement monitoring and logging (CloudWatch, SIEM integration, audit trails).
+
+
+Cloud Architect
+Candidate Requirements:
+* Experience architecting/operating/migrate solutions build on virtualized (compute, network and storage) and cloud as Huawei, AWS, Azure, GCP in complex enterprise environments.
+* Experience in presales and working with large enterprise.
+* Comfortable to present and speak with Executives, IT Management, and Developers.
+* Excellent communication skills with an ability to right level conversations.
+* Love to learn new technology with excellent ability to adapt and learn quickly.
+* Familiar with common enterprise services (Security, Directory Services, Virtual Desktop, etc.).
+Core Technical Skills
+* Expertise in Cloud Architecture design (AWS, Azure, GCP, or Huawei) with at least one platform at the Architect level.
+* Enterprise-scale infrastructure design, including Cloud Landing Zones, Multi-Account/Multi-Subscription structures.
+* Secure Network Architecture (VPC, Firewall, Transit Gateway, Zero Trust).
+* IAM Architecture and Key Management.
+* High Availability (HA), Disaster Recovery (DR), and Data Protection.
+* Experience in Application Modernization (Microservices, API-first, Container Orchestration).
+* Expertise in Cloud Governance: Policies, Standards, Tagging, Resource Models, and Workload Classification.
+* Security Architecture: IAM, encryption, vulnerability management, logging, and monitoring.
+* Knowledge of Compliance Frameworks such as ISO 27001, NIST, and PDPA.
+Key Responsibilities:
+* Lead cloud solution design across multi-cloud platforms
+* Create HLD/LLD, landing zones, migration paths
+* Support sales with RFP/RFI, workshops, proposals
+* Provide Oracle Cloud expertise (ADB, HeatWave, OCVS)
+* Ensure architecture compliance (security, PDPA, DR)
+
+
+Cybersecurity Engineer
+Qualifications:
+* Bachelor's or Master's degree in Cybersecurity, Computer Science, or related field.
+* Experience in offensive security, penetration testing, and ethical hacking.
+* Proven leadership experience in managing red teaming and adversarial security programs.
+* Expertise in attack simulation, risk analysis, and security strategy development.
+* Advanced knowledge of network security, malware analysis, exploit development.
+* Hands-on experience with penetration testing frameworks and security automation tools.
+* Strong stakeholder management and executive communication skills.
+* Deep understanding of regulatory frameworks (ISO 27001, PCI-DSS, NIST, GDPR).
+* Preferred certifications: OSWE, OSCP, CISSP, GXPN, or equivalent.
+Cybersecurity Operations
+* Design and implement secure network, server, and application architectures.
+* Manage cybersecurity tools (firewalls, email security gateways, SIEM, endpoint protection).
+* Support identity and access management (Azure Entra ID).
+* Perform vulnerability assessments, penetration testing, and ensure timely remediation.
+* Develop and follow incident response procedures; investigate security incidents.
+* Monitor logs and network traffic to detect and respond to threats.
+* Ensure compliance with frameworks (ISO 27001, NIST, GDPR).
+Qualifications:
+* 1-3 years of experience cybersecurity administration or implementation.
+* 3-5 years of experience in network, system, or infrastructure engineering.
+* Strong understanding of system, network, virtualization, and cloud operations.
+* Basic Knowledge of firewalls, SOC, SIEM, EDR/XDR, vulnerability management, and penetration testing.
+* Microsoft Security (SC-900, SC-200) or Security+ certification is an advantage.
+
+
+Backend Engineer
+Qualifications
+* Bachelor's Degree in Computer Science or equivalent fields
+* Minimum 3 years of experience in Java
+* Experience with software development in related technology stack: SpringBoot, Microservices, SQL Server
+* Good communication skills and be able to work well with others
+Programming Languages required:
+* Java (Spring Boot)
+* C# (.NET)
+Database knowledge:
+* MySQL
+* PostgreSQL
+* MongoDB
+* MS SQL
+* Oracle
+Network knowledge:
+* HTTP / HTTPS
+* RESTful API
+* JSON
+* PKI
+* Workflow
+Tools:
+* Git (Version Control)
+* Figma
+
+
+Full-Stack Developer
+Requirements:
+* Bachelor's degree in a relevant field (Computer Science, Software Engineering, etc.) — fresh graduates are welcome.
+* Strong understanding and/or hands-on experience with TypeScript, React, Next.js, MongoDB, and GraphQL.
+* Basic knowledge of Git, CI/CD, and modern DevOps practices.
+* Passion for continuous learning and staying updated with the latest technologies.
+* Ability to work independently and within a team that embraces rapid change.
+* Strong problem-solving skills and a proactive approach to challenges.
+* Experience in writing tests and documentation to ensure high software quality.
+* Understanding of agile methodologies and Scrum processes.
+Qualifications
+* Strong knowledge in developing Web Application with Node.js (TypeScript)
+* Experience with frameworks and libraries: React, NEXT.JS, Zustand, NestJS, Prisma, Swagger
+* Experience with Build tools and Package Manager: webpack, SWC, npm, yarn
+* Knowledge in Microservices development
+* Experience in designing and developing REST API, WebSocket
+* Experience in designing and using RDBMS, NoSQL (MySQL, Redis)
+* Experience in designing and using Cache
+* Knowledge in Error, Log management and debugging
+* Experience using Git and working in team
+* Knowledge in Docker, Container, Cloud-Native Application
+* Knowledge in Security (OWASP e.g. Injection, Broken Authentication, XSS, CSRF, etc.)
+
+
+Embedded Systems Engineer
+Knowledge/Skills/Competencies
+* Bachelor's Degree in Computer, Electronics, Electrical Engineering or similar field
+* Fresh graduates are welcome to apply
+* Knowledge in at least one programming language (C, C++, VHDL or Verilog), more than one is plus
+* Understanding of circuits and electronics, able to read schematics, electronic component datasheets
+* Knowledge in DSP, EdgeAI, IoT, Motor control or Cloud computing is plus.
+* Experience with version control systems (e.g., Git) and development methodologies
+* Excellent problem-solving, analytical, and critical thinking skills
+* Self-motivated with the capability to drive development efforts to completion
+Who You Are
+* Bachelor's degree or higher in Electrical Engineering, Electronics Engineering, Computer Engineering, or any related field
+* 3+ years of experience in embedded system development and electronics hardware design
+* Strong foundation in coding in low-level C programming for microcontroller
+* Skills in designing PCB through CAD/design tools
+* Proficient in using measurement instruments such as oscilloscopes, logic analyzer
+* Experience in complex firmware and hardware development
+* Knowledge of RFID circuit design and protocols
+* Knowledge of digital IC design, or IC testing/calibration
+
+
+Computer Vision Engineer
+Requirements
+* Currently pursuing a Bachelor's or Master's degree in Computer Science, Software Engineering, Artificial Intelligence, or a related field.
+* Solid software engineering fundamentals: data structures and algorithms, object-oriented design, common design patterns, and coding best practices.
+* Proficient in at least one primary programming language for engineering work; Python is required.
+* Familiar with common engineering tools and workflows: Git, basic Linux, debugging skills; understanding of unit/integration testing, RESTful APIs, and databases (SQL/NoSQL).
+* Some AI/LLM project or internship experience is sufficient, e.g., prompt engineering/function calling, RAG, vector databases, or experience integrating frameworks like LangChain/LangGraph is a plus.
+* Strong ownership, good communication and collaboration skills, and the ability to learn quickly and deliver.
+
+
+Game Developer
+Qualifications:
+* Bachelor's degree in Computer Science, Software Engineering, or related field — fresh graduates are welcome.
+* Strong understanding and/or hands-on experience with TypeScript, React, Next.js, MongoDB, and GraphQL.
+* Basic knowledge of Git, CI/CD, and modern DevOps practices.
+* Passion for continuous learning and staying updated with the latest technologies.
+* Strong problem-solving skills and a proactive approach to challenges.
+* Programming knowledge in JavaScript, Python, Java, C# or other languages
+* Understanding of OOP (Object-Oriented Programming)
+* Understanding of Database (SQL / NoSQL)
+* Understanding of Web Development (HTML, CSS, API)
+* Unity 3D or Unreal Engine experience is a plus
+
+
+Product Manager (Technical)
+Basic Qualifications:
+* Have shipped real products or features — in any environment (startup, scaleup, freelance, side project).
+* Can break down complex problems into clear decisions and priorities.
+* Communicate with clarity, confidence, and empathy across diverse stakeholders.
+* Have strong product sense and attention to detail.
+* Are comfortable working with ambiguity, incomplete information, and shifting priorities.
+* Can influence without authority and build trust across teams.
+What You Bring (Must Have)
+* Proven experience owning or co-owning digital products or major digital initiatives
+* Strong affinity with digital and technology, including hands-on experience working with engineers, data teams, and vendors
+* Ability to translate business problems into product decisions
+* Experience managing and developing small teams (1-2 people), including coaching and capability building
+* Comfort operating with senior stakeholders and making decisions with incomplete information
+
+
+Security Engineer (AppSec)
+Qualifications
+* Education: Bachelor's or Master's degree in Computer Science, IT, Cybersecurity, or a related field.
+* Experience: Fresh graduates or candidates with 0-1 year of IT/security-related experience are welcome. Candidates with a minimum of 5 years in IT security engineering and at least 2 years at a senior/lead level are highly preferred.
+* Technical Knowledge: Basic knowledge of networking fundamentals, operating systems, and information security concepts. Strong, in-depth knowledge and experience leading solution delivery will be prioritized.
+* Certifications: Holding at least one foundational-level security certification (e.g., CompTIA Security+, EC-Council) or vendor/product-specific security credential (e.g., Palo Alto, Fortinet, CheckPoint, F5 Networks, etc.) is a significant advantage.
+* Frameworks/Compliance: Familiarity with compliance frameworks such as ISO/IEC 27001, PCI-DSS, NIST, and applicable regulatory standards.
+* Soft Skills: Good communication, teamwork, and analytical problem-solving skills.
+
+
+Blockchain / Web3 Developer
+Required Qualifications
+* 5 years or more of Java development experience with a solid foundation in computer science.
+* Proficient in multi-threaded programming, familiarity with JVM, understanding of common open-source distributed middleware, caching, message queues, etc., and expertise in MySQL performance tuning.
+* Familiarity with frameworks such as Spring Cloud, and prior experience in designing and stabilizing large-scale distributed, high-concurrency, high-load, and high-availability systems is a plus.
+* Strong logical thinking, excellent problem analysis and solving abilities, and a strong sense of responsibility.
+* Understanding of blockchain technology, with preference given to candidates with related project experience.
+Better To Have
+* Proficiency in Go is a plus.
+* Proven experience as a Web3 Developer.
+* Proficiency in smart contract languages like Solidity.
+* Understanding of algorithms and cryptography.
+* Understanding of DeFi protocols and tokenomics.

@@ -18,38 +18,30 @@ interface SkillRadarData {
 interface SkillRadarProps {
   data: SkillRadarData[]
   title?: string
+  theme?: 'light' | 'dark'
 }
 
-const LEVEL_SCORE: Record<string, number> = {
-  Beginner: 33,
-  Intermediate: 66,
-  Advanced: 100,
-  Native: 100,
-}
-
-export function levelToScore(level: string) {
-  return LEVEL_SCORE[level] ?? 50
-}
-
-export default function SkillRadar({ data, title = 'Skills vs Market Demand' }: SkillRadarProps) {
+export default function SkillRadar({ data, title = 'Skills vs Market Demand', theme = 'light' }: SkillRadarProps) {
+  const isDark = theme === 'dark'
+  
   if (!data.length) {
     return (
-      <div className="bg-white rounded-2xl border border-gray-100 p-6 shadow-sm">
-        <p className="text-sm font-semibold text-gray-700 mb-4">{title}</p>
-        <p className="text-gray-400 text-sm text-center py-8">No skill data available</p>
+      <div className={isDark ? "py-8" : "bg-white rounded-2xl border border-gray-100 p-6 shadow-sm"}>
+        {title && <p className={`text-sm font-semibold mb-4 ${isDark ? 'text-white/80' : 'text-gray-700'}`}>{title}</p>}
+        <p className={`${isDark ? 'text-white/40' : 'text-gray-400'} text-sm text-center py-8`}>No skill data available</p>
       </div>
     )
   }
 
   return (
-    <div className="bg-white rounded-2xl border border-gray-100 p-6 shadow-sm">
-      <p className="text-sm font-semibold text-gray-700 mb-4">{title}</p>
-      <ResponsiveContainer width="100%" height={280}>
-        <RadarChart data={data} margin={{ top: 10, right: 20, bottom: 10, left: 20 }}>
-          <PolarGrid stroke="#e5e7eb" />
+    <div className={isDark ? "" : "bg-white rounded-2xl border border-gray-100 p-6 shadow-sm"}>
+      {title && <p className={`text-sm font-semibold mb-4 ${isDark ? 'text-white/80' : 'text-gray-700'}`}>{title}</p>}
+      <ResponsiveContainer width="100%" height={isDark ? 220 : 280}>
+        <RadarChart cx="50%" cy="50%" outerRadius={isDark ? "60%" : "70%"} data={data} margin={{ top: 10, right: 30, bottom: 10, left: 30 }}>
+          <PolarGrid stroke={isDark ? "#ffffff20" : "#e5e7eb"} />
           <PolarAngleAxis
             dataKey="skill"
-            tick={{ fontSize: 11, fill: '#6b7280' }}
+            tick={{ fontSize: 10, fill: isDark ? '#9ca3af' : '#6b7280' }}
           />
           <Radar
             name="Your Skills"
@@ -69,7 +61,7 @@ export default function SkillRadar({ data, title = 'Skills vs Market Demand' }: 
           <Legend
             iconType="square"
             iconSize={10}
-            wrapperStyle={{ fontSize: 12 }}
+            wrapperStyle={{ fontSize: 11, color: isDark ? '#9ca3af' : '#6b7280' }}
           />
         </RadarChart>
       </ResponsiveContainer>

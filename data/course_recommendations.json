@@ -1,0 +1,1156 @@
+{
+  "metadata": {
+    "version": "1.0",
+    "description": "Skill-to-course mapping for AI Advisor course recommendations",
+    "sources": ["KU Courses", "Online Platforms", "Professional Certifications"]
+  },
+  "courses": {
+    "Python": {
+      "ku": [{"code": "01418111", "title": "Introduction to Computer Programming (Python)", "faculty": "CPE"}],
+      "online": [
+        {"title": "Python for Everybody Specialization", "provider": "Coursera (University of Michigan)", "url": "https://coursera.org/specializations/python", "level": "Beginner"},
+        {"title": "Complete Python Bootcamp", "provider": "Udemy", "url": "https://udemy.com/course/complete-python-bootcamp", "level": "Beginner"}
+      ],
+      "cert": [{"title": "PCAP – Certified Associate in Python Programming", "provider": "Python Institute"}]
+    },
+    "Java": {
+      "ku": [{"code": "01418112", "title": "Fundamental Programming Concepts (Java)", "faculty": "CPE"}],
+      "online": [
+        {"title": "Java Programming and Software Engineering Fundamentals", "provider": "Coursera (Duke University)", "url": "https://coursera.org/specializations/java-programming", "level": "Beginner"}
+      ],
+      "cert": [{"title": "Oracle Certified Associate Java SE", "provider": "Oracle"}]
+    },
+    "JavaScript": {
+      "ku": [{"code": "01418321", "title": "Web Development", "faculty": "CPE"}],
+      "online": [
+        {"title": "The Complete JavaScript Course", "provider": "Udemy", "url": "https://udemy.com/course/the-complete-javascript-course", "level": "Beginner"},
+        {"title": "JavaScript Algorithms and Data Structures", "provider": "freeCodeCamp", "url": "https://freecodecamp.org", "level": "Intermediate"}
+      ],
+      "cert": []
+    },
+    "TypeScript": {
+      "ku": [],
+      "online": [
+        {"title": "Understanding TypeScript", "provider": "Udemy", "url": "https://udemy.com/course/understanding-typescript", "level": "Intermediate"}
+      ],
+      "cert": []
+    },
+    "SQL": {
+      "ku": [{"code": "01418331", "title": "Database Systems", "faculty": "CPE"}],
+      "online": [
+        {"title": "SQL for Data Science", "provider": "Coursera (UC Davis)", "url": "https://coursera.org/learn/sql-for-data-science", "level": "Beginner"},
+        {"title": "The Complete SQL Bootcamp", "provider": "Udemy", "url": "https://udemy.com/course/the-complete-sql-bootcamp", "level": "Beginner"}
+      ],
+      "cert": []
+    },
+    "Go": {
+      "ku": [],
+      "online": [
+        {"title": "Go: The Complete Developer's Guide", "provider": "Udemy", "url": "https://udemy.com/course/go-the-complete-developers-guide", "level": "Intermediate"}
+      ],
+      "cert": []
+    },
+    "C/C++": {
+      "ku": [{"code": "01418113", "title": "Computer Programming", "faculty": "CPE"}],
+      "online": [
+        {"title": "C++ For C Programmers", "provider": "Coursera (UC Santa Cruz)", "url": "https://coursera.org/learn/c-plus-plus-a", "level": "Intermediate"}
+      ],
+      "cert": []
+    },
+    "C#": {
+      "ku": [],
+      "online": [
+        {"title": "C# Programming for Unity Game Development", "provider": "Coursera (University of Colorado)", "url": "https://coursera.org/specializations/programming-unity-game-development", "level": "Beginner"}
+      ],
+      "cert": [{"title": "Microsoft Certified: C# Developer", "provider": "Microsoft"}]
+    },
+    "Machine Learning": {
+      "ku": [{"code": "01418341", "title": "Machine Learning", "faculty": "CPE"}],
+      "online": [
+        {"title": "Machine Learning Specialization", "provider": "Coursera (Stanford / DeepLearning.AI)", "url": "https://coursera.org/specializations/machine-learning-introduction", "level": "Intermediate"},
+        {"title": "Hands-On Machine Learning", "provider": "O'Reilly / Book", "url": "https://www.oreilly.com", "level": "Advanced"}
+      ],
+      "cert": [{"title": "TensorFlow Developer Certificate", "provider": "Google"}]
+    },
+    "Deep Learning": {
+      "ku": [{"code": "01418497", "title": "Neural Networks and Deep Learning", "faculty": "CPE"}],
+      "online": [
+        {"title": "Deep Learning Specialization", "provider": "Coursera (DeepLearning.AI)", "url": "https://coursera.org/specializations/deep-learning", "level": "Intermediate"}
+      ],
+      "cert": [{"title": "Deep Learning Specialization Certificate", "provider": "DeepLearning.AI"}]
+    },
+    "Computer Vision": {
+      "ku": [{"code": "01418496", "title": "Computer Vision", "faculty": "CPE"}],
+      "online": [
+        {"title": "Computer Vision", "provider": "Coursera (University at Buffalo)", "url": "https://coursera.org/specializations/computer-vision", "level": "Advanced"}
+      ],
+      "cert": []
+    },
+    "Natural Language Processing": {
+      "ku": [{"code": "01418495", "title": "Natural Language Processing", "faculty": "CPE"}],
+      "online": [
+        {"title": "Natural Language Processing Specialization", "provider": "Coursera (DeepLearning.AI)", "url": "https://coursera.org/specializations/natural-language-processing", "level": "Intermediate"}
+      ],
+      "cert": []
+    },
+    "Docker": {
+      "ku": [],
+      "online": [
+        {"title": "Docker for the Absolute Beginner", "provider": "Udemy", "url": "https://udemy.com/course/learn-docker", "level": "Beginner"},
+        {"title": "Docker & Kubernetes: The Practical Guide", "provider": "Udemy", "url": "https://udemy.com/course/docker-kubernetes-the-practical-guide", "level": "Intermediate"}
+      ],
+      "cert": [{"title": "Docker Certified Associate", "provider": "Docker"}]
+    },
+    "Kubernetes": {
+      "ku": [],
+      "online": [
+        {"title": "Certified Kubernetes Administrator (CKA)", "provider": "Udemy / Linux Foundation", "url": "https://udemy.com/course/certified-kubernetes-administrator-with-practice-tests", "level": "Advanced"}
+      ],
+      "cert": [{"title": "Certified Kubernetes Administrator (CKA)", "provider": "CNCF / Linux Foundation"}]
+    },
+    "AWS (EC2, S3, Lambda)": {
+      "ku": [],
+      "online": [
+        {"title": "AWS Certified Solutions Architect – Associate", "provider": "Coursera / Udemy", "url": "https://aws.amazon.com/certification/certified-solutions-architect-associate", "level": "Intermediate"}
+      ],
+      "cert": [{"title": "AWS Certified Solutions Architect – Associate", "provider": "Amazon Web Services"}]
+    },
+    "GCP (BigQuery, GKE)": {
+      "ku": [],
+      "online": [
+        {"title": "Google Cloud Professional Data Engineer", "provider": "Coursera (Google Cloud)", "url": "https://coursera.org/professional-certificates/google-cloud-data-engineering", "level": "Advanced"}
+      ],
+      "cert": [{"title": "Professional Data Engineer", "provider": "Google Cloud"}]
+    },
+    "Azure (AKS, Functions)": {
+      "ku": [],
+      "online": [
+        {"title": "Microsoft Azure Fundamentals (AZ-900)", "provider": "Microsoft Learn", "url": "https://learn.microsoft.com/en-us/certifications/azure-fundamentals", "level": "Beginner"}
+      ],
+      "cert": [{"title": "Azure Administrator Associate (AZ-104)", "provider": "Microsoft"}]
+    },
+    "React": {
+      "ku": [],
+      "online": [
+        {"title": "React – The Complete Guide", "provider": "Udemy", "url": "https://udemy.com/course/react-the-complete-guide-incl-redux", "level": "Intermediate"}
+      ],
+      "cert": []
+    },
+    "Vue.js": {
+      "ku": [],
+      "online": [
+        {"title": "Vue.js 3 - The Complete Guide", "provider": "Udemy", "url": "https://udemy.com/course/vuejs-2-the-complete-guide", "level": "Intermediate"}
+      ],
+      "cert": []
+    },
+    "Node.js": {
+      "ku": [{"code": "01418321", "title": "Web Development", "faculty": "CPE"}],
+      "online": [
+        {"title": "Node.js, Express, MongoDB Bootcamp", "provider": "Udemy", "url": "https://udemy.com/course/nodejs-express-mongodb-bootcamp", "level": "Intermediate"}
+      ],
+      "cert": []
+    },
+    "Next.js": {
+      "ku": [],
+      "online": [
+        {"title": "Next.js 14 & React - The Complete Guide", "provider": "Udemy", "url": "https://udemy.com/course/nextjs-react-the-complete-guide", "level": "Intermediate"}
+      ],
+      "cert": []
+    },
+    "Spring Boot": {
+      "ku": [{"code": "01418332", "title": "Software Engineering", "faculty": "CPE"}],
+      "online": [
+        {"title": "Spring & Hibernate for Beginners", "provider": "Udemy", "url": "https://udemy.com/course/spring-hibernate-tutorial", "level": "Intermediate"}
+      ],
+      "cert": []
+    },
+    "FastAPI": {
+      "ku": [],
+      "online": [
+        {"title": "FastAPI - The Complete Course", "provider": "Udemy", "url": "https://udemy.com/course/fastapi-the-complete-course", "level": "Intermediate"}
+      ],
+      "cert": []
+    },
+    "Django": {
+      "ku": [],
+      "online": [
+        {"title": "Python and Django Full Stack Web Developer Bootcamp", "provider": "Udemy", "url": "https://udemy.com/course/python-and-django-full-stack-web-developer-bootcamp", "level": "Intermediate"}
+      ],
+      "cert": []
+    },
+    "Flask": {
+      "ku": [],
+      "online": [
+        {"title": "REST APIs with Flask and Python", "provider": "Udemy", "url": "https://udemy.com/course/rest-api-flask-and-python", "level": "Intermediate"}
+      ],
+      "cert": []
+    },
+    "PostgreSQL": {
+      "ku": [{"code": "01418331", "title": "Database Systems", "faculty": "CPE"}],
+      "online": [
+        {"title": "The Complete SQL and PostgreSQL Course", "provider": "Udemy", "url": "https://udemy.com/course/sql-and-postgresql", "level": "Intermediate"}
+      ],
+      "cert": []
+    },
+    "Redis": {
+      "ku": [],
+      "online": [
+        {"title": "Redis for Developers", "provider": "Udemy", "url": "https://udemy.com/course/redis-for-developers", "level": "Intermediate"}
+      ],
+      "cert": []
+    },
+    "Elasticsearch": {
+      "ku": [],
+      "online": [
+        {"title": "Elasticsearch 8 and the Elastic Stack", "provider": "Udemy", "url": "https://udemy.com/course/elasticsearch-8-and-the-elastic-stack", "level": "Intermediate"}
+      ],
+      "cert": [{"title": "Elastic Certified Engineer", "provider": "Elastic"}]
+    },
+    "Git / Version Control": {
+      "ku": [],
+      "online": [
+        {"title": "Git Complete: The definitive, step-by-step guide to Git", "provider": "Udemy", "url": "https://udemy.com/course/git-complete", "level": "Beginner"}
+      ],
+      "cert": []
+    },
+    "CI/CD Pipelines": {
+      "ku": [],
+      "online": [
+        {"title": "DevOps CI/CD Pipeline with Jenkins", "provider": "Udemy", "url": "https://udemy.com/course/devops-cicd-pipeline-with-jenkins", "level": "Intermediate"}
+      ],
+      "cert": []
+    },
+    "Terraform": {
+      "ku": [],
+      "online": [
+        {"title": "HashiCorp Terraform Associate Certification", "provider": "Udemy", "url": "https://udemy.com/course/terraform-certified", "level": "Intermediate"}
+      ],
+      "cert": [{"title": "HashiCorp Certified: Terraform Associate", "provider": "HashiCorp"}]
+    },
+    "Ansible": {
+      "ku": [],
+      "online": [
+        {"title": "Ansible for the Absolute Beginner", "provider": "Udemy", "url": "https://udemy.com/course/ansible-for-the-absolute-beginner", "level": "Beginner"}
+      ],
+      "cert": []
+    },
+    "Linux System Admin": {
+      "ku": [{"code": "01418341", "title": "Operating Systems", "faculty": "CPE"}],
+      "online": [
+        {"title": "Linux Administration Bootcamp", "provider": "Udemy", "url": "https://udemy.com/course/linux-administration-bootcamp", "level": "Intermediate"}
+      ],
+      "cert": [{"title": "CompTIA Linux+", "provider": "CompTIA"}]
+    },
+    "Bash/Shell Scripting": {
+      "ku": [],
+      "online": [
+        {"title": "B Scripting and Shell Programming", "provider": "Udemy", "url": "https://udemy.com/course/bash-scripting", "level": "Beginner"}
+      ],
+      "cert": []
+    },
+    "Data Visualization": {
+      "ku": [{"code": "01204111", "title": "Statistics for Science", "faculty": "SCI"}],
+      "online": [
+        {"title": "Data Visualization with Tableau Specialization", "provider": "Coursera (UC Davis)", "url": "https://coursera.org/specializations/data-visualization", "level": "Beginner"}
+      ],
+      "cert": []
+    },
+    "Tableau": {
+      "ku": [],
+      "online": [
+        {"title": "Data Visualization with Tableau Specialization", "provider": "Coursera (UC Davis)", "url": "https://coursera.org/specializations/data-visualization", "level": "Beginner"}
+      ],
+      "cert": [{"title": "Tableau Desktop Specialist", "provider": "Tableau"}]
+    },
+    "Power BI": {
+      "ku": [],
+      "online": [
+        {"title": "Microsoft Power BI Desktop for Business Intelligence", "provider": "Udemy", "url": "https://udemy.com/course/microsoft-power-bi-up-running", "level": "Beginner"}
+      ],
+      "cert": [{"title": "PL-300 Microsoft Power BI Data Analyst", "provider": "Microsoft"}]
+    },
+    "Pandas / NumPy": {
+      "ku": [{"code": "01418111", "title": "Introduction to Computer Programming (Python)", "faculty": "CPE"}],
+      "online": [
+        {"title": "Python for Data Science and Machine Learning Bootcamp", "provider": "Udemy", "url": "https://udemy.com/course/python-for-data-science-and-machine-learning-bootcamp", "level": "Intermediate"}
+      ],
+      "cert": []
+    },
+    "Apache Spark": {
+      "ku": [],
+      "online": [
+        {"title": "Apache Spark with Scala", "provider": "Udemy", "url": "https://udemy.com/course/apache-spark-with-scala", "level": "Advanced"}
+      ],
+      "cert": [{"title": "Databricks Data Engineer Associate", "provider": "Databricks"}]
+    },
+    "Apache Kafka": {
+      "ku": [],
+      "online": [
+        {"title": "Apache Kafka Series - Learn Apache Kafka for Beginners", "provider": "Udemy", "url": "https://udemy.com/course/apache-kafka", "level": "Intermediate"}
+      ],
+      "cert": [{"title": "Confluent Certified Developer for Apache Kafka", "provider": "Confluent"}]
+    },
+    "Airflow": {
+      "ku": [],
+      "online": [
+        {"title": "The Complete Apache Airflow Course", "provider": "Udemy", "url": "https://udemy.com/course/the-complete-apache-airflow-course", "level": "Intermediate"}
+      ],
+      "cert": []
+    },
+    "Hadoop": {
+      "ku": [],
+      "online": [
+        {"title": "Big Data Hadoop and Spark Developer", "provider": "Udemy", "url": "https://udemy.com/course/big-data-hadoop-spark", "level": "Intermediate"}
+      ],
+      "cert": [{"title": "Cloudera CCA Data Analyst", "provider": "Cloudera"}]
+    },
+    "dbt (Data Build Tool)": {
+      "ku": [],
+      "online": [
+        {"title": "dbt (Data Build Tool) Bootcamp", "provider": "Udemy", "url": "https://udemy.com/course/dbt-data-build-tool-bootcamp", "level": "Intermediate"}
+      ],
+      "cert": [{"title": "dbt Analytics Engineering Certification", "provider": "dbt Labs"}]
+    },
+    "TensorFlow": {
+      "ku": [],
+      "online": [
+        {"title": "DeepLearning.AI TensorFlow Developer Professional Certificate", "provider": "Coursera (DeepLearning.AI)", "url": "https://coursera.org/professional-certificates/tensorflow-in-practice", "level": "Intermediate"}
+      ],
+      "cert": [{"title": "TensorFlow Developer Certificate", "provider": "Google"}]
+    },
+    "PyTorch": {
+      "ku": [],
+      "online": [
+        {"title": "PyTorch for Deep Learning", "provider": "Udemy", "url": "https://udemy.com/course/pytorch-for-deep-learning", "level": "Intermediate"}
+      ],
+      "cert": []
+    },
+    "Scikit-learn": {
+      "ku": [{"code": "01418341", "title": "Machine Learning", "faculty": "CPE"}],
+      "online": [
+        {"title": "Machine Learning with Scikit-Learn", "provider": "Coursera / DataCamp", "url": "https://coursera.org", "level": "Intermediate"}
+      ],
+      "cert": []
+    },
+    "Hugging Face Transformers": {
+      "ku": [],
+      "online": [
+        {"title": "NLP with Transformers", "provider": "Hugging Face / Book", "url": "https://huggingface.co/course", "level": "Advanced"}
+      ],
+      "cert": []
+    },
+    "LangChain": {
+      "ku": [],
+      "online": [
+        {"title": "LangChain & Vector Databases in Production", "provider": "DeepLearning.AI / Activeloop", "url": "https://deeplearning.ai", "level": "Intermediate"}
+      ],
+      "cert": []
+    },
+    "RAG (Retrieval-Augmented Generation)": {
+      "ku": [],
+      "online": [
+        {"title": "Building RAG Agents with LLMs", "provider": "NVIDIA / DeepLearning.AI", "url": "https://deeplearning.ai", "level": "Advanced"}
+      ],
+      "cert": []
+    },
+    "LLM Fine-tuning": {
+      "ku": [],
+      "online": [
+        {"title": "Fine-Tuning Large Language Models", "provider": "DeepLearning.AI", "url": "https://deeplearning.ai", "level": "Advanced"}
+      ],
+      "cert": []
+    },
+    "Prompt Engineering": {
+      "ku": [],
+      "online": [
+        {"title": "ChatGPT Prompt Engineering for Developers", "provider": "DeepLearning.AI / OpenAI", "url": "https://deeplearning.ai", "level": "Beginner"}
+      ],
+      "cert": []
+    },
+    "Vector Databases (Pinecone/Weaviate)": {
+      "ku": [],
+      "online": [
+        {"title": "Vector Databases: from Embeddings to Applications", "provider": "DeepLearning.AI / Weaviate", "url": "https://deeplearning.ai", "level": "Intermediate"}
+      ],
+      "cert": []
+    },
+    "REST API Design": {
+      "ku": [{"code": "01418321", "title": "Web Development", "faculty": "CPE"}],
+      "online": [
+        {"title": "API and Web Service Introduction", "provider": "Udemy", "url": "https://udemy.com/course/api-and-web-service-introduction", "level": "Beginner"}
+      ],
+      "cert": []
+    },
+    "Microservices Architecture": {
+      "ku": [],
+      "online": [
+        {"title": "Microservices with Node JS and React", "provider": "Udemy", "url": "https://udemy.com/course/microservices-with-node-js-and-react", "level": "Advanced"}
+      ],
+      "cert": []
+    },
+    "Penetration Testing": {
+      "ku": [],
+      "online": [
+        {"title": "Learn Ethical Hacking From Scratch", "provider": "Udemy", "url": "https://udemy.com/course/learn-ethical-hacking-from-scratch", "level": "Beginner"}
+      ],
+      "cert": [{"title": "Certified Ethical Hacker (CEH)", "provider": "EC-Council"}]
+    },
+    "Network Security": {
+      "ku": [{"code": "01418343", "title": "Computer Network", "faculty": "CPE"}],
+      "online": [
+        {"title": "The Complete Cyber Security Course", "provider": "Udemy", "url": "https://udemy.com/course/the-complete-cyber-security-course", "level": "Intermediate"}
+      ],
+      "cert": [{"title": "CompTIA Security+", "provider": "CompTIA"}]
+    },
+    "Cryptography": {
+      "ku": [{"code": "01418344", "title": "Cryptography and Blockchain", "faculty": "CPE"}],
+      "online": [
+        {"title": "Cryptography I", "provider": "Coursera (Stanford)", "url": "https://coursera.org/learn/crypto", "level": "Advanced"}
+      ],
+      "cert": []
+    },
+    "OWASP Top 10": {
+      "ku": [],
+      "online": [
+        {"title": "OWASP Top 10 - Web Security Fundamentals", "provider": "Udemy", "url": "https://udemy.com/course/owasp-top-10-fundamentals", "level": "Beginner"}
+      ],
+      "cert": []
+    },
+    "SIEM Tools": {
+      "ku": [],
+      "online": [
+        {"title": "Splunk Fundamentals", "provider": "Splunk / Coursera", "url": "https://coursera.org", "level": "Intermediate"}
+      ],
+      "cert": [{"title": "Splunk Core Certified Power User", "provider": "Splunk"}]
+    },
+    "TCP/IP Networking": {
+      "ku": [{"code": "01418343", "title": "Computer Network", "faculty": "CPE"}],
+      "online": [
+        {"title": "The Complete Networking Fundamentals Course", "provider": "Udemy", "url": "https://udemy.com/course/complete-networking-fundamentals-course", "level": "Beginner"}
+      ],
+      "cert": [{"title": "Cisco CCNA", "provider": "Cisco"}]
+    },
+    "Nginx": {
+      "ku": [],
+      "online": [
+        {"title": "Nginx Fundamentals", "provider": "Udemy", "url": "https://udemy.com/course/nginx-fundamentals", "level": "Beginner"}
+      ],
+      "cert": []
+    },
+    "Prometheus & Grafana": {
+      "ku": [],
+      "online": [
+        {"title": "Prometheus and Grafana Monitoring", "provider": "Udemy", "url": "https://udemy.com/course/prometheus-and-grafana-monitoring", "level": "Intermediate"}
+      ],
+      "cert": []
+    },
+    "GitHub Actions": {
+      "ku": [],
+      "online": [
+        {"title": "GitHub Actions - The Complete Guide", "provider": "Udemy", "url": "https://udemy.com/course/github-actions-the-complete-guide", "level": "Intermediate"}
+      ],
+      "cert": []
+    },
+    "OpenCV": {
+      "ku": [],
+      "online": [
+        {"title": "Python for Computer Vision with OpenCV and Deep Learning", "provider": "Udemy", "url": "https://udemy.com/course/python-for-computer-vision-with-opencv-and-deep-learning", "level": "Intermediate"}
+      ],
+      "cert": []
+    },
+    "Unity / Unreal Engine": {
+      "ku": [],
+      "online": [
+        {"title": "Complete C# Unity Game Developer 2D", "provider": "Udemy", "url": "https://udemy.com/course/unitycourse", "level": "Beginner"}
+      ],
+      "cert": []
+    },
+    "Computer Graphics": {
+      "ku": [{"code": "01418231", "title": "Computer Graphics", "faculty": "CPE"}],
+      "online": [
+        {"title": "Interactive Computer Graphics", "provider": "Coursera (UTokyo)", "url": "https://coursera.org/learn/interactive-computer-graphics", "level": "Advanced"}
+      ],
+      "cert": []
+    },
+    "Digital Game Production": {
+      "ku": [{"code": "01418232", "title": "Digital Game Production", "faculty": "CPE"}],
+      "online": [
+        {"title": "Game Design and Development Specialization", "provider": "Coursera (Michigan State)", "url": "https://coursera.org/specializations/game-design", "level": "Beginner"}
+      ],
+      "cert": []
+    },
+    "Agile / Scrum Methodology": {
+      "ku": [{"code": "01418332", "title": "Software Engineering", "faculty": "CPE"}],
+      "online": [
+        {"title": "Agile with Atlassian Jira", "provider": "Coursera (Atlassian)", "url": "https://coursera.org/learn/agile-with-atlassian-jira", "level": "Beginner"}
+      ],
+      "cert": [{"title": "Professional Scrum Master I (PSM I)", "provider": "Scrum.org"}]
+    },
+    "Software Engineering": {
+      "ku": [{"code": "01418332", "title": "Software Engineering", "faculty": "CPE"}],
+      "online": [
+        {"title": "Software Engineering: Introduction", "provider": "edX (UBC)", "url": "https://edx.org", "level": "Beginner"}
+      ],
+      "cert": []
+    },
+    "Data Structures & Algorithms": {
+      "ku": [{"code": "01418132", "title": "Data Structures", "faculty": "CPE"}],
+      "online": [
+        {"title": "Data Structures and Algorithms Specialization", "provider": "Coursera (UC San Diego)", "url": "https://coursera.org/specializations/data-structures-algorithms", "level": "Intermediate"}
+      ],
+      "cert": []
+    },
+    "Feature Engineering": {
+      "ku": [{"code": "01418341", "title": "Machine Learning", "faculty": "CPE"}],
+      "online": [
+        {"title": "Feature Engineering for Machine Learning", "provider": "Udemy", "url": "https://udemy.com/course/feature-engineering-for-machine-learning", "level": "Intermediate"}
+      ],
+      "cert": []
+    },
+    "A/B Testing": {
+      "ku": [],
+      "online": [
+        {"title": "A/B Testing for Business Analysts", "provider": "Udemy / DataCamp", "url": "https://udemy.com", "level": "Intermediate"}
+      ],
+      "cert": []
+    },
+    "Statistical Modeling": {
+      "ku": [{"code": "01204111", "title": "Statistics for Science", "faculty": "SCI"}],
+      "online": [
+        {"title": "Statistical Modeling for Data Science", "provider": "Coursera / DataCamp", "url": "https://coursera.org", "level": "Intermediate"}
+      ],
+      "cert": []
+    },
+    "Jupyter Notebook": {
+      "ku": [],
+      "online": [
+        {"title": "Jupyter Notebook for Data Science", "provider": "DataCamp", "url": "https://datacamp.com", "level": "Beginner"}
+      ],
+      "cert": []
+    },
+    "R": {
+      "ku": [],
+      "online": [
+        {"title": "R Programming", "provider": "Coursera (Johns Hopkins)", "url": "https://coursera.org/learn/r-programming", "level": "Beginner"}
+      ],
+      "cert": []
+    },
+    "Scala": {
+      "ku": [],
+      "online": [
+        {"title": "Scala and Spark for Big Data", "provider": "Udemy", "url": "https://udemy.com/course/scala-and-spark-for-big-data", "level": "Intermediate"}
+      ],
+      "cert": []
+    },
+    "Model Deployment (MLOps)": {
+      "ku": [],
+      "online": [
+        {"title": "MLOps Specialization", "provider": "Coursera (DeepLearning.AI)", "url": "https://coursera.org/specializations/machine-learning-engineering-for-production-mlops", "level": "Advanced"}
+      ],
+      "cert": [{"title": "Google Cloud Professional Machine Learning Engineer", "provider": "Google Cloud"}]
+    },
+    "MLflow / Weights & Biases": {
+      "ku": [],
+      "online": [
+        {"title": "MLflow for MLOps", "provider": "Udemy", "url": "https://udemy.com/course/mlflow-for-mlops", "level": "Intermediate"}
+      ],
+      "cert": []
+    },
+    "Reinforcement Learning": {
+      "ku": [],
+      "online": [
+        {"title": "Reinforcement Learning Specialization", "provider": "Coursera (Alberta)", "url": "https://coursera.org/specializations/reinforcement-learning", "level": "Advanced"}
+      ],
+      "cert": []
+    },
+    "Convolutional Neural Networks": {
+      "ku": [{"code": "01418496", "title": "Computer Vision", "faculty": "CPE"}],
+      "online": [
+        {"title": "Convolutional Neural Networks", "provider": "Coursera (DeepLearning.AI)", "url": "https://coursera.org/learn/convolutional-neural-networks", "level": "Advanced"}
+      ],
+      "cert": []
+    },
+    "Digital Image Processing": {
+      "ku": [{"code": "01418496", "title": "Computer Vision", "faculty": "CPE"}],
+      "online": [
+        {"title": "Digital Image Processing", "provider": "Coursera (Northwestern)", "url": "https://coursera.org", "level": "Advanced"}
+      ],
+      "cert": []
+    },
+    "CUDA Programming": {
+      "ku": [],
+      "online": [
+        {"title": "CUDA Programming Masterclass", "provider": "Udemy", "url": "https://udemy.com/course/cuda-programming-masterclass", "level": "Advanced"}
+      ],
+      "cert": [{"title": "NVIDIA DLI Certificate – Fundamentals of Accelerated Computing with CUDA C/C++", "provider": "NVIDIA"}]
+    },
+    "Embedded Systems (Arduino/Raspberry Pi)": {
+      "ku": [{"code": "01418211", "title": "Embedded System", "faculty": "CPE"}],
+      "online": [
+        {"title": "Arduino Step by Step: Getting Started", "provider": "Udemy", "url": "https://udemy.com/course/arduino-step-by-step-getting-started", "level": "Beginner"}
+      ],
+      "cert": []
+    },
+    "Real-Time Operating Systems (RTOS)": {
+      "ku": [],
+      "online": [
+        {"title": "RTOS for Embedded Systems", "provider": "Udemy", "url": "https://udemy.com/course/rtos-for-embedded-systems", "level": "Advanced"}
+      ],
+      "cert": []
+    },
+    "Microcontroller Programming": {
+      "ku": [{"code": "01418211", "title": "Embedded System", "faculty": "CPE"}],
+      "online": [
+        {"title": "Microcontroller Embedded C Programming", "provider": "Udemy", "url": "https://udemy.com/course/microcontroller-embedded-c-programming", "level": "Intermediate"}
+      ],
+      "cert": []
+    },
+    "FPGA Programming": {
+      "ku": [{"code": "01418233", "title": "Digital Systems Design", "faculty": "CPE"}],
+      "online": [
+        {"title": "FPGA Design for Embedded Systems", "provider": "Coursera (Colorado Boulder)", "url": "https://coursera.org/specializations/fpga-design", "level": "Advanced"}
+      ],
+      "cert": []
+    },
+    "IoT Development": {
+      "ku": [],
+      "online": [
+        {"title": "Introduction to the Internet of Things and Embedded Systems", "provider": "Coursera (UC Irvine)", "url": "https://coursera.org/learn/introduction-iot", "level": "Beginner"}
+      ],
+      "cert": []
+    },
+    "Assembly Language": {
+      "ku": [{"code": "01418231", "title": "Computer Organization and Architecture", "faculty": "CPE"}],
+      "online": [
+        {"title": "Assembly Language Programming", "provider": "Udemy", "url": "https://udemy.com/course/assembly-language-programming", "level": "Advanced"}
+      ],
+      "cert": []
+    },
+    "Digital Systems Design": {
+      "ku": [{"code": "01418233", "title": "Digital Systems Design", "faculty": "CPE"}],
+      "online": [
+        {"title": "Digital Systems: From Logic Gates to Processors", "provider": "Coursera (Barcelona)", "url": "https://coursera.org/learn/digital-systems", "level": "Intermediate"}
+      ],
+      "cert": []
+    },
+    "Figma (UI/UX)": {
+      "ku": [],
+      "online": [
+        {"title": "Figma UI UX Design Essentials", "provider": "Udemy", "url": "https://udemy.com/course/figma-ux-ui-design-essentials", "level": "Beginner"}
+      ],
+      "cert": []
+    },
+    "Technical Writing": {
+      "ku": [{"code": "01355101", "title": "English for Science and Technology", "faculty": "KU"}],
+      "online": [
+        {"title": "Technical Writing", "provider": "Coursera (Colorado State)", "url": "https://coursera.org/specializations/technical-writing", "level": "Beginner"}
+      ],
+      "cert": []
+    },
+    "Problem Solving": {
+      "ku": [],
+      "online": [
+        {"title": "Creative Problem Solving", "provider": "Coursera (University of Minnesota)", "url": "https://coursera.org/learn/creative-problem-solving", "level": "Beginner"}
+      ],
+      "cert": []
+    },
+    "Communication": {
+      "ku": [{"code": "01355101", "title": "English for Science and Technology", "faculty": "KU"}],
+      "online": [
+        {"title": "Improving Communication Skills", "provider": "Coursera (University of Pennsylvania)", "url": "https://coursera.org/learn/wharton-communication", "level": "Beginner"}
+      ],
+      "cert": []
+    },
+    "Leadership": {
+      "ku": [],
+      "online": [
+        {"title": "Leadership and Management Specialization", "provider": "Coursera (University of London)", "url": "https://coursera.org/specializations/leadership-management", "level": "Beginner"}
+      ],
+      "cert": []
+    },
+    "Unit Testing": {
+      "ku": [{"code": "01418332", "title": "Software Engineering", "faculty": "CPE"}],
+      "online": [
+        {"title": "Unit Testing for C# Developers", "provider": "Udemy", "url": "https://udemy.com/course/unit-testing-for-c-sharp-developers", "level": "Intermediate"}
+      ],
+      "cert": []
+    },
+    "SAST / DAST Tools": {
+      "ku": [],
+      "online": [
+        {"title": "Application Security Testing (SAST/DAST)", "provider": "Udemy", "url": "https://udemy.com/course/application-security-testing", "level": "Intermediate"}
+      ],
+      "cert": []
+    },
+    "Secure Code Review": {
+      "ku": [],
+      "online": [
+        {"title": "Secure Code Review Fundamentals", "provider": "Udemy", "url": "https://udemy.com/course/secure-code-review", "level": "Intermediate"}
+      ],
+      "cert": []
+    },
+    "Burp Suite": {
+      "ku": [],
+      "online": [
+        {"title": "Web Application Penetration Testing with Burp Suite", "provider": "Udemy", "url": "https://udemy.com/course/web-application-penetration-testing-with-burp-suite", "level": "Intermediate"}
+      ],
+      "cert": [{"title": "Burp Suite Certified Practitioner", "provider": "PortSwigger"}]
+    },
+    "Cloud Security (AWS / GCP)": {
+      "ku": [],
+      "online": [
+        {"title": "AWS Security Specialty", "provider": "Udemy", "url": "https://udemy.com/course/aws-certified-security-specialty", "level": "Advanced"}
+      ],
+      "cert": [{"title": "AWS Certified Security – Specialty", "provider": "Amazon Web Services"}]
+    },
+    "Incident Response": {
+      "ku": [],
+      "online": [
+        {"title": "Incident Response and Digital Forensics", "provider": "Udemy", "url": "https://udemy.com/course/incident-response-and-digital-forensics", "level": "Intermediate"}
+      ],
+      "cert": [{"title": "GCIH (GIAC Certified Incident Handler)", "provider": "GIAC"}]
+    },
+    "Solidity": {
+      "ku": [],
+      "online": [
+        {"title": "Ethereum and Solidity: The Complete Developer's Guide", "provider": "Udemy", "url": "https://udemy.com/course/ethereum-and-solidity-the-complete-developers-guide", "level": "Intermediate"}
+      ],
+      "cert": []
+    },
+    "Ethereum / EVM": {
+      "ku": [],
+      "online": [
+        {"title": "Ethereum Blockchain Developer Bootcamp With Solidity", "provider": "Udemy", "url": "https://udemy.com/course/blockchain-developer", "level": "Intermediate"}
+      ],
+      "cert": []
+    },
+    "Web3.js / Ethers.js": {
+      "ku": [],
+      "online": [
+        {"title": "Learn Web3.js / Ethers.js", "provider": "Udemy", "url": "https://udemy.com/course/learn-web3js", "level": "Intermediate"}
+      ],
+      "cert": []
+    },
+    "Smart Contract Development": {
+      "ku": [],
+      "online": [
+        {"title": "Smart Contract Development with Solidity", "provider": "Coursera / Udemy", "url": "https://coursera.org", "level": "Intermediate"}
+      ],
+      "cert": []
+    },
+    "Hardhat / Foundry": {
+      "ku": [],
+      "online": [
+        {"title": "Hardhat & Ethers.js Smart Contract Development", "provider": "Udemy", "url": "https://udemy.com/course/hardhat-ethersjs", "level": "Intermediate"}
+      ],
+      "cert": []
+    },
+    "DeFi Protocols": {
+      "ku": [],
+      "online": [
+        {"title": "Decentralized Finance (DeFi) Infrastructure", "provider": "Coursera (Wharton)", "url": "https://coursera.org/learn/decentralized-finance-infrastructure", "level": "Intermediate"}
+      ],
+      "cert": []
+    },
+    "IPFS / Decentralized Storage": {
+      "ku": [],
+      "online": [
+        {"title": "IPFS - The Complete Guide", "provider": "Udemy", "url": "https://udemy.com/course/ipfs-complete-guide", "level": "Intermediate"}
+      ],
+      "cert": []
+    },
+    "Rust": {
+      "ku": [],
+      "online": [
+        {"title": "The Rust Programming Language", "provider": "Udemy", "url": "https://udemy.com/course/rust-programming-language", "level": "Intermediate"}
+      ],
+      "cert": []
+    },
+    "Zero-Knowledge Proofs (ZKP)": {
+      "ku": [],
+      "online": [
+        {"title": "Zero Knowledge Proofs", "provider": "Coursera / Berkeley", "url": "https://coursera.org", "level": "Advanced"}
+      ],
+      "cert": []
+    },
+    "Apache Kafka": {
+      "ku": [],
+      "online": [
+        {"title": "Apache Kafka Series - Learn Apache Kafka for Beginners", "provider": "Udemy", "url": "https://udemy.com/course/apache-kafka", "level": "Intermediate"}
+      ],
+      "cert": [{"title": "Confluent Certified Developer for Apache Kafka", "provider": "Confluent"}]
+    },
+    "Excel (Advanced: Solver, VBA, Power Query)": {
+      "ku": [],
+      "online": [
+        {"title": "Microsoft Excel - Excel from Beginner to Advanced", "provider": "Udemy", "url": "https://udemy.com/course/microsoft-excel-excel-from-beginner-to-advanced", "level": "Beginner"},
+        {"title": "Excel VBA Programming", "provider": "Udemy", "url": "https://udemy.com/course/excel-vba-programming", "level": "Advanced"}
+      ],
+      "cert": [{"title": "Microsoft Office Specialist: Excel Expert", "provider": "Microsoft"}]
+    },
+    "Financial Modeling": {
+      "ku": [{"code": "01205341", "title": "Financial Management", "faculty": "ECON"}],
+      "online": [
+        {"title": "Financial Modeling & Valuation Analyst (FMVA)", "provider": "Corporate Finance Institute (CFI)", "url": "https://corporatefinanceinstitute.com", "level": "Intermediate"}
+      ],
+      "cert": [{"title": "FMVA® (Financial Modeling & Valuation Analyst)", "provider": "CFI"}]
+    },
+    "Bloomberg Terminal": {
+      "ku": [],
+      "online": [
+        {"title": "Bloomberg Market Concepts (BMC)", "provider": "Bloomberg", "url": "https://bmc.bloomberg.com", "level": "Beginner"}
+      ],
+      "cert": [{"title": "Bloomberg Market Concepts (BMC)", "provider": "Bloomberg"}]
+    },
+    "Valuation (DCF, Comps)": {
+      "ku": [{"code": "01205341", "title": "Financial Management", "faculty": "ECON"}],
+      "online": [
+        {"title": "Business Valuation Modeling", "provider": "Corporate Finance Institute (CFI)", "url": "https://corporatefinanceinstitute.com", "level": "Intermediate"}
+      ],
+      "cert": [{"title": "FMVA® (Financial Modeling & Valuation Analyst)", "provider": "CFI"}]
+    },
+    "Portfolio Management": {
+      "ku": [{"code": "01205341", "title": "Financial Management", "faculty": "ECON"}],
+      "online": [
+        {"title": "Investment and Portfolio Management Specialization", "provider": "Coursera (Rice University)", "url": "https://coursera.org/specializations/investment-portolio-management", "level": "Intermediate"}
+      ],
+      "cert": [{"title": "CFA Level I/II/III", "provider": "CFA Institute"}]
+    },
+    "Fixed Income Analysis": {
+      "ku": [{"code": "01205341", "title": "Financial Management", "faculty": "ECON"}],
+      "online": [
+        {"title": "Fixed Income Securities", "provider": "Coursera (Columbia University)", "url": "https://coursera.org/learn/fixed-income-securities", "level": "Advanced"}
+      ],
+      "cert": [{"title": "CFA Level I/II/III", "provider": "CFA Institute"}]
+    },
+    "Risk Management (VaR, CVaR)": {
+      "ku": [{"code": "01205341", "title": "Financial Management", "faculty": "ECON"}],
+      "online": [
+        {"title": "Financial Risk Management", "provider": "Coursera (NYU)", "url": "https://coursera.org/learn/financial-risk-management", "level": "Advanced"}
+      ],
+      "cert": [{"title": "FRM (Financial Risk Manager)", "provider": "GARP"}]
+    },
+    "Derivatives Pricing (Black-Scholes)": {
+      "ku": [{"code": "01205341", "title": "Financial Management", "faculty": "ECON"}],
+      "online": [
+        {"title": "Derivatives Pricing and Risk Management", "provider": "Coursera (Columbia)", "url": "https://coursera.org", "level": "Advanced"}
+      ],
+      "cert": [{"title": "CFA Level I/II/III", "provider": "CFA Institute"}]
+    },
+    "Quantitative Trading": {
+      "ku": [],
+      "online": [
+        {"title": "Quantitative Trading Strategies", "provider": "Coursera (NYU)", "url": "https://coursera.org", "level": "Advanced"}
+      ],
+      "cert": [{"title": "CQF (Certificate in Quantitative Finance)", "provider": "CQF Institute"}]
+    },
+    "Time Series Forecasting": {
+      "ku": [{"code": "01204211", "title": "Statistics for Economics", "faculty": "ECON"}],
+      "online": [
+        {"title": "Practical Time Series Analysis", "provider": "Coursera (University of Colorado)", "url": "https://coursera.org/learn/practical-time-series-analysis", "level": "Intermediate"}
+      ],
+      "cert": []
+    },
+    "Behavioral Finance": {
+      "ku": [{"code": "01205371", "title": "Behavioral Economics", "faculty": "ECON"}],
+      "online": [
+        {"title": "Behavioral Finance", "provider": "Coursera (Duke University)", "url": "https://coursera.org/learn/behavioral-finance", "level": "Intermediate"}
+      ],
+      "cert": []
+    },
+    "Stochastic Modeling": {
+      "ku": [{"code": "01204111", "title": "Statistics for Science", "faculty": "SCI"}],
+      "online": [
+        {"title": "Stochastic Processes", "provider": "Coursera (National Research University)", "url": "https://coursera.org/learn/stochastic-processes", "level": "Advanced"}
+      ],
+      "cert": []
+    },
+    "ESG Reporting Frameworks (GRI, TCFD, ISSB)": {
+      "ku": [],
+      "online": [
+        {"title": "Sustainable Finance and ESG Investing", "provider": "Coursera (University of Cambridge)", "url": "https://coursera.org/learn/sustainable-finance", "level": "Intermediate"}
+      ],
+      "cert": [{"title": "Certificate in ESG Investing", "provider": "CFA Institute"}]
+    },
+    "Green Bond / Sustainable Finance Analysis": {
+      "ku": [],
+      "online": [
+        {"title": "Sustainable Finance and ESG Investing", "provider": "Coursera (University of Cambridge)", "url": "https://coursera.org/learn/sustainable-finance", "level": "Intermediate"}
+      ],
+      "cert": [{"title": "Climate Risk Certificate", "provider": "GARP"}]
+    },
+    "Environmental Economics": {
+      "ku": [{"code": "01205372", "title": "Environmental Economics", "faculty": "ECON"}],
+      "online": [
+        {"title": "Environmental Economics", "provider": "Coursera (University of London)", "url": "https://coursera.org/learn/environmental-economics", "level": "Intermediate"}
+      ],
+      "cert": []
+    },
+    "Cost-Benefit Analysis (CBA)": {
+      "ku": [{"code": "01205373", "title": "Public Economics", "faculty": "ECON"}],
+      "online": [
+        {"title": "Cost-Benefit Analysis", "provider": "Coursera (University of London)", "url": "https://coursera.org/learn/cost-benefit-analysis", "level": "Intermediate"}
+      ],
+      "cert": []
+    },
+    "Social Impact Evaluation": {
+      "ku": [],
+      "online": [
+        {"title": "Social Impact Evaluation", "provider": "Coursera (University of London)", "url": "https://coursera.org/learn/social-impact-evaluation", "level": "Intermediate"}
+      ],
+      "cert": []
+    },
+    "Regression Analysis": {
+      "ku": [{"code": "01204111", "title": "Statistics for Science", "faculty": "SCI"}],
+      "online": [
+        {"title": "Regression Models", "provider": "Coursera (Johns Hopkins)", "url": "https://coursera.org/learn/regression-models", "level": "Intermediate"}
+      ],
+      "cert": []
+    },
+    "Stata": {
+      "ku": [{"code": "01204111", "title": "Statistics for Science", "faculty": "SCI"}],
+      "online": [
+        {"title": "Data Analysis with Stata", "provider": "Coursera / DataCamp", "url": "https://coursera.org", "level": "Beginner"}
+      ],
+      "cert": []
+    },
+    "Financial Planning": {
+      "ku": [{"code": "01205341", "title": "Financial Management", "faculty": "ECON"}],
+      "online": [
+        {"title": "Financial Planning Specialization", "provider": "Coursera (University of Illinois)", "url": "https://coursera.org/specializations/financial-planning", "level": "Beginner"}
+      ],
+      "cert": [{"title": "CFP (Certified Financial Planner)", "provider": "CFP Board"}]
+    },
+    "Tax Planning": {
+      "ku": [{"code": "01205374", "title": "Taxation", "faculty": "ECON"}],
+      "online": [
+        {"title": "U.S. Federal Taxation", "provider": "Coursera (University of Illinois)", "url": "https://coursera.org/specializations/us-federal-taxation", "level": "Intermediate"}
+      ],
+      "cert": []
+    },
+    "Estate Planning": {
+      "ku": [],
+      "online": [
+        {"title": "Estate Planning and Wealth Management", "provider": "Coursera (University of Illinois)", "url": "https://coursera.org", "level": "Intermediate"}
+      ],
+      "cert": []
+    },
+    "Client Relationship Management": {
+      "ku": [],
+      "online": [
+        {"title": "Customer Relationship Management (CRM)", "provider": "Coursera / HubSpot", "url": "https://coursera.org", "level": "Beginner"}
+      ],
+      "cert": []
+    },
+    "Investment Analysis": {
+      "ku": [{"code": "01205341", "title": "Financial Management", "faculty": "ECON"}],
+      "online": [
+        {"title": "Investment Management Specialization", "provider": "Coursera (University of Geneva)", "url": "https://coursera.org/specializations/investment-management", "level": "Intermediate"}
+      ],
+      "cert": [{"title": "CFA Level I/II/III", "provider": "CFA Institute"}]
+    },
+    "Budgeting & Forecasting": {
+      "ku": [{"code": "01205341", "title": "Financial Management", "faculty": "ECON"}],
+      "online": [
+        {"title": "Budgeting and Forecasting for Business Professionals", "provider": "Udemy", "url": "https://udemy.com/course/budgeting-and-forecasting", "level": "Intermediate"}
+      ],
+      "cert": []
+    },
+    "Financial Statement Analysis": {
+      "ku": [{"code": "01205341", "title": "Financial Management", "faculty": "ECON"}],
+      "online": [
+        {"title": "Financial Statement Analysis", "provider": "Coursera (University of Illinois)", "url": "https://coursera.org/learn/financial-statement-analysis", "level": "Intermediate"}
+      ],
+      "cert": [{"title": "CFA Level I/II/III", "provider": "CFA Institute"}]
+    },
+    "Variance Analysis": {
+      "ku": [],
+      "online": [
+        {"title": "Variance Analysis for Management Accountants", "provider": "Udemy", "url": "https://udemy.com/course/variance-analysis", "level": "Intermediate"}
+      ],
+      "cert": []
+    },
+    "Capital Budgeting": {
+      "ku": [{"code": "01205341", "title": "Financial Management", "faculty": "ECON"}],
+      "online": [
+        {"title": "Capital Budgeting and Project Evaluation", "provider": "Coursera", "url": "https://coursera.org", "level": "Intermediate"}
+      ],
+      "cert": []
+    },
+    "Report Writing": {
+      "ku": [{"code": "01355101", "title": "English for Science and Technology", "faculty": "KU"}],
+      "online": [
+        {"title": "Academic and Business Writing", "provider": "edX (Berkeley)", "url": "https://edx.org", "level": "Beginner"}
+      ],
+      "cert": []
+    },
+    "AML / KYC Compliance": {
+      "ku": [],
+      "online": [
+        {"title": "Anti-Money Laundering (AML) and Know Your Customer (KYC)", "provider": "Udemy", "url": "https://udemy.com/course/anti-money-laundering", "level": "Beginner"}
+      ],
+      "cert": [{"title": "CAMS (Certified Anti-Money Laundering Specialist)", "provider": "ACAMS"}]
+    },
+    "Regulatory Frameworks (Basel III, MiFID II)": {
+      "ku": [],
+      "online": [
+        {"title": "Banking and Financial Institutions", "provider": "Coursera (University of Illinois)", "url": "https://coursera.org", "level": "Advanced"}
+      ],
+      "cert": []
+    },
+    "RegTech Tools (ComplyAdvantage)": {
+      "ku": [],
+      "online": [
+        {"title": "Regulatory Technology (RegTech) Fundamentals", "provider": "Udemy", "url": "https://udemy.com/course/regtech-fundamentals", "level": "Intermediate"}
+      ],
+      "cert": []
+    },
+    "Policy Brief Writing": {
+      "ku": [{"code": "01355101", "title": "English for Science and Technology", "faculty": "KU"}],
+      "online": [
+        {"title": "Writing for Public Policy", "provider": "Coursera (University of Michigan)", "url": "https://coursera.org", "level": "Intermediate"}
+      ],
+      "cert": []
+    },
+    "Attention to Detail": {
+      "ku": [],
+      "online": [
+        {"title": "Attention Management", "provider": "Udemy", "url": "https://udemy.com/course/attention-management", "level": "Beginner"}
+      ],
+      "cert": []
+    },
+    "Negotiation": {
+      "ku": [],
+      "online": [
+        {"title": "Successful Negotiation: Essential Strategies and Skills", "provider": "Coursera (University of Michigan)", "url": "https://coursera.org/learn/negotiation", "level": "Beginner"}
+      ],
+      "cert": []
+    },
+    "Presentation Skills": {
+      "ku": [],
+      "online": [
+        {"title": "Dynamic Public Speaking", "provider": "Coursera (University of Washington)", "url": "https://coursera.org/specializations/public-speaking", "level": "Beginner"}
+      ],
+      "cert": []
+    },
+    "Stakeholder Management": {
+      "ku": [],
+      "online": [
+        {"title": "Stakeholder Management", "provider": "Coursera / PMI", "url": "https://coursera.org", "level": "Intermediate"}
+      ],
+      "cert": []
+    },
+    "Research Skills": {
+      "ku": [],
+      "online": [
+        {"title": "Understanding Research Methods", "provider": "Coursera (University of London)", "url": "https://coursera.org/learn/research-methods", "level": "Beginner"}
+      ],
+      "cert": []
+    },
+    "Adaptability": {
+      "ku": [],
+      "online": [
+        {"title": "Learning How to Learn", "provider": "Coursera (DeepLearning.AI)", "url": "https://coursera.org/learn/learning-how-to-learn", "level": "Beginner"}
+      ],
+      "cert": []
+    },
+    "Product Roadmapping": {
+      "ku": [],
+      "online": [
+        {"title": "Product Management Specialization", "provider": "Coursera (University of Alberta)", "url": "https://coursera.org/specializations/product-management", "level": "Intermediate"}
+      ],
+      "cert": []
+    },
+    "User Research": {
+      "ku": [],
+      "online": [
+        {"title": "User Experience Research and Design", "provider": "Coursera (University of Michigan)", "url": "https://coursera.org/specializations/michiganux", "level": "Beginner"}
+      ],
+      "cert": []
+    },
+    "Data Analytics": {
+      "ku": [{"code": "01204111", "title": "Statistics for Science", "faculty": "SCI"}],
+      "online": [
+        {"title": "Google Data Analytics Professional Certificate", "provider": "Coursera (Google)", "url": "https://coursera.org/professional-certificates/google-data-analytics", "level": "Beginner"}
+      ],
+      "cert": [{"title": "Google Data Analytics Certificate", "provider": "Google"}]
+    },
+    "Payment Systems Knowledge": {
+      "ku": [],
+      "online": [
+        {"title": "Fintech: Foundations & Applications", "provider": "Coursera (Wharton)", "url": "https://coursera.org/learn/wharton-fintech", "level": "Intermediate"}
+      ],
+      "cert": []
+    },
+    "Open Banking / API Finance": {
+      "ku": [],
+      "online": [
+        {"title": "Open Banking and APIs in Finance", "provider": "Coursera / CFTE", "url": "https://coursera.org", "level": "Intermediate"}
+      ],
+      "cert": []
+    },
+    "On-Chain Data Analysis (Dune Analytics, Glassnode)": {
+      "ku": [],
+      "online": [
+        {"title": "Blockchain Data Analysis", "provider": "Udemy", "url": "https://udemy.com/course/blockchain-data-analysis", "level": "Intermediate"}
+      ],
+      "cert": []
+    },
+    "DeFi Protocol Analysis": {
+      "ku": [],
+      "online": [
+        {"title": "Decentralized Finance (DeFi) Primitives", "provider": "Coursera (Duke)", "url": "https://coursera.org/learn/defi-primitives", "level": "Advanced"}
+      ],
+      "cert": []
+    },
+    "Tokenomics Modeling": {
+      "ku": [],
+      "online": [
+        {"title": "Tokenomics and Crypto Economics", "provider": "Udemy", "url": "https://udemy.com/course/tokenomics", "level": "Advanced"}
+      ],
+      "cert": []
+    },
+    "Economics of Natural Resources and Public Policy": {
+      "ku": [{"code": "01205372", "title": "Environmental Economics", "faculty": "ECON"}],
+      "online": [
+        {"title": "Natural Resource Economics", "provider": "Coursera (University of Queensland)", "url": "https://coursera.org", "level": "Intermediate"}
+      ],
+      "cert": []
+    },
+    "SAP / Oracle ERP": {
+      "ku": [],
+      "online": [
+        {"title": "SAP S/4HANA Fundamentals", "provider": "openSAP", "url": "https://open.sap.com", "level": "Beginner"}
+      ],
+      "cert": [{"title": "SAP Certified Application Associate", "provider": "SAP"}]
+    },
+    "Survey Design & Analysis": {
+      "ku": [{"code": "01204111", "title": "Statistics for Science", "faculty": "SCI"}],
+      "online": [
+        {"title": "Questionnaire Design for Social Surveys", "provider": "Coursera (University of Michigan)", "url": "https://coursera.org/learn/questionnaire-design", "level": "Intermediate"}
+      ],
+      "cert": []
+    },
+    "English": {
+      "ku": [{"code": "01355101", "title": "English for Science and Technology", "faculty": "KU"}],
+      "online": [
+        {"title": "English for Career Development", "provider": "Coursera (University of Pennsylvania)", "url": "https://coursera.org/learn/careerdevelopment", "level": "Beginner"}
+      ],
+      "cert": [{"title": "IELTS / TOEFL iBT", "provider": "British Council / ETS"}]
+    },
+    "Chinese": {
+      "ku": [{"code": "01355102", "title": "Chinese for Beginners", "faculty": "KU"}],
+      "online": [
+        {"title": "Chinese for Beginners", "provider": "Coursera (Peking University)", "url": "https://coursera.org/learn/chinese-for-beginners", "level": "Beginner"}
+      ],
+      "cert": [{"title": "HSK (Hanyu Shuiping Kaoshi)", "provider": "Hanban"}]
+    },
+    "Japanese": {
+      "ku": [{"code": "01355103", "title": "Japanese for Beginners", "faculty": "KU"}],
+      "online": [
+        {"title": "Japanese for Beginners", "provider": "Coursera (Waseda University)", "url": "https://coursera.org", "level": "Beginner"}
+      ],
+      "cert": [{"title": "JLPT N5-N1", "provider": "Japan Foundation"}]
+    }
+  }
+}

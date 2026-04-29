@@ -6,6 +6,9 @@ const KEYS = {
   targets: 'fa_user_targets',
   coachStudents: 'fa_coach_students',
   coachAuth: 'fa_coach_auth',
+  role: 'fa_role',
+  teacherId: 'fa_teacher_id',
+  teacherName: 'fa_teacher_name',
 }
 
 function safe<T>(fn: () => T, fallback: T): T {
@@ -40,6 +43,17 @@ export const storage = {
   setCoachAuth: () => localStorage.setItem(KEYS.coachAuth, '1'),
   getCoachAuth: () => safe(() => localStorage.getItem(KEYS.coachAuth) === '1', false),
   clearCoachAuth: () => localStorage.removeItem(KEYS.coachAuth),
+
+  getRole: () => safe(() => localStorage.getItem(KEYS.role) as 'student' | 'teacher' | null, null),
+  setRole: (role: 'student' | 'teacher') => localStorage.setItem(KEYS.role, role),
+  clearRole: () => localStorage.removeItem(KEYS.role),
+
+  getTeacherId: () => safe(() => localStorage.getItem(KEYS.teacherId), null),
+  setTeacherId: (id: string) => localStorage.setItem(KEYS.teacherId, id),
+  clearTeacherId: () => localStorage.removeItem(KEYS.teacherId),
+
+  getTeacherName: () => safe(() => localStorage.getItem(KEYS.teacherName), null),
+  setTeacherName: (name: string) => localStorage.setItem(KEYS.teacherName, name),
 
   mergeSkills: (csvSkills: SkillItem[], overrides: ProfileOverrides): SkillItem[] => {
     if (!overrides.skills) return csvSkills

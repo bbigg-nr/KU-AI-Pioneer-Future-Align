@@ -9,10 +9,10 @@ import ChatInput from '@/components/advisor/ChatInput'
 import { GraduationCap, Loader2 } from 'lucide-react'
 
 const SUGGESTIONS = [
-  'บอกรายละเอียดเพิ่มเติมหน่อย',
-  'ต่อไปไหนแล้ว?',
-  'แสดงใบรับรองที่ควรมีหน่อย',
-  'What skills should I focus on?',
+  'ช่วยสร้าง Roadmap การเตรียมตัวสำหรับอาชีพเป้าหมายหน่อย',
+  'ช่วยวิเคราะห์ช่องว่างทักษะ (Skill Gap) ของฉันให้หน่อย',
+  'ค้นหางานที่น่าสนใจและเหมาะกับทักษะของฉันในตอนนี้',
+  'แนะนำคอร์สเรียนหรือใบรับรองเพื่ออัปสกิลที่ฉันยังขาด',
 ]
 
 function buildSystemPrompt(student: Student, topJob?: string, matchScore?: number): string {
@@ -81,7 +81,7 @@ export default function AdvisorPage() {
       const res = await fetch('/api/advisor', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ messages: apiMessages, systemContext }),
+        body: JSON.stringify({ messages: apiMessages, systemContext, student_id: studentId }),
       })
       const data = await res.json()
       if (data.text) {

@@ -1,0 +1,881 @@
+{
+  "Investment Banker": {
+    "core_skills": [
+      "Bond valuation",
+      "Debt financing",
+      "Debt restructuring",
+      "Due diligence",
+      "Financial modeling",
+      "IPO",
+      "Independent Financial Advisory",
+      "M&A",
+      "SEC/SET regulations"
+    ],
+    "adjacent_skills": [
+      "Chinese language",
+      "English communication",
+      "Financial Advisor (FA) license",
+      "MS Office"
+    ]
+  },
+  "Financial Analyst": {
+    "core_skills": [
+      "Accounts Payable (A/P)",
+      "Accounts Receivable (A/R)",
+      "Budgeting",
+      "Cash flow forecasting",
+      "Financial modeling",
+      "Forecasting",
+      "Internal controls",
+      "Microsoft Excel",
+      "Month-end/year-end closing",
+      "Variance analysis",
+      "Working capital management"
+    ],
+    "adjacent_skills": [
+      "Business Intelligence (BI) tools",
+      "CFA",
+      "CMA",
+      "CPA",
+      "ERP systems (SAP, Oracle, NetSuite)"
+    ]
+  },
+  "Risk Manager": {
+    "core_skills": [
+      "Credit risk frameworks",
+      "Legal risk review",
+      "Regulatory compliance",
+      "Risk assessment",
+      "Risk identification",
+      "Risk management policies",
+      "Risk reporting",
+      "Root cause analysis"
+    ],
+    "adjacent_skills": [
+      "Credit limits",
+      "Credit risk models",
+      "Margin loan policies",
+      "Risk monitoring tools"
+    ]
+  },
+  "Data Analyst (Finance)": {
+    "core_skills": [
+      "Dashboard development",
+      "Data accuracy",
+      "Data analysis",
+      "Data integrity",
+      "KPI tracking",
+      "Microsoft Excel",
+      "SQL"
+    ],
+    "adjacent_skills": [
+      "Banking experience",
+      "Collections portfolio analysis",
+      "Financial services knowledge",
+      "Python",
+      "R"
+    ]
+  },
+  "Economist": {
+    "core_skills": [
+      "Causal inference",
+      "Econometric modeling",
+      "Economic research",
+      "Microeconomic theory",
+      "Pricing strategy",
+      "Python",
+      "R",
+      "SQL",
+      "Statistical reasoning",
+      "Time series analysis"
+    ],
+    "adjacent_skills": [
+      "Difference-in-differences",
+      "Instrumental variables",
+      "Marketplace design",
+      "Regression discontinuity"
+    ]
+  },
+  "Portfolio Manager": {
+    "core_skills": [
+      "Asset allocation",
+      "Financial acumen",
+      "Investment Consultant (IC) License",
+      "Market analysis",
+      "Portfolio construction",
+      "Portfolio rebalancing"
+    ],
+    "adjacent_skills": [
+      "CFA",
+      "CFP",
+      "Financial advisory",
+      "Investment Planner (IP) License",
+      "Private banking",
+      "Wealth management"
+    ]
+  },
+  "Equity Research Analyst": {
+    "core_skills": [
+      "Cash flow projection",
+      "Financial analysis",
+      "Financial modeling",
+      "Forecasting",
+      "Investment portfolio management",
+      "Microsoft Excel",
+      "Microsoft PowerPoint",
+      "Microsoft Word",
+      "Presentation skills"
+    ],
+    "adjacent_skills": [
+      "Credit analysis",
+      "Debt Capital Markets",
+      "Financial Advisory"
+    ]
+  },
+  "Derivatives Trader": {
+    "core_skills": [
+      "Financial time series analysis",
+      "Global economic analysis",
+      "Microsoft Excel",
+      "Microsoft PowerPoint",
+      "Microsoft Word",
+      "Momentum analysis",
+      "Python",
+      "Risk metrics (drawdown, Sharpe/Sortino, hit rate)",
+      "Technical indicators (MA/EMA, RSI, MACD, ATR)",
+      "Volatility analysis"
+    ],
+    "adjacent_skills": [
+      "Negotiation skills"
+    ]
+  },
+  "Credit Analyst": {
+    "core_skills": [
+      "Financial analysis",
+      "Investment portfolio analysis",
+      "Microsoft Excel",
+      "Microsoft PowerPoint",
+      "Microsoft Word",
+      "SAP"
+    ],
+    "adjacent_skills": [
+      "Credit analysis experience"
+    ]
+  },
+  "ESG Analyst": {
+    "core_skills": [
+      "Attention to detail",
+      "Data visualization",
+      "Excel",
+      "Problem-solving",
+      "SQL"
+    ],
+    "adjacent_skills": [
+      "Google Data Studio",
+      "Power BI",
+      "Python",
+      "Social listening tools",
+      "Tableau"
+    ]
+  },
+  "Corporate Finance Analyst": {
+    "core_skills": [
+      "Cash flow projection",
+      "Financial analysis",
+      "Financial modeling",
+      "Forecasting",
+      "Investment portfolio management",
+      "Microsoft Excel",
+      "Microsoft PowerPoint",
+      "Microsoft Word",
+      "Presentation skills"
+    ],
+    "adjacent_skills": [
+      "Credit analysis",
+      "Debt Capital Markets",
+      "Financial Advisory"
+    ]
+  },
+  "FinTech Product Manager": {
+    "core_skills": [
+      "Cross-functional collaboration",
+      "Data analysis",
+      "KPI analysis",
+      "Product lifecycle management",
+      "Product roadmap development",
+      "Product strategy",
+      "Stakeholder management"
+    ],
+    "adjacent_skills": [
+      "API integration",
+      "Agile",
+      "Blockchain",
+      "Cybersecurity standards",
+      "Digital Identity (NDID)",
+      "Figma",
+      "Jira",
+      "Payment systems",
+      "Scrum",
+      "Trello",
+      "UX design"
+    ]
+  },
+  "Crypto / Digital Asset Analyst": {
+    "core_skills": [
+      "Blockchain technology",
+      "Financial modeling",
+      "Fundamental analysis",
+      "On-chain data analysis",
+      "Smart contracts",
+      "Technical analysis",
+      "Tokenomics analysis"
+    ],
+    "adjacent_skills": [
+      "CFA",
+      "Certified Bitcoin Professional",
+      "DEX knowledge",
+      "Dune Analytics",
+      "Excel",
+      "Glassnode",
+      "Nansen",
+      "Python",
+      "SQL",
+      "Web3 ecosystem"
+    ]
+  },
+  "Wealth Manager": {
+    "core_skills": [
+      "Business development",
+      "Financial planning",
+      "Investment Consultant (IC) License",
+      "Market analysis",
+      "Portfolio construction",
+      "Portfolio rebalancing",
+      "Relationship management",
+      "SEC regulations"
+    ],
+    "adjacent_skills": [
+      "CFA",
+      "CFP",
+      "Estate planning",
+      "Investment Planner (IP) License",
+      "Private wealth experience",
+      "Tax planning"
+    ]
+  },
+  "FP&A Analyst": {
+    "core_skills": [
+      "Budgeting",
+      "Data analysis",
+      "Financial modeling",
+      "Forecasting",
+      "Management reporting",
+      "Microsoft Excel",
+      "Variance analysis"
+    ],
+    "adjacent_skills": [
+      "CFA",
+      "CPA",
+      "ERP systems (SAP, Oracle, Microsoft Dynamics)",
+      "FPAC",
+      "Pivot Tables",
+      "Power Query"
+    ]
+  },
+  "Compliance Officer (RegTech)": {
+    "core_skills": [
+      "Compliance automation",
+      "Data privacy (PDPA)",
+      "KYC/AML",
+      "Regulatory knowledge (BOT, SEC, AMLO)",
+      "Regulatory reporting",
+      "Risk assessment",
+      "Transaction monitoring"
+    ],
+    "adjacent_skills": [
+      "CAMS",
+      "CISA",
+      "Cybersecurity frameworks",
+      "Data analytics",
+      "Digital assets knowledge",
+      "Payment systems",
+      "RegTech solutions"
+    ]
+  },
+  "Sustainability / ESG Finance Analyst": {
+    "core_skills": [
+      "Climate risk assessment",
+      "Data analysis",
+      "ESG frameworks (GRI, TCFD, SASB, ISSB)",
+      "ESG research",
+      "ESG scoring",
+      "Green bonds",
+      "Sustainable investment strategies"
+    ],
+    "adjacent_skills": [
+      "CESGA",
+      "CFA Certificate in ESG Investing",
+      "ESG data providers (MSCI, Sustainalytics, Bloomberg ESG)",
+      "Project management",
+      "SCR",
+      "Stakeholder coordination",
+      "Valuation analysis"
+    ]
+  },
+  "Quantitative Researcher": {
+    "core_skills": [
+      "Financial time series analysis",
+      "Python",
+      "Quantitative analysis",
+      "R",
+      "Risk metrics (drawdown, Sharpe/Sortino, hit rate)",
+      "SQL",
+      "Statistical modeling",
+      "Strategy backtesting",
+      "Technical indicators (MA/EMA, RSI, MACD, ATR)",
+      "Time series analysis",
+      "Trading strategy research"
+    ],
+    "adjacent_skills": [
+      "Causal inference",
+      "numpy",
+      "pandas",
+      "sklearn"
+    ]
+  },
+  "MLOps Engineer": {
+    "core_skills": [
+      "AWS",
+      "Azure",
+      "Bash scripting",
+      "CI/CD",
+      "Computer Vision",
+      "CrewAI",
+      "Data preprocessing",
+      "Feature engineering",
+      "Flask",
+      "GCP",
+      "Guardrails AI",
+      "LangChain",
+      "LangFuse",
+      "LangGraph",
+      "LangSmith",
+      "LlamaIndex",
+      "Model Context Protocol",
+      "Model monitoring",
+      "N8N",
+      "NLP",
+      "NextJS",
+      "Predictive Analytics",
+      "RAG workflows",
+      "ReactJS",
+      "Scikit-learn"
+    ],
+    "adjacent_skills": [
+      "Compliance frameworks",
+      "DVC",
+      "Kubeflow",
+      "LakeFS",
+      "MLflow",
+      "Model explainability"
+    ]
+  },
+  "Software Engineer": {
+    "core_skills": [
+      "API development",
+      "AWS",
+      "C",
+      "C#",
+      "C++",
+      "Database design",
+      "Flutter",
+      "Git",
+      "Kotlin",
+      "MATLAB Simulink",
+      "Microservices",
+      "React.js",
+      "SVN",
+      "Version control"
+    ],
+    "adjacent_skills": [
+      "API Gateway",
+      "Arduino",
+      "Embedded systems",
+      "IoT",
+      "Kafka",
+      "Microcontroller",
+      "Raspberry Pi",
+      "Redis"
+    ]
+  },
+  "Data Scientist": {
+    "core_skills": [
+      "Analytical problem-solving",
+      "Data cleaning",
+      "Data mining",
+      "Data validation",
+      "Deep Learning",
+      "Matplotlib",
+      "Model development",
+      "Performance testing",
+      "Power BI",
+      "Statistics"
+    ],
+    "adjacent_skills": [
+      "Big data stores",
+      "Business intelligence tools",
+      "Message queuing",
+      "Stream processing"
+    ]
+  },
+  "ML Engineer": {
+    "core_skills": [
+      "Chatbot development",
+      "Document processing",
+      "LLM",
+      "LangGraph",
+      "OCR",
+      "OpenAI SDK",
+      "PaddleOCR",
+      "Problem-solving",
+      "RAG",
+      "Tesseract",
+      "Vector databases"
+    ],
+    "adjacent_skills": [
+      "AWS",
+      "Azure",
+      "Backend integration",
+      "FastAPI",
+      "GCP"
+    ]
+  },
+  "AI Engineer": {
+    "core_skills": [
+      "Agentic AI architectures",
+      "AutoGen",
+      "Azure",
+      "Azure AI Foundry",
+      "Azure AI Services",
+      "Bash scripting",
+      "CI/CD workflows",
+      "Crew.ai",
+      "CrewAI",
+      "Data analysis",
+      "Deep Learning",
+      "ETL processes",
+      "Generative AI",
+      "Git",
+      "Java",
+      "Kubernetes",
+      "LangGraph",
+      "Machine Learning",
+      "Microservices architecture",
+      "OpenAI Agent SDK",
+      "Prompt engineering",
+      "PyTorch",
+      "RESTful API design",
+      "SQL",
+      "TensorFlow"
+    ],
+    "adjacent_skills": [
+      "AWS",
+      "AWS Sagemaker",
+      "Airflow",
+      "Apache Spark",
+      "C++",
+      "Figma",
+      "Go",
+      "Google Cloud",
+      "Hugging Face",
+      "Kubeflow",
+      "MLflow",
+      "Power BI",
+      "Tableau",
+      "VertexAI"
+    ]
+  },
+  "Data Engineer": {
+    "core_skills": [
+      "AWS",
+      "AWS Glue",
+      "Amazon Redshift",
+      "Apache Airflow",
+      "Apache Iceberg",
+      "Azure",
+      "BigQuery",
+      "Boto3",
+      "Databricks",
+      "Delta Lake",
+      "ELT",
+      "ETL",
+      "GCP",
+      "Git",
+      "Linux",
+      "Pandas",
+      "Prefect",
+      "PySpark",
+      "Shell scripting",
+      "Snowflake",
+      "dbt"
+    ],
+    "adjacent_skills": [
+      "CI/CD pipelines",
+      "Cassandra",
+      "Data governance",
+      "Data modeling",
+      "Data warehousing",
+      "DynamoDB",
+      "Informatica",
+      "Java",
+      "MongoDB",
+      "MySQL",
+      "Oracle",
+      "SQL Server",
+      "SSIS",
+      "Talend"
+    ]
+  },
+  "DevOps / SRE Engineer": {
+    "core_skills": [
+      "AWS",
+      "Application security",
+      "Azure",
+      "Bash",
+      "CI/CD",
+      "Chef",
+      "Container orchestration",
+      "Container security",
+      "DAST",
+      "Dependency scanning",
+      "Git",
+      "GitLab CI",
+      "Google Cloud",
+      "IIS",
+      "Infrastructure as Code",
+      "Jenkins",
+      "Linux",
+      "Perl",
+      "Puppet",
+      "SAST"
+    ],
+    "adjacent_skills": [
+      "AWS Glue",
+      "AWS Lambda",
+      "AWS Step Functions",
+      "AWS certification",
+      "Agile methodologies",
+      "Ant",
+      "CloudWatch",
+      "DNS",
+      "ECS",
+      "EKS",
+      "Firewalls",
+      "Hudson",
+      "Maven",
+      "Penetration testing",
+      "SIEM integration",
+      "Sonar",
+      "Spark",
+      "TCP/IP",
+      "VMware",
+      "Windows environments"
+    ]
+  },
+  "Cloud Architect": {
+    "core_skills": [
+      "ADB",
+      "API-first design",
+      "AWS",
+      "Azure",
+      "Cloud architecture design",
+      "Cloud governance",
+      "Cloud landing zones",
+      "Container orchestration",
+      "Data protection",
+      "Disaster recovery",
+      "Encryption",
+      "Firewall configuration",
+      "GCP",
+      "HeatWave",
+      "High availability",
+      "Huawei Cloud",
+      "IAM architecture",
+      "ISO 27001",
+      "Key management",
+      "Logging",
+      "Microservices",
+      "Monitoring",
+      "Multi-account architecture",
+      "NIST",
+      "OCVS",
+      "Oracle Cloud",
+      "PDPA",
+      "Security architecture",
+      "Transit Gateway",
+      "VPC",
+      "Vulnerability management",
+      "Zero Trust architecture"
+    ],
+    "adjacent_skills": [
+      "Directory services",
+      "Enterprise services",
+      "Presales",
+      "Security",
+      "Virtual desktop"
+    ]
+  },
+  "Cybersecurity Engineer": {
+    "core_skills": [
+      "Attack simulation",
+      "Azure Entra ID",
+      "Email security gateways",
+      "Endpoint protection",
+      "Ethical hacking",
+      "Exploit development",
+      "Firewalls",
+      "GDPR",
+      "ISO 27001",
+      "Identity and access management",
+      "Incident response",
+      "Log monitoring",
+      "Malware analysis",
+      "NIST",
+      "Network security",
+      "Network traffic analysis",
+      "Offensive security",
+      "PCI-DSS",
+      "Penetration testing",
+      "Penetration testing frameworks",
+      "Risk analysis",
+      "SIEM",
+      "Security automation",
+      "Security strategy development",
+      "Vulnerability assessments"
+    ],
+    "adjacent_skills": [
+      "CISSP",
+      "EDR/XDR",
+      "GXPN",
+      "Microsoft Security",
+      "OSCP",
+      "OSWE",
+      "SOC"
+    ]
+  },
+  "Backend Engineer": {
+    "core_skills": [
+      ".NET",
+      "C#",
+      "Git",
+      "HTTP/HTTPS",
+      "JSON",
+      "MS SQL",
+      "Microservices",
+      "MongoDB",
+      "MySQL",
+      "Oracle",
+      "PKI",
+      "RESTful API",
+      "SQL Server"
+    ],
+    "adjacent_skills": [
+      "Figma",
+      "Workflow design"
+    ]
+  },
+  "Full-Stack Developer": {
+    "core_skills": [
+      "Agile methodologies",
+      "Documentation",
+      "Git",
+      "GraphQL",
+      "MongoDB",
+      "MySQL",
+      "NestJS",
+      "OWASP",
+      "Prisma",
+      "REST API",
+      "Redis",
+      "SWC",
+      "Scrum",
+      "Swagger",
+      "Testing",
+      "WebSocket",
+      "Webpack",
+      "Yarn",
+      "npm"
+    ],
+    "adjacent_skills": [
+      "CI/CD",
+      "Cache design",
+      "Cloud-native applications",
+      "Container",
+      "Debugging",
+      "DevOps practices",
+      "Error management",
+      "Log management",
+      "Microservices",
+      "NoSQL",
+      "Security best practices",
+      "Zustand"
+    ]
+  },
+  "Embedded Systems Engineer": {
+    "core_skills": [
+      "C",
+      "C++",
+      "CAD tools",
+      "Circuit design",
+      "Component datasheets",
+      "Critical thinking",
+      "Electronics",
+      "Git",
+      "Logic analyzer",
+      "Low-level C programming",
+      "Microcontroller programming",
+      "Oscilloscope",
+      "PCB design",
+      "Problem-solving",
+      "Schematic reading",
+      "VHDL",
+      "Verilog"
+    ],
+    "adjacent_skills": [
+      "Cloud computing",
+      "DSP",
+      "Development methodologies",
+      "Digital IC design",
+      "EdgeAI",
+      "Firmware development",
+      "Hardware development",
+      "IC calibration",
+      "IC testing",
+      "IoT",
+      "Motor control",
+      "RFID circuit design",
+      "RFID protocols",
+      "Version control systems"
+    ]
+  },
+  "Computer Vision Engineer": {
+    "core_skills": [
+      "Algorithms",
+      "Data structures",
+      "Debugging",
+      "Design patterns",
+      "Git",
+      "Integration testing",
+      "Linux",
+      "NoSQL",
+      "Object-oriented design",
+      "RESTful APIs",
+      "SQL",
+      "Software engineering fundamentals",
+      "Unit testing"
+    ],
+    "adjacent_skills": [
+      "AI/LLM project experience",
+      "Function calling",
+      "LangChain",
+      "LangGraph",
+      "Prompt engineering",
+      "RAG",
+      "Vector databases"
+    ]
+  },
+  "Game Developer": {
+    "core_skills": [
+      "API development",
+      "CSS",
+      "Git",
+      "GraphQL",
+      "HTML",
+      "MongoDB",
+      "Next.js",
+      "NoSQL",
+      "Object-oriented programming",
+      "React",
+      "SQL",
+      "TypeScript"
+    ],
+    "adjacent_skills": [
+      "CI/CD",
+      "DevOps practices",
+      "Unity 3D",
+      "Unreal Engine"
+    ]
+  },
+  "Product Manager (Technical)": {
+    "core_skills": [
+      "Business acumen",
+      "Capability building",
+      "Clear communication",
+      "Coaching",
+      "Cross-functional collaboration",
+      "Decision-making",
+      "Problem decomposition",
+      "Product sense",
+      "Product strategy",
+      "Stakeholder management",
+      "Team leadership",
+      "Technical translation"
+    ],
+    "adjacent_skills": []
+  },
+  "Security Engineer (AppSec)": {
+    "core_skills": [
+      "Analytical thinking",
+      "Communication",
+      "Compliance frameworks",
+      "ISO/IEC 27001",
+      "Information security",
+      "NIST",
+      "Networking fundamentals",
+      "Operating systems",
+      "PCI-DSS",
+      "Problem-solving",
+      "Teamwork"
+    ],
+    "adjacent_skills": [
+      "Application security",
+      "CheckPoint",
+      "CompTIA Security+",
+      "EC-Council certification",
+      "F5 Networks",
+      "Fortinet",
+      "Network security",
+      "Palo Alto",
+      "Penetration testing",
+      "System security",
+      "Vulnerability assessment"
+    ]
+  },
+  "Blockchain / Web3 Developer": {
+    "core_skills": [
+      "Blockchain technology",
+      "Distributed systems",
+      "High-availability systems",
+      "High-concurrency systems",
+      "High-load systems",
+      "JVM",
+      "Java",
+      "Multi-threaded programming",
+      "MySQL",
+      "Problem analysis",
+      "Problem solving",
+      "Spring Cloud"
+    ],
+    "adjacent_skills": [
+      "Algorithms",
+      "Caching",
+      "DeFi protocols",
+      "Go",
+      "Message queues",
+      "Open-source middleware",
+      "Smart contracts",
+      "Tokenomics",
+      "Web3 development"
+    ]
+  }
+}

@@ -11,8 +11,14 @@ from pydantic import BaseModel
 from matcher import SkillMatcher
 import csv, json, os, re
 from dotenv import load_dotenv
+from predictor import calculate_core_gpa
 
 load_dotenv()
+
+# LangChain imports (lazy-load to avoid slowing startup if not used)
+from services.langchain_advisor import LangChainAdvisor
+from services.langchain_agent import AgentManager
+from routers import ai_advisor as ai_advisor_router
 
 
 def parse_activity_roles(activities_str: str) -> list[str]:
@@ -50,10 +56,24 @@ with open(student_path, encoding="utf-8-sig") as f:
             "gpa":            float(row["gpa"]),
             "skills":         json.loads(row["skills"]),
             "languages":      json.loads(row["languages"]),
+            "key_course_grades": json.loads(row.get("key_course_grades", "[]")),
             "target_career":  row["target_career"],
             "activities":     activities_raw,
             "activity_roles": parse_activity_roles(activities_raw),
         }
+
+# โหลด teacher data ไว้ใน memory
+TEACHERS: dict[str, dict] = {}
+teacher_path = os.getenv("DATA_PATH_TEACHERS", "data/teacher_dataset.csv")
+if os.path.exists(teacher_path):
+    with open(teacher_path, encoding="utf-8") as f:
+        for row in csv.DictReader(f):
+            TEACHERS[row["teacher_id"]] = {
+                "teacher_id":        row["teacher_id"],
+                "name":              row["name"],
+                "faculty":           row["faculty"],
+                "assigned_students": json.loads(row["assigned_students"]),
+            }
 
 # โหลด alumni data ไว้ใน memory
 ALUMNI: dict[str, dict] = {}
@@ -71,6 +91,30 @@ with open(alumni_path, encoding="utf-8-sig") as f:
             "success_score":      int(row["success_score"]),
         }
 
+# โหลด skill pool ไว้ใน memory
+SKILL_POOL: list[str] = []
+job_path = os.getenv("DATA_PATH_JOBS", "data/labor_market_dataset_with_salary.csv")
+if os.path.exists(job_path):
+    with open(job_path, encoding="utf-8-sig") as f:
+        pool = set()
+        for row in csv.DictReader(f):
+            req_skills = json.loads(row["required_skills"])
+            for s in req_skills:
+                pool.add(s["name"])
+        SKILL_POOL = sorted(list(pool))
+
+# ── Initialize LangChain AI Advisor ──
+langchain_advisor = LangChainAdvisor(
+    embedding_model=matcher.model,
+    chroma_client=matcher.client,
+)
+agent_manager = AgentManager(
+    matcher=matcher,
+    advisor=langchain_advisor,
+    students_dict=STUDENTS,
+)
+ai_advisor_router.set_agent_manager(agent_manager)
+app.include_router(ai_advisor_router.router)
 
 # ---------- Schemas ----------
 
@@ -111,12 +155,48 @@ class RAGSearchRequest(BaseModel):
     top_k_jobs: int = 5
     top_k_alumni: int = 3
 
+class StudentCreate(BaseModel):
+    student_id: str
+    name: str
+    faculty: str
+    year: int
+    gpa: float
+    target_career: str = ""
+    skills: list[SkillItem] = []
+    languages: list[SkillItem] = []
+    activities: str = ""
+    key_course_grades: list[dict] = []
+
+class StudentUpdate(BaseModel):
+    name: str | None = None
+    faculty: str | None = None
+    year: int | None = None
+    gpa: float | None = None
+    target_career: str | None = None
+    skills: list[SkillItem] | None = None
+    languages: list[SkillItem] | None = None
+    activities: str | None = None
+
+
 
 # ---------- Endpoints ----------
 
 @app.get("/")
 def root():
     return {"message": "Career Matcher API", "students": len(STUDENTS)}
+
+
+@app.get("/teachers/{teacher_id}")
+def get_teacher(teacher_id: str):
+    t = TEACHERS.get(teacher_id)
+    if not t:
+        raise HTTPException(status_code=404, detail="Teacher not found")
+    return t
+
+
+@app.get("/teachers")
+def list_teachers():
+    return {"teachers": list(TEACHERS.values()), "total": len(TEACHERS)}
 
 
 @app.get("/students")
@@ -135,6 +215,66 @@ def list_students(limit: int = 20):
         })
     return {"students": result, "total": len(STUDENTS)}
 
+@app.get("/skills/pool")
+def get_skill_pool():
+    """ดึง skill ทั้งหมดในระบบจาก labor market dataset"""
+    return {"skills": SKILL_POOL}
+
+
+@app.post("/students")
+def create_student(req: StudentCreate):
+    """สร้างโปรไฟล์นิสิตใหม่"""
+    if req.student_id in STUDENTS:
+        raise HTTPException(status_code=400, detail="Student ID already exists")
+
+    # Add to memory
+    new_student = {
+        "student_id":     req.student_id,
+        "name":           req.name,
+        "faculty":        req.faculty,
+        "year":           req.year,
+        "gpa":            req.gpa,
+        "skills":         [s.model_dump() for s in req.skills],
+        "languages":      [l.model_dump() for l in req.languages],
+        "target_career":  req.target_career,
+        "key_course_grades": req.key_course_grades,
+        "activities":     req.activities,
+        "activity_roles": parse_activity_roles(req.activities),
+    }
+    STUDENTS[req.student_id] = new_student
+
+    # Append to CSV
+    try:
+        student_path = os.getenv("DATA_PATH_STUDENTS", "data/synthetic_student_dataset_500_clean.csv")
+        file_exists = os.path.isfile(student_path)
+        with open(student_path, mode="a", encoding="utf-8-sig", newline="") as f:
+            writer = csv.writer(f)
+            if not file_exists:
+                writer.writerow(["student_id","name","faculty","year","gpa","skills","languages","activities","key_course_grades","target_career"])
+            
+            # Format JSON fields properly for CSV
+            skills_json = json.dumps(new_student["skills"], ensure_ascii=False)
+            languages_json = json.dumps(new_student["languages"], ensure_ascii=False)
+            courses_json = json.dumps(req.key_course_grades, ensure_ascii=False)
+            
+            writer.writerow([
+                req.student_id,
+                req.name,
+                req.faculty,
+                req.year,
+                req.gpa,
+                skills_json,
+                languages_json,
+                req.activities,
+                courses_json,
+                req.target_career
+            ])
+    except Exception as e:
+        # In case CSV appending fails, we still have it in memory, but log error
+        print(f"Error appending student to CSV: {e}")
+        
+    return {"message": "Student created successfully", "student": new_student}
+
 
 @app.get("/students/{student_id}")
 def get_student(student_id: str):
@@ -143,6 +283,78 @@ def get_student(student_id: str):
     if not s:
         raise HTTPException(status_code=404, detail="Student not found")
     return {k: v for k, v in s.items() if k != "activity_roles"}
+
+@app.put("/students/{student_id}")
+def update_student(student_id: str, req: StudentUpdate):
+    """อัปเดตข้อมูลนิสิต"""
+    if student_id not in STUDENTS:
+        raise HTTPException(status_code=404, detail="Student not found")
+        
+    s = STUDENTS[student_id]
+    
+    # Update memory
+    if req.name is not None: s["name"] = req.name
+    if req.faculty is not None: s["faculty"] = req.faculty
+    if req.year is not None: s["year"] = req.year
+    if req.gpa is not None: s["gpa"] = req.gpa
+    if req.target_career is not None: s["target_career"] = req.target_career
+    if req.skills is not None: s["skills"] = [skill.model_dump() for skill in req.skills]
+    if req.languages is not None: s["languages"] = [lang.model_dump() for lang in req.languages]
+    if req.activities is not None:
+        s["activities"] = req.activities
+        s["activity_roles"] = parse_activity_roles(req.activities)
+        
+    # Update CSV safely
+    student_path = os.getenv("DATA_PATH_STUDENTS", "data/synthetic_student_dataset_500_clean.csv")
+    temp_file = student_path + ".tmp"
+    try:
+        with open(student_path, mode="r", encoding="utf-8-sig") as infile, \
+             open(temp_file, mode="w", encoding="utf-8-sig", newline="") as outfile:
+            reader = csv.DictReader(infile)
+            writer = csv.DictWriter(outfile, fieldnames=reader.fieldnames)
+            writer.writeheader()
+            for row in reader:
+                if row["student_id"] == student_id:
+                    row["name"] = s["name"]
+                    row["faculty"] = s["faculty"]
+                    row["year"] = str(s["year"])
+                    row["gpa"] = str(s["gpa"])
+                    row["target_career"] = s["target_career"]
+                    row["skills"] = json.dumps(s["skills"], ensure_ascii=False)
+                    row["languages"] = json.dumps(s["languages"], ensure_ascii=False)
+                    row["activities"] = s["activities"]
+                writer.writerow(row)
+        os.replace(temp_file, student_path)
+    except Exception as e:
+        print(f"Error updating student in CSV: {e}")
+        
+    return {"message": "Student updated successfully", "student": s}
+
+@app.delete("/students/{student_id}")
+def delete_student(student_id: str):
+    """ลบโปรไฟล์นิสิต"""
+    if student_id not in STUDENTS:
+        raise HTTPException(status_code=404, detail="Student not found")
+        
+    del STUDENTS[student_id]
+    
+    # Update CSV safely
+    student_path = os.getenv("DATA_PATH_STUDENTS", "data/synthetic_student_dataset_500_clean.csv")
+    temp_file = student_path + ".tmp"
+    try:
+        with open(student_path, mode="r", encoding="utf-8-sig") as infile, \
+             open(temp_file, mode="w", encoding="utf-8-sig", newline="") as outfile:
+            reader = csv.DictReader(infile)
+            writer = csv.DictWriter(outfile, fieldnames=reader.fieldnames)
+            writer.writeheader()
+            for row in reader:
+                if row["student_id"] != student_id:
+                    writer.writerow(row)
+        os.replace(temp_file, student_path)
+    except Exception as e:
+        print(f"Error deleting student in CSV: {e}")
+        
+    return {"message": "Student deleted successfully"}
 
 
 @app.post("/match")
@@ -166,7 +378,8 @@ def match_student(req: StudentMatchRequest):
     if not s:
         raise HTTPException(status_code=404, detail="Student not found")
 
-    result = matcher.match(s["skills"], top_n=req.top_n)
+    combined_skills = s["skills"] + s.get("languages", [])
+    result = matcher.match(combined_skills, top_n=req.top_n)
 
     return {
         "student": {
@@ -197,7 +410,8 @@ def match_student_archetype(req: StudentMatchRequest):
     if not s:
         raise HTTPException(status_code=404, detail="Student not found")
 
-    result = matcher.match_archetypes(s["skills"], top_n=req.top_n)
+    combined_skills = s["skills"] + s.get("languages", [])
+    result = matcher.match_archetypes(combined_skills, top_n=req.top_n)
     return {
         "student": {
             "student_id":    s["student_id"],
@@ -229,7 +443,8 @@ def match_student_alumni(req: StudentAlumniMatchRequest):
     if not s:
         raise HTTPException(status_code=404, detail="Student not found")
 
-    similar = matcher.find_similar_alumni(s["skills"], top_k=req.top_k)
+    combined_skills = s["skills"] + s.get("languages", [])
+    similar = matcher.find_similar_alumni(combined_skills, top_k=req.top_k)
     return {
         "student": {
             "student_id":    s["student_id"],
@@ -259,9 +474,13 @@ def match_student_blended(req: StudentBlendedMatchRequest):
     if not s:
         raise HTTPException(status_code=404, detail="Student not found")
 
+    combined_skills = s["skills"] + s.get("languages", [])
     result = matcher.match_blended(
-        s["skills"], top_n=req.top_n, alpha=req.alpha, knn_k=req.knn_k,
+        combined_skills, top_n=req.top_n, alpha=req.alpha, knn_k=req.knn_k,
         activity_roles=s.get("activity_roles", []),
+        gpa=s["gpa"],
+        core_gpa=calculate_core_gpa(s.get("key_course_grades", [])),
+        faculty=s["faculty"],
     )
     return {
         "student": {

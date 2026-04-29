@@ -7,24 +7,29 @@ import { useAuth } from '@/context/AuthContext'
 import { cn } from '@/lib/utils'
 import { useState } from 'react'
 
-const NAV = [
+const STUDENT_NAV = [
   { href: '/', label: 'Dashboard', icon: LayoutDashboard },
   { href: '/profile', label: 'My Profile', icon: User },
   { href: '/career-matches', label: 'Career Matches', icon: Briefcase },
   { href: '/advisor', label: 'AI Advisor', icon: MessageCircle },
+]
+
+const TEACHER_NAV = [
   { href: '/coach', label: 'Coach Mode', icon: GraduationCap },
 ]
 
 export default function Sidebar() {
   const pathname = usePathname()
   const router = useRouter()
-  const { logout } = useAuth()
+  const { logout, role, teacherName } = useAuth()
   const [collapsed, setCollapsed] = useState(false)
 
   const handleLogout = () => {
     logout()
     router.push('/login')
   }
+
+  const nav = role === 'teacher' ? TEACHER_NAV : STUDENT_NAV
 
   return (
     <aside className={cn(
@@ -38,13 +43,22 @@ export default function Sidebar() {
         {!collapsed && (
           <div className="overflow-hidden">
             <p className="text-sm font-bold leading-tight">FutureAlign</p>
-            <p className="text-[10px] text-white/50 uppercase tracking-wider">Career Guidance</p>
+            <p className="text-[10px] text-white/50 uppercase tracking-wider">
+              {role === 'teacher' ? 'Advisor' : 'Career Guidance'}
+            </p>
           </div>
         )}
       </div>
 
+      {!collapsed && role === 'teacher' && teacherName && (
+        <div className="px-4 py-3 border-b border-white/10">
+          <p className="text-[10px] text-white/40 uppercase tracking-wider">Logged in as</p>
+          <p className="text-sm text-white/80 font-medium mt-0.5">{teacherName}</p>
+        </div>
+      )}
+
       <nav className="flex-1 py-4 space-y-1 px-2">
-        {NAV.map(({ href, label, icon: Icon }) => {
+        {nav.map(({ href, label, icon: Icon }) => {
           const active = pathname === href || (href !== '/' && pathname.startsWith(href))
           return (
             <Link

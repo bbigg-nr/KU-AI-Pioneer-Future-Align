@@ -63,6 +63,9 @@ export default function CareerMatchesPage() {
       storage.removeTarget(title)
     } else {
       storage.addTarget(title)
+      if (studentId) {
+        api.updateStudent(studentId, { target_career: title }).catch(console.error)
+      }
     }
     refreshSaved()
   }
@@ -120,9 +123,9 @@ export default function CareerMatchesPage() {
                     />
                     <button
                       onClick={() => toggleSaved(job.job_title)}
-                      className="w-full py-2 rounded-xl text-xs font-medium transition-colors flex items-center justify-center gap-2 bg-red-50 text-red-500 hover:bg-red-100 border border-red-100"
+                      className="w-full py-2.5 rounded-xl text-xs font-semibold transition-all duration-300 flex items-center justify-center gap-2 bg-white text-slate-400 border border-slate-200 hover:bg-rose-50 hover:text-rose-600 hover:border-rose-200 hover:shadow-md hover:shadow-rose-100/50 hover:-translate-y-0.5 group"
                     >
-                      <Trash2 size={12} />
+                      <Trash2 size={14} className="transition-transform duration-300 group-hover:scale-110 group-hover:-rotate-12" />
                       Remove from My List
                     </button>
                   </div>
@@ -155,9 +158,9 @@ export default function CareerMatchesPage() {
                   />
                   <button
                     onClick={() => toggleSaved(job.job_title)}
-                    className="w-full py-2 rounded-xl text-xs font-medium transition-colors flex items-center justify-center gap-2 bg-indigo-50 text-indigo-600 hover:bg-indigo-100 border border-indigo-100"
+                    className="w-full py-2.5 rounded-xl text-xs font-bold transition-all duration-300 flex items-center justify-center gap-2 bg-gradient-to-br from-indigo-50 to-blue-50/50 text-indigo-600 border border-indigo-200/60 hover:border-indigo-400 hover:shadow-lg hover:shadow-indigo-100/60 hover:-translate-y-0.5 group"
                   >
-                    <Plus size={12} />
+                    <Plus size={14} className="transition-transform duration-300 group-hover:rotate-90 group-hover:scale-125" />
                     Add to My List
                   </button>
                 </div>

@@ -12,14 +12,44 @@ async function post<T>(path: string, body: unknown): Promise<T> {
   return res.json()
 }
 
+async function put<T>(path: string, body: unknown): Promise<T> {
+  const res = await fetch(`${BASE}${path}`, {
+    method: 'PUT',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(body),
+  })
+  if (!res.ok) throw new Error(`API error ${res.status}: ${path}`)
+  return res.json()
+}
+
+async function del<T>(path: string): Promise<T> {
+  const res = await fetch(`${BASE}${path}`, {
+    method: 'DELETE',
+  })
+  if (!res.ok) throw new Error(`API error ${res.status}: ${path}`)
+  return res.json()
+}
+
 async function get<T>(path: string): Promise<T> {
   const res = await fetch(`${BASE}${path}`)
   if (!res.ok) throw new Error(`API error ${res.status}: ${path}`)
   return res.json()
 }
 
+export interface Teacher {
+  teacher_id: string
+  name: string
+  faculty: string
+  assigned_students: string[]
+}
+
 export const api = {
+  createStudent: (data: Partial<Student>) => post<{ message: string, student: Student }>('/students', data),
+  updateStudent: (id: string, data: Partial<Student>) => put<{ message: string, student: Student }>(`/students/${id}`, data),
+  deleteStudent: (id: string) => del<{ message: string }>(`/students/${id}`),
   getStudent: (id: string) => get<Student>(`/students/${id}`),
+  getTeacher: (id: string) => get<Teacher>(`/teachers/${id}`),
+  getSkillPool: () => get<{ skills: string[] }>('/skills/pool'),
 
   listStudents: (limit = 500) =>
     get<{ students: Pick<Student, 'student_id' | 'name' | 'faculty' | 'year' | 'gpa' | 'target_career'>[], total: number }>(`/students?limit=${limit}`),

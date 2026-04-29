@@ -1,10 +1,60 @@
+# Frontend (deployed separately or via static hosting)
 frontend/
+
+# Scraper (dev-only tool)
 scraper/
+
+# Python cache
 __pycache__/
 *.pyc
 *.pyo
 .pytest_cache/
+
+# Environments & secrets
 .env
-*.zip
+.env.railway
+.env.local
+.env.template
+.venv/
+venv/
+env/
+
+# Git
 .git/
 .gitignore
+
+# Archives
+*.zip
+*.tar.gz
+
+# Pre-built databases (rebuilt during Docker build via index_jobs.py)
+chroma_db/
+chroma_db_old/
+
+# Pre-trained model (rebuilt during Docker build via index_jobs.py)
+predictor_model.pt
+predictor_model.joblib
+
+# Dev / test files
+test_server*.py
+test_results*.json
+test_api.py
+evaluate_kpi.py
+rag_precision_eval.py
+generate_backtest_data.py
+Generate_DATA.py
+extract_jd_skills.py
+results_k5.md
+pipeline/
+pipeline.zip
+scratch/
+server_err.log
+server_out.log
+*.log
+
+# IDE
+.claude/
+.vscode/
+
+# Docs
+README.md
