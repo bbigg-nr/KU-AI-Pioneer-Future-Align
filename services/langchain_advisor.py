@@ -25,7 +25,7 @@ load_dotenv()
 # ── Constants ──
 CHROMA_PATH = os.getenv("CHROMA_DB_PATH", "./chroma_db")
 MODEL_NAME = os.getenv("HF_MODEL_NAME", "paraphrase-multilingual-MiniLM-L12-v2")
-ANTHROPIC_MODEL = os.getenv("ANTHROPIC_MODEL", "claude-3-5-sonnet-20240620")
+ANTHROPIC_MODEL = os.getenv("ANTHROPIC_MODEL", "claude-sonnet-4-6")
 
 # ── System prompt template ──
 SYSTEM_TEMPLATE = """You are **FutureAlign AI Advisor**, a career guidance assistant for Kasetsart University (KU) students.
