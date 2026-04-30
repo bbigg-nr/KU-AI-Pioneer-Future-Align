@@ -86,7 +86,7 @@ For top match "${topJ?.job_title ?? student.target_career}":
 - Already has: ${matchedSkills}
 - Missing: ${missingSkills}
 - Needs improvement: ${skillsToImprove}
-Always respond with valid JSON only, no markdown, no explanation. All generated text must be in Thai language.`
+Always respond with valid JSON only. DO NOT include any preamble, introduction, or explanation. DO NOT use markdown code blocks. Start your response with "{" and end it with "}". All generated text must be in Thai language.`
 
       const prompt = `Generate a realistic, specific coaching report based on actual skills and career match data.
 Return JSON with exactly these keys:
@@ -105,16 +105,24 @@ Each string must be 1 concise sentence in Thai language (ภาษาไทย).
       const data = await res.json()
       if (data.error) throw new Error(data.error)
       
-      let cleanText = data.text;
-      const jsonMatch = cleanText.match(/```(?:json)?\n([\s\S]*?)\n```/);
+      let cleanText = data.text.trim();
+      
+      // Try to find JSON block in markdown
+      const jsonMatch = cleanText.match(/```(?:json)?\s*([\s\S]*?)\s*```/);
       if (jsonMatch) {
-        cleanText = jsonMatch[1];
+        cleanText = jsonMatch[1].trim();
       } else {
+        // Find first { and last }
         const firstBrace = cleanText.indexOf('{');
         const lastBrace = cleanText.lastIndexOf('}');
         if (firstBrace !== -1 && lastBrace !== -1) {
           cleanText = cleanText.substring(firstBrace, lastBrace + 1);
         }
+      }
+
+      if (!cleanText.startsWith('{')) {
+        console.error('Failed to find JSON in response:', data.text);
+        throw new Error('AI response was not in the expected format. Please try again.');
       }
       
       setReport(JSON.parse(cleanText))

@@ -23,7 +23,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-ANTHROPIC_MODEL = os.getenv("ANTHROPIC_MODEL", "claude-sonnet-4-6")
+ANTHROPIC_MODEL = os.getenv("ANTHROPIC_MODEL", "claude-3-5-sonnet-20240620")
 
 
 class AgentManager:
@@ -284,8 +284,10 @@ class AgentManager:
 2. **NO HALLUCINATION**: If a tool returns "No matching jobs found" or empty data, tell the user honestly. Do NOT invent job titles, salary numbers, or alumni stories.
 3. **CITE DATA**: Reference specific numbers, job titles, and skill names exactly as they appear in tool results.
 4. **SAME LANGUAGE**: Respond in the SAME language the user writes (Thai or English).
-5. **CONCISENESS**: Keep responses concise (3-5 sentences) unless detail is explicitly requested.
-6. **TONE**: Be encouraging, specific, and reference actual data from tool results."""
+5. **CONCISENESS**: Keep responses concise. If the user asks for a specific format (like JSON), follow it STRICTLY and do not add any preamble or explanation.
+6. **TONE**: Be encouraging and specific. Use actual data from tool results.
+7. **JSON OUTPUT**: If the system context or user message requests JSON, return ONLY the JSON block. Do not include markdown code blocks unless requested.
+"""
 
         agent = create_react_agent(
             model=self.llm,

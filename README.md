@@ -17,29 +17,42 @@ career-matcher/
 
 ---
 
-## ติดตั้ง
+## การรันโปรเจกต์ (Backend & Frontend)
 
-```bash
-pip install -r requirements.txt
-```
+โปรเจกต์นี้ประกอบด้วย 2 ส่วนหลัก คือ Backend (FastAPI) และ Frontend (Next.js) ต้องรันทั้ง 2 ส่วนพร้อมกัน (แยก Terminal)
 
----
+### 1. การตั้งค่าและรัน Backend (FastAPI)
 
-## รันครั้งแรก (3 ขั้นตอน)
+1. ติดตั้ง dependencies สำหรับ Python:
+   ```bash
+   pip install -r requirements.txt
+   ```
+2. Index job skills (ทำครั้งแรกครั้งเดียว):
+   ```bash
+   python index_jobs.py
+   ```
+   *(ใช้เวลาประมาณ 1–2 นาที จะสร้างโฟลเดอร์ `chroma_db/` ขึ้นมา)*
+3. รัน API server:
+   ```bash
+   uvicorn main:app --reload --port 8080
+   ```
+   *ตรวจสอบ API Docs ได้ที่: http://localhost:8080/docs*
 
-### ขั้นที่ 1 — Index job skills (ทำครั้งเดียว)
-```bash
-python index_jobs.py
-```
-ใช้เวลาประมาณ 1–2 นาที จะสร้างโฟลเดอร์ `chroma_db/` ขึ้นมา
+### 2. การตั้งค่าและรัน Frontend (Next.js)
 
-### ขั้นที่ 2 — รัน API server
-```bash
-uvicorn main:app --reload --port 8080
-```
-
-### ขั้นที่ 3 — ทดสอบ
-เปิด browser ไปที่ http://localhost:8080/docs
+1. เปิด Terminal ใหม่ แล้วเข้าไปที่โฟลเดอร์ `frontend`:
+   ```bash
+   cd frontend
+   ```
+2. ติดตั้ง Node.js dependencies:
+   ```bash
+   npm install
+   ```
+3. รัน Web Application:
+   ```bash
+   npm run dev
+   ```
+   *เปิด Browser ไปที่: http://localhost:3000 เพื่อใช้งานระบบ*
 
 ---
 
